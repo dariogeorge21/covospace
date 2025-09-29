@@ -51,3 +51,9 @@ html {
   scrollbar-width:auto;
   scrollbar-color: #5ab834 #f1f1f1;
 }
+
+.koulen-regular {
+  font-family: "Koulen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
