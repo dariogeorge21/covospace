@@ -1,3 +1,5 @@
+// import {ReactComponent as Ellipse} from '../Ellipse.svg'
+
 const servicesData = [
   {
     title: 'Private Offices',
@@ -47,13 +49,29 @@ const servicesData = [
 ];
 
 const Background = () => (
-  <div className="absolute inset-0 overflow-hidden z-0">
-    <img 
-      src="https://res.cloudinary.com/dobqxxtml/image/upload/v1759120026/bg-services_o7mjxe.png" 
-      alt="bg" 
-      className="w-full h-full object-cover"
-    />
-  </div>
+  // <div className="absolute inset-0 overflow-hidden z-0">
+  //   <img 
+  //     src="https://res.cloudinary.com/dobqxxtml/image/upload/v1759120026/bg-services_o7mjxe.png" 
+  //     alt="bg" 
+  //     className="w-full h-full object-cover"
+  //   />
+  // </div>
+       <div className="hidden absolute inset-0 sm:flex items-center justify-center pointer-events-none ">
+      {/* <Ellipse className="top-0"/> */}
+      <div className="position absolute left-0 bottom-10 ">
+        <img src="/Ellipse.svg"/>
+      </div>
+      <div className="position absolute right-0 top-20 ">
+        <img src="/Rectangle.svg"/>
+      </div>
+        <div className="text-[25rem] sm:text-[35rem] md:text-[50rem] lg:text-[70rem] font-bold text-transparent koulen-regular pt-10" 
+             style={{
+               WebkitTextStroke: '2px #E69464',
+              //  opacity: 0.1
+             }}>
+          CS
+        </div>
+      </div>
 );
 
 const EnquireIcon = () => (
