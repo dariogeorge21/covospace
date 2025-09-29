@@ -56,14 +56,21 @@ const Background = () => (
   //     className="w-full h-full object-cover"
   //   />
   // </div>
-       <div className="hidden absolute inset-0 sm:flex items-center justify-center pointer-events-none ">
+       <div className="hidden absolute inset-0 sm:flex items-center justify-center pointer-events-none bg-white ">
       {/* <Ellipse className="top-0"/> */}
+      <div className="position absolute -left-20 bottom-[-300px] ">
+        <img src="/Ellipse3.svg" className="w-[500px] hidden lg:block" />
+      </div>
       <div className="position absolute left-0 bottom-10 ">
         <img src="/Ellipse.svg"/>
+      </div>
+       <div className="position absolute -right-10 -top-20 " >
+        <img src="/Ellipse2.svg" className="hidden lg:block w-[300px]" />
       </div>
       <div className="position absolute right-0 top-20 ">
         <img src="/Rectangle.svg"/>
       </div>
+      
         <div className="text-[25rem] sm:text-[35rem] md:text-[50rem] lg:text-[70rem] font-bold text-transparent koulen-regular pt-10" 
              style={{
                WebkitTextStroke: '2px #E69464',
