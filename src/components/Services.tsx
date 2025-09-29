@@ -1,64 +1,143 @@
-import { ArrowRight, Building, Users, Calendar, MapPin, Briefcase } from 'lucide-react';
-
-const services = [
+const servicesData = [
   {
-    icon: Building,
     title: 'Private Offices',
-    description: 'Fully furnished private offices for teams of all sizes'
+    description: 'Your team deserves more than space — enjoy a premier, fully managed private office experience.',
+    features: [
+      'Flexible Plans',
+      '24x7 Security & Access',
+      'All-Inclusive - includes Internet and Services',
+    ],
   },
   {
-    icon: Users,
     title: 'Dedicated Desk',
-    description: 'Your own dedicated workspace in a shared environment'
+    description: 'Work your way with a dedicated desk in an aesthetically crafted coworking environment.',
+    features: [
+      'Daily-Weekly-Monthly Plans',
+      'Free Secure Internet & WiFi',
+      'Mail & Courier Handling',
+    ],
   },
   {
-    icon: Calendar,
     title: 'Meeting Rooms',
-    description: 'Professional meeting spaces with modern amenities'
+    description: 'Reserve premium meeting rooms designed with cutting-edge technology and complete amenities.',
+    features: [
+      '4 - 8 Seater Meeting Rooms',
+      'Audio and Video Conferencing',
+      'Catering on Request',
+    ],
   },
   {
-    icon: MapPin,
     title: 'Virtual Offices',
-    description: 'Professional business address and mail handling'
+    description: 'Establish your presence at a prime business address without the upfront cost.',
+    features: [
+      'Prime Business Address',
+      'Mail & Courier Handling',
+      'Call Answering & Forwarding',
+    ],
   },
   {
-    icon: Briefcase,
     title: 'Business Address',
-    description: 'Premium business address in the heart of Kochi'
-  }
+    description: 'Company registration made simple — use our address.',
+    features: [
+      'Company and GST Registration',
+      'Bank Account Support',
+      'Mail & Courier Handling',
+    ],
+  },
 ];
 
-export default function Services() {
+const Background = () => (
+  <div className="absolute inset-0 overflow-hidden z-0">
+    <img 
+      src="https://res.cloudinary.com/dobqxxtml/image/upload/v1759120026/bg-services_o7mjxe.png" 
+      alt="bg" 
+      className="w-full h-full object-cover"
+    />
+  </div>
+);
+
+const EnquireIcon = () => (
+    <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6.125 13.4583L14.875 5.54163M14.875 5.54163H6.125M14.875 5.54163V13.4583" stroke="#F3F3F3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+);
+
+// Interface for ServiceCard props
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  features: string[];
+}
+
+// The main card component that will be rendered for each service
+const ServiceCard = ({ title, description, features }: ServiceCardProps) => (
+  <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/80 shadow-sm h-full flex flex-col">
+    <h3 className="text-xl font-bold text-gray-800">{title}</h3>
+    <p className="mt-2 text-sm text-gray-600 flex-grow">{description}</p>
+    <ul className="mt-4 space-y-2 text-sm text-gray-600 list-disc list-inside">
+      {features.map((feature, index) => (
+        <li key={index}>{feature}</li>
+      ))}
+    </ul>
+    <div className="mt-6">
+      <button className="flex items-center space-x-2 bg-lime-500 text-white font-bold text-xs py-2 px-4 rounded-md hover:bg-lime-600 transition-colors">
+        <span>ENQUIRE NOW</span>
+        <EnquireIcon />
+      </button>
+    </div>
+  </div>
+);
+
+
+// The main export component
+const ServicesSection = () => {
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
-          Our Covospace
-        </h2>
+    <section className="relative py-16 md:py-24 bg-gray-50 font-sans overflow-hidden">
+      <Background />
+      <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-16 h-16 bg-[#5ab834] rounded-full flex items-center justify-center mb-6">
-                  <Icon className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-                <button className="bg-[#5ab834] text-white px-6 py-2 rounded-lg hover:bg-[#4a9e2d] transition-colors flex items-center font-medium">
-                  Enquire Now
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </button>
-              </div>
-            );
-          })}
+        {/* Section Title */}
+        <div className="relative inline-block mb-12">
+          <svg width="419" height="75" viewBox="0 0 419 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <foreignObject x="-30.6" y="-30.6" width="479.7" height="136.2">
+              <div 
+                style={{
+                  backdropFilter: 'blur(15.3px)',
+                  clipPath: 'url(#bgblur_0_61_10583_clip_path)',
+                  height: '100%',
+                  width: '100%'
+                }}
+              />
+            </foreignObject>
+            <g data-figma-bg-blur-radius="30.6">
+              <path d="M0 19C0 8.50659 8.50659 0 19 0H249.548C251.912 0 254.255 0.44112 256.457 1.30071L294.623 16.1993C296.825 17.0589 299.169 17.5 301.532 17.5H399.5C409.993 17.5 418.5 26.0066 418.5 36.5V56C418.5 66.4934 409.993 75 399.5 75H19C8.5066 75 0 66.4934 0 56V19Z" fill="#D95000" fillOpacity="0.6"/>
+              <path d="M19 1H249.548C251.787 1 254.008 1.41807 256.094 2.23242L294.26 17.1309C296.578 18.0357 299.044 18.5 301.532 18.5H399.5C409.441 18.5 417.5 26.5589 417.5 36.5V56C417.5 65.9411 409.441 74 399.5 74H19C9.05888 74 1 65.9411 1 56V19C1 9.05888 9.05888 1 19 1Z" stroke="#D95000" strokeOpacity="0.1" strokeWidth="2"/>
+            </g>
+            <defs>
+              <clipPath id="bgblur_0_61_10583_clip_path" transform="translate(30.6 30.6)">
+                <path d="M0 19C0 8.50659 8.50659 0 19 0H249.548C251.912 0 254.255 0.44112 256.457 1.30071L294.623 16.1993C296.825 17.0589 299.169 17.5 301.532 17.5H399.5C409.993 17.5 418.5 26.0066 418.5 36.5V56C418.5 66.4934 409.993 75 399.5 75H19C8.5066 75 0 66.4934 0 56V19Z"/>
+              </clipPath>
+            </defs>
+          </svg>
+
+          <h2 className="absolute inset-0 flex items-center justify-start pl-8 text-3xl text-white" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: 0 }}>OUR COVSPACES</h2>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 tracking-wide">
+          {servicesData.map((service, index) => (
+            <ServiceCard 
+              key={index} 
+              title={service.title}
+              description={service.description}
+              features={service.features}
+            />
+          ))}
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default ServicesSection;
