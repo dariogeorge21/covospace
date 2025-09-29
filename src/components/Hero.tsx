@@ -13,37 +13,47 @@ const Hero= () => {
 
   return (
     <div 
-      className="relative w-full h-[500px] md:h-[600px] lg:h-[900px] bg-cover bg-center font-sans"
+      className="relative w-full min-h-[100vh] sm:h-[500px] md:h-[600px] lg:h-[900px] bg-cover bg-center font-sans"
       style={{ 
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(${heroImageUrl})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(${heroImageUrl})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center', 
+        backgroundPosition: 'center center', 
       }}
     >
-      {/* Overlay to darken the image slightly, which makes text more readable */}
-      <div className="absolute inset-0 bg-black opacity-30"></div>
+      {/* Overlay to darken the image slightly for better text readability */}
+      <div className="absolute inset-0 bg-black opacity-20 sm:opacity-30"></div>
 
-      {/* Container to position the content */}
-      <div className="relative h-full flex items-center justify-start max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Container to position the content - mobile-first responsive */}
+      <div className="relative h-full flex items-center justify-center sm:justify-start max-w-screen-2xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         
-        {/* The frosted glass content box */}
-        <div className="bg-white/75 backdrop-blur-sm rounded-xl shadow-lg p-8 md:p-12 w-full max-w-lg">
+        {/* The frosted glass content box - fully responsive */}
+        <div className="bg-white/80 sm:bg-white/75 backdrop-blur-sm rounded-lg sm:rounded-xl shadow-lg p-6 sm:p-8 md:p-12 w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto sm:mx-0">
           
-          {/* Heading */}
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight" style={{ fontFamily: 'Istok Web', fontStyle: 'italic' }}>
-            Exclusive Offices &<br />
-            Workspaces in the Center<br />
-            of Kochi.
+          {/* Heading - responsive typography */}
+          <h1 
+            className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 leading-tight text-center sm:text-left" 
+            style={{ fontFamily: 'Istok Web', fontStyle: 'italic' }}
+          >
+            <span className="block">Exclusive Offices &</span>
+            <span className="block">Workspaces in the Center</span>
+            <span className="block">of Kochi.</span>
           </h1>
 
-          {/* Paragraph description */}
-          <p className="mt-6 text-gray-600 text-sm md:text-base leading-relaxed" style={{ fontFamily: 'Istok Web', fontStyle: 'italic' }}>
+          {/* Paragraph description - responsive text sizing */}
+          <p 
+            className="mt-4 sm:mt-6 text-gray-600 text-xs xs:text-sm sm:text-sm md:text-base leading-relaxed text-center sm:text-left" 
+            style={{ fontFamily: 'Istok Web', fontStyle: 'italic' }}
+          >
             Covspace is a premier coworking and shared workspace provider based in Kochi, Kerala. We offer fully managed private offices, collaborative coworking spaces, meeting rooms, and virtual office services.
           </p>
 
-          {/* Quick Quote Button */}
-          <div className="mt-8">
-            <button className="flex items-center space-x-2 text-white font-bold py-3 px-6 rounded-md hover:bg-lime-600 transition-colors duration-300 shadow-md" style={{ backgroundColor: '#5AB834' }}>
+          {/* Quick Quote Button - mobile-optimized */}
+          <div className="mt-6 sm:mt-8 flex justify-center sm:justify-start">
+            <button 
+              className="flex items-center justify-center space-x-2 text-white font-bold py-3 px-4 sm:px-6 rounded-md hover:bg-lime-600 active:bg-lime-700 transition-colors duration-300 shadow-md min-h-[48px] min-w-[140px] text-sm sm:text-base touch-manipulation" 
+              style={{ backgroundColor: '#5AB834' }}
+              aria-label="Get a quick quote for our workspace services"
+            >
               <span>QUICK QUOTE</span>
               <QuoteIcon />
             </button>
@@ -51,6 +61,15 @@ const Hero= () => {
           
         </div>
 
+      </div>
+
+      {/* Mobile scroll indicator (optional) */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 sm:hidden">
+        <div className="animate-bounce">
+          <svg className="w-6 h-6 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m0 0l7-7"></path>
+          </svg>
+        </div>
       </div>
     </div>
   );
