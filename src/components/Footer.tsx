@@ -1,80 +1,92 @@
-import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import CovspaceLogo from "./ui/CovspaceLogo";
 
-export default function Footer() {
+const FacebookIcon = () => (
+  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
+  </svg>
+);
+
+const InstagramIcon = () => (
+  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.316 1.363.364 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.316-2.427.364-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.316-1.363-.364-2.427C2.013 14.987 2 14.643 2 12v-.08c0-2.643.012-2.987.06-4.043.049-1.064-.218-1.791-.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.316 2.427-.364C8.93 2.013 9.27 2 12 2h.315zM12 4.556c-1.803 0-2.09.008-2.824.042-1.136.052-1.626.248-1.846.333a2.47 2.47 0 00-.92.598 2.47 2.47 0 00-.598.92c-.085.22-.28.71-.333 1.846-.034.734-.042 1.02-.042 2.824v.19c0 1.803.008 2.09.042 2.824.052 1.136.248 1.626.333 1.846.126.33.317.598.598.92.28.28.59.472.92.598.22.085.71.28 1.846.333.734.034 1.02.042 2.824.042h.19c1.803 0 2.09-.008 2.824-.042 1.136-.052-1.626-.248-1.846-.333.33-.126.598-.317.92-.598.28-.28.472-.59.598-.92.085-.22.28.71.333-1.846.034-.734.042-1.02.042-2.824v-.19c0-1.803-.008-2.09-.042-2.824-.052-1.136-.248-1.626-.333-1.846a2.47 2.47 0 00-.598-.92 2.47 2.47 0 00-.92-.598c-.22-.085-.71-.28-1.846-.333C14.09 4.564 13.803 4.556 12 4.556h-.19zM12 8.242a3.758 3.758 0 100 7.516 3.758 3.758 0 000-7.516zM12 14a2 2 0 110-4 2 2 0 010 4z" clipRule="evenodd" />
+  </svg>
+);
+
+const TwitterIcon = () => (
+  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+  </svg>
+);
+
+const LinkedInIcon = () => (
+  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path fillRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clipRule="evenodd" />
+  </svg>
+);
+
+// --- Data Arrays for Links ---
+// Storing data this way makes the component easier to update.
+const footerLinks = [
+  { name: 'About', href: '#' },
+  { name: 'Blogs', href: '#' },
+  { name: 'Contact Us', href: '#' },
+  { name: 'Careers', href: '#' },
+];
+
+const socialLinks = [
+  { name: 'Facebook', href: '#', icon: FacebookIcon },
+  { name: 'Instagram', href: '#', icon: InstagramIcon },
+  { name: 'Twitter', href: '#', icon: TwitterIcon },
+  { name: 'LinkedIn', href: '#', icon: LinkedInIcon },
+];
+
+
+// --- Main Footer Component ---
+const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div>
-            <div className="bg-[#5ab834] text-white px-4 py-2 rounded-lg font-bold text-xl mb-6 inline-block">
-              Covospace
-            </div>
-            <p className="text-gray-300 leading-relaxed mb-6">
-              Premier coworking and shared workspace provider in Kochi, Kerala. 
-              Professional spaces designed for modern businesses.
-            </p>
-            <div className="flex space-x-4">
-              <Facebook className="h-6 w-6 text-gray-400 hover:text-[#5ab834] cursor-pointer transition-colors" />
-              <Twitter className="h-6 w-6 text-gray-400 hover:text-[#5ab834] cursor-pointer transition-colors" />
-              <Linkedin className="h-6 w-6 text-gray-400 hover:text-[#5ab834] cursor-pointer transition-colors" />
-              <Instagram className="h-6 w-6 text-gray-400 hover:text-[#5ab834] cursor-pointer transition-colors" />
-            </div>
-          </div>
+    <footer className="bg-black text-white font-sans rounded-t-3xl overflow-hidden min-h-[50px]">
+      <div className="flex">
+        
+        {/* First Column: Black spacer */}
+        <div className="w-1/6 bg-black"></div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-xl font-bold mb-6">Services</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-gray-300 hover:text-[#5ab834] transition-colors">Private Offices</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-[#5ab834] transition-colors">Dedicated Desks</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-[#5ab834] transition-colors">Meeting Rooms</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-[#5ab834] transition-colors">Virtual Offices</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-[#5ab834] transition-colors">Business Address</a></li>
-            </ul>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-xl font-bold mb-6">Quick Links</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-gray-300 hover:text-[#5ab834] transition-colors">About Us</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-[#5ab834] transition-colors">Location</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-[#5ab834] transition-colors">Our Clients</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-[#5ab834] transition-colors">Blog</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-[#5ab834] transition-colors">Contact</a></li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-xl font-bold mb-6">Contact Info</h3>
-            <div className="space-y-4">
-              <div className="flex items-start">
-                <MapPin className="h-5 w-5 text-[#5ab834] mr-3 mt-1 flex-shrink-0" />
-                <p className="text-gray-300">
-                  123 Business District,<br />
-                  Kochi, Kerala 682001
-                </p>
-              </div>
-              <div className="flex items-center">
-                <Phone className="h-5 w-5 text-[#5ab834] mr-3" />
-                <p className="text-gray-300">+91 9876543210</p>
-              </div>
-              <div className="flex items-center">
-                <Mail className="h-5 w-5 text-[#5ab834] mr-3" />
-                <p className="text-gray-300">hello@covospace.com</p>
-              </div>
-            </div>
+        {/* Middle Column: Green background with Logo */}
+        <div className="w-1/6 bg-lime-600 flex items-center justify-center p-4">
+          <div className="text-center">
+            <CovspaceLogo />
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p className="text-gray-400">
-            © 2024 Covospace. All rights reserved. | Privacy Policy | Terms of Service
-          </p>
+        {/* Right Column: Black background with links */}
+        <div className="w-1/2 flex flex-col p-4 sm:p-8">
+          
+          {/* Navigation Links */}
+          <nav>
+            <ul className="space-y-4">
+              {footerLinks.map((link) => (
+                <li key={link.name}>
+                  <a href={link.href} className="text-2xl hover:text-gray-300 transition-colors">
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Social Media Icons - Pushed to the bottom */}
+          <div className="mt-auto flex justify-end items-center gap-5">
+            {socialLinks.map((social) => (
+              <a key={social.name} href={social.href} className="text-white hover:text-gray-400 transition-colors">
+                <span className="sr-only">{social.name}</span>
+                <social.icon />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
+
