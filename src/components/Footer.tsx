@@ -44,28 +44,28 @@ const socialLinks = [
 // --- Main Footer Component ---
 const Footer = () => {
   return (
-    <footer className="bg-black text-white font-sans rounded-t-3xl overflow-hidden min-h-[50px]">
-      <div className="flex">
-        
-        {/* First Column: Black spacer */}
-        <div className="w-1/6 bg-black"></div>
-
-        {/* Middle Column: Green background with Logo */}
-        <div className="w-1/6 bg-lime-600 flex items-center justify-center p-4">
-          <div className="text-center">
-            <CovspaceLogo />
-          </div>
-        </div>
-
-        {/* Right Column: Black background with links */}
-        <div className="w-1/2 flex flex-col p-4 sm:p-8">
+    <footer className="bg-black text-white font-sans rounded-t-xl sm:rounded-t-2xl md:rounded-t-3xl overflow-hidden">
+      
+      {/* Mobile Layout (320px - 768px) */}
+      <div className="block md:hidden">
+        <div className="px-4 py-6 sm:px-6 sm:py-8">
           
-          {/* Navigation Links */}
-          <nav>
-            <ul className="space-y-4">
+          {/* Logo Section - Mobile */}
+          <div className="bg-lime-600 rounded-lg p-4 sm:p-6 mb-6 sm:mb-8 flex items-center justify-center">
+            <div className="scale-75 sm:scale-90">
+              <CovspaceLogo />
+            </div>
+          </div>
+
+          {/* Navigation Links - Mobile */}
+          <nav className="mb-6 sm:mb-8">
+            <ul className="grid grid-cols-2 gap-3 sm:gap-4">
               {footerLinks.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-2xl hover:text-gray-300 transition-colors">
+                  <a 
+                    href={link.href} 
+                    className="flex items-center justify-center text-center text-base sm:text-lg font-medium hover:text-lime-400 transition-colors py-3 px-4 min-h-[44px] bg-gray-900 hover:bg-gray-800 rounded-lg touch-manipulation"
+                  >
                     {link.name}
                   </a>
                 </li>
@@ -73,12 +73,68 @@ const Footer = () => {
             </ul>
           </nav>
 
-          {/* Social Media Icons - Pushed to the bottom */}
-          <div className="mt-auto flex justify-end items-center gap-5">
+          {/* Social Media Icons - Mobile */}
+          <div className="flex justify-center items-center gap-4 sm:gap-6">
             {socialLinks.map((social) => (
-              <a key={social.name} href={social.href} className="text-white hover:text-gray-400 transition-colors">
+              <a 
+                key={social.name} 
+                href={social.href} 
+                className="text-white hover:text-lime-400 transition-colors p-3 min-h-[44px] min-w-[44px] flex items-center justify-center bg-gray-900 hover:bg-gray-800 rounded-lg touch-manipulation"
+              >
                 <span className="sr-only">{social.name}</span>
-                <social.icon />
+                <div className="w-6 h-6 sm:w-7 sm:h-7">
+                  <social.icon />
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Layout (768px+) */}
+      <div className="hidden md:flex">
+        
+        {/* First Column: Black spacer */}
+        <div className="w-1/6 bg-black"></div>
+
+        {/* Middle Column: Green background with Logo */}
+        <div className="w-1/6 bg-lime-600 flex items-center justify-center p-4 lg:p-6">
+          <div className="text-center scale-90 lg:scale-100">
+            <CovspaceLogo />
+          </div>
+        </div>
+
+        {/* Right Column: Black background with links */}
+        <div className="w-1/2 flex flex-col p-6 lg:p-8 xl:p-10">
+          
+          {/* Navigation Links - Desktop */}
+          <nav>
+            <ul className="space-y-3 lg:space-y-4">
+              {footerLinks.map((link) => (
+                <li key={link.name}>
+                  <a 
+                    href={link.href} 
+                    className="text-xl lg:text-2xl xl:text-3xl hover:text-lime-400 transition-all duration-300 block py-2 hover:translate-x-2 transform"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Social Media Icons - Desktop */}
+          <div className="mt-auto flex justify-end items-center gap-4 lg:gap-5 xl:gap-6">
+            {socialLinks.map((social) => (
+              <a 
+                key={social.name} 
+                href={social.href} 
+                className="text-white hover:text-lime-400 transition-all duration-300 p-2 hover:scale-110 transform"
+              >
+                <span className="sr-only">{social.name}</span>
+                <div className="w-6 h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8">
+                  <social.icon />
+                </div>
               </a>
             ))}
           </div>
