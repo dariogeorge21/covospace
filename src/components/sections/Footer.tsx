@@ -1,4 +1,4 @@
-import CovspaceLogo from "./ui/CovspaceLogo";
+import CovspaceLogo from "../ui/CovspaceLogo";
 
 const FacebookIcon = () => (
   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

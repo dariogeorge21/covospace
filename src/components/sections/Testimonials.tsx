@@ -1,5 +1,5 @@
-import TestimonialCardBackground from "./ui/TestimonalBackground";
-import QuoteIcon from "./ui/QuoteIcon";
+import TestimonialCardBackground from "../ui/TestimonalBackground";
+import QuoteIcon from "../ui/QuoteIcon";
 
 const testimonialsData = [
   {

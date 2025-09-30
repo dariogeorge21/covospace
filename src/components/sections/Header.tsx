@@ -1,7 +1,7 @@
 // To keep the JSX clean, the complex logo is created as a separate component.
 // This is a recreation of the logo from the image as an SVG.
 import { useState } from 'react';
-import CovspaceLogo from "./ui/CovspaceLogo";
+import CovspaceLogo from "../ui/CovspaceLogo";
 import { Link } from 'react-router-dom';
 
 

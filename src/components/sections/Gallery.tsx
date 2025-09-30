@@ -1,12 +1,14 @@
-const Image = () => (
-  <div className="w-full h-full mx-auto max-w-4xl">
-    <img 
-      src="https://res.cloudinary.com/dobqxxtml/image/upload/v1759127262/gallery_frame_dernd4.png" 
-      alt="gallery" 
-      className="w-full h-auto object-contain rounded-lg sm:rounded-xl shadow-lg" 
-    />
-  </div>
-)
+import LeftClipped from "../leftClipped";
+import RightClipped from "../rightClipped";
+// const Image = () => (
+//   <div className="w-full h-full mx-auto max-w-4xl">
+//     <img 
+//       src="https://res.cloudinary.com/dobqxxtml/image/upload/v1759127262/gallery_frame_dernd4.png" 
+//       alt="gallery" 
+//       className="w-full h-auto object-contain rounded-lg sm:rounded-xl shadow-lg" 
+//     />
+//   </div>
+// )
 
 // Reusable SVG icon for the arrow link
 const ArrowIcon = () => (
@@ -52,16 +54,49 @@ const Gallery = () => {
         </div>
 
         {/* Image Section - Responsive */}
-        <div className="mb-8 sm:mb-12 md:mb-16">
-          <Image />
+        <div className="mb-8 sm:mb-12 md:mb-16 flex gap-4 items-end justify-center">
+          {/* <Image /> */}
+          <div className="flex flex-col gap-4">
+              <LeftClipped className="h-[300px] w-[250px] rounded-xl overflow-clip">
+              <img  className="h-full w-full object-cover"  src="/gallery/l2.jpg" />
+            </LeftClipped>
+            <div className="rounded-xl overflow-clip h-[150px] w-[250px]">
+              <img  className="h-full w-full object-cover"  src="/gallery/l2.jpg" />
+            </div>
+          </div>
+          
+          <LeftClipped className="h-[300px] w-[250px] ">
+            <img  className="h-full w-full object-cover"  src="/gallery/l2.jpg" />
+          </LeftClipped>
+          <div>
+          <div className="w-[250px] h-[300px] rounded-xl overflow-clip bg-red-400">
+            <img  className=" w-full object-cover"  src="/gallery/l2.jpg" />
+          </div>
+                      {/* Connect Us Button - Mobile Optimized */}
+            <div className="flex justify-center m-2">
+              <button className="bg-lime-500 hover:bg-lime-600 active:bg-lime-700 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-2xl text-md sm:text-base transition-colors duration-300 shadow-lg hover:shadow-xl min-h-[48px] w-full touch-manipulation">
+                CONNECT US
+              </button>
+            </div>
+          </div>
+          
+          <RightClipped className="h-[300px] w-[250px] rounded-[40px]">
+            <img  className="h-full w-full object-cover"  src="/gallery/l2.jpg" />
+          </RightClipped>
+          <div className="flex flex-col gap-2">
+              <RightClipped className="h-[300px] w-[250px] rounded-[40px]">
+              <img  className="h-full w-full object-cover"  src="/gallery/l2.jpg" />
+            </RightClipped>
+            {/* <RightClipped className="h-[150px] w-[250px] rounded-[40px]"> */}
+            <div className="rounded-xl overflow-clip h-[150px] w-[250px]">
+              <img  className="h-full w-full object-cover"  src="/gallery/l2.jpg" />
+
+            </div>
+            {/* </RightClipped> */}
+          </div>
         </div>
 
-        {/* Connect Us Button - Mobile Optimized */}
-        <div className="flex justify-center mb-8 sm:mb-12 md:mb-16">
-          <button className="bg-lime-500 hover:bg-lime-600 active:bg-lime-700 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-lg text-sm sm:text-base transition-colors duration-300 shadow-lg hover:shadow-xl min-h-[48px] touch-manipulation">
-            CONNECT US
-          </button>
-        </div>
+        
 
         {/* Bottom Section - Responsive Layout */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 sm:gap-8 lg:gap-12">
