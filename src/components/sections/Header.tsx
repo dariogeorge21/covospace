@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileWorkspacesOpen, setIsMobileWorkspacesOpen] = useState(false);
-
+  const [isWorkspacesOpen, setIsWorkspacesOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -58,17 +58,17 @@ const Header = () => {
               <div className="flex items-center space-x-3 xl:space-x-4">
                 {/* Workspaces Dropdown */}
                 <div className="relative group">
-                  <button className="flex items-center space-x-2 border border-gray-400 rounded-md px-4 xl:px-5 py-2.5 text-[12px] xl:text-[13px] font-bold hover:bg-gray-50 transition-colors">
+                  <button className="flex items-center space-x-2 border border-gray-400 rounded-md px-4 xl:px-5 py-2.5 text-[12px] xl:text-[13px] font-bold hover:bg-gray-50 transition-colors" onClick={() => setIsWorkspacesOpen(v => !v)}>
                     <span>WORKSPACES</span>
-                    <svg className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg className={`w-4 h-4 transition-transform duration-200 ${isWorkspacesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                   </button>
                   {/* Dropdown menu */}
-                  <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity duration-200 absolute left-0 mt-2 w-56 bg-white border border-gray-200 rounded-md shadow-lg py-2 z-50">
-                    <Link to="/private-offices" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Private Offices</Link>
-                    <Link to="/dedicated-desk" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Dedicated Desk</Link>
-                    <Link to="/flexi-desk" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Flexi Desk</Link>
-                    <Link to="/virtual-offices" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Virtual Offices</Link>
-                    <Link to="/meeting-rooms" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Meeting Rooms</Link>
+                  <div className={` opacity-0   transition-opacity duration-500  absolute left-0 mt-2 w-56 bg-white border border-gray-200 rounded-md shadow-lg py-2 z-50 ${isWorkspacesOpen ? 'visible opacity-100' : 'invisible'}`}>
+                    <Link to="/private-offices" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" onClick={()=>{setIsWorkspacesOpen(false)}}>Private Offices</Link>
+                    <Link to="/dedicated-desk" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" onClick={()=>{setIsWorkspacesOpen(false)}}>Dedicated Desk</Link>
+                    <Link to="/flexi-desk" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" onClick={()=>{setIsWorkspacesOpen(false)}}>Flexi Desk</Link>
+                    <Link to="/virtual-offices" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" onClick={()=>{setIsWorkspacesOpen(false)}}>Virtual Offices</Link>
+                    <Link to="/meeting-rooms" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" onClick={()=>{setIsWorkspacesOpen(false)}}>Meeting Rooms</Link>
                   </div>
                 </div>
 

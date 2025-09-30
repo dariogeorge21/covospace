@@ -58,19 +58,19 @@ const Gallery = () => {
           {/* <Image /> */}
           <div className="flex flex-col gap-4">
               <LeftClipped className="h-[300px] w-[250px] rounded-xl overflow-clip">
-              <img  className="h-full w-full object-cover"  src="/gallery/l1.jpg" />
+              <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/l1.jpg"  />
             </LeftClipped>
             <div className="rounded-xl overflow-clip h-[150px] w-[250px]">
-              <img  className="h-full w-full object-cover"  src="/gallery/l3.jpg" />
+              <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/l3.jpg" />
             </div>
           </div>
           
           <LeftClipped className="h-[300px] w-[250px] rounded-xl overflow-clip ">
-            <img  className="h-full w-full object-cover"  src="/gallery/l2.jpg" />
+            <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/l2.jpg" />
           </LeftClipped>
           <div>
           <div className="w-[250px] h-[300px] rounded-xl overflow-clip bg-red-400">
-            <img  className=" w-full object-cover"  src="/gallery/m.jpg" />
+            <img  className=" w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/m.jpg" />
           </div>
                       {/* Connect Us Button - Mobile Optimized */}
             <div className="flex justify-center m-2">
@@ -81,15 +81,15 @@ const Gallery = () => {
           </div>
           
           <RightClipped className="h-[300px] w-[250px]  rounded-xl overflow-clip">
-            <img  className="h-full w-full object-cover"  src="/gallery/r1.jpg" />
+            <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/r1.jpg" />
           </RightClipped>
           <div className="flex flex-col gap-2">
               <RightClipped className="h-[300px] w-[250px]  rounded-xl overflow-clip">
-              <img  className="h-full w-full object-cover"  src="/gallery/r2.jpg" />
+              <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/r2.jpg" />
             </RightClipped>
             {/* <RightClipped className="h-[150px] w-[250px] rounded-[40px]"> */}
             <div className="rounded-xl overflow-clip h-[150px] w-[250px]">
-              <img  className="h-full w-full object-cover"  src="/gallery/r3.jpg" />
+              <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/r3.jpg" />
 
             </div>
             {/* </RightClipped> */}
