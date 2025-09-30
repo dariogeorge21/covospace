@@ -46,7 +46,7 @@ const Gallery = () => {
         
         {/* Title Section - Mobile Responsive */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
             <span className="block sm:inline">Bold Workspaces</span>
             <span className="block sm:inline"> Built To</span>
             <span className="block sm:inline"> Inspire You.</span>
@@ -65,7 +65,7 @@ const Gallery = () => {
             </div>
           </div>
           
-          <LeftClipped className="h-[300px] w-[250px] ">
+          <LeftClipped className="h-[300px] w-[250px] rounded-xl overflow-clip ">
             <img  className="h-full w-full object-cover"  src="/gallery/l2.jpg" />
           </LeftClipped>
           <div>
@@ -80,11 +80,11 @@ const Gallery = () => {
             </div>
           </div>
           
-          <RightClipped className="h-[300px] w-[250px] rounded-[40px]">
+          <RightClipped className="h-[300px] w-[250px] rounded-[40px] rounded-xl overflow-clip">
             <img  className="h-full w-full object-cover"  src="/gallery/l2.jpg" />
           </RightClipped>
           <div className="flex flex-col gap-2">
-              <RightClipped className="h-[300px] w-[250px] rounded-[40px]">
+              <RightClipped className="h-[300px] w-[250px] rounded-[40px] rounded-xl overflow-clip">
               <img  className="h-full w-full object-cover"  src="/gallery/l2.jpg" />
             </RightClipped>
             {/* <RightClipped className="h-[150px] w-[250px] rounded-[40px]"> */}
