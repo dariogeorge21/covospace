@@ -120,37 +120,50 @@ export default function Location() {
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="text-center">
-          <div className="flex justify-center mb-6">
-            <LocationIcon />
-          </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Our <span className="text-lime-600">Location</span>
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
-            Strategically positioned in the center of Kochi, Kerala, our workspace puts you at the heart of 
-            the state's business district with unparalleled accessibility and professional environment.
-          </p>
-          <div className="bg-gray-50 rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto">
-            <div className="flex items-center justify-center mb-4">
-              <LocationIcon />
+      <section 
+        className="relative py-12 sm:py-16 lg:py-20"
+        style={{
+          backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1759946953/DJI_0010_uy3uvp.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40" aria-hidden="true"></div>
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-white/20 backdrop-blur-sm rounded-full">
+                <LocationIcon />
+              </div>
             </div>
-            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Covspace Kochi</h2>
-            <p className="text-gray-600 text-lg mb-4">Center of Kochi, Kerala, India</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="inline-flex items-center justify-center bg-lime-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-lime-700 transition-colors duration-300"
-              >
-                Get Directions
-              </Link>
-              <Link 
-                to="/contact" 
-                className="inline-flex items-center justify-center border-2 border-lime-600 text-lime-600 font-semibold py-3 px-6 rounded-lg hover:bg-lime-50 transition-colors duration-300"
-              >
-                Schedule Visit
-              </Link>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Our <span className="text-lime-400">Location</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
+              Strategically positioned in the center of Kochi, Kerala, our workspace puts you at the heart of 
+              the state's business district with unparalleled accessibility and professional environment.
+            </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto">
+              <div className="flex items-center justify-center mb-4">
+                <LocationIcon />
+              </div>
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Covspace Kochi</h2>
+              <p className="text-white/90 text-lg mb-4">Center of Kochi, Kerala, India</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/contact" 
+                  className="inline-flex items-center justify-center bg-lime-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-lime-700 transition-colors duration-300"
+                >
+                  Get Directions
+                </Link>
+                <Link 
+                  to="/contact" 
+                  className="inline-flex items-center justify-center border-2 border-white text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors duration-300"
+                >
+                  Schedule Visit
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -182,13 +195,22 @@ export default function Location() {
       </section>
 
       {/* Transportation & Accessibility */}
-      <section className="py-12 sm:py-16 lg:py-20">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="relative py-12 sm:py-16 lg:py-20"
+        style={{
+          backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1759947548/DSCN0759_eaza4f.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60" aria-hidden="true"></div>
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
               Easy to Reach
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-white/90 max-w-2xl mx-auto">
               Our central location ensures convenient access through multiple transportation options, 
               making it easy for you and your clients to reach us.
             </p>
@@ -208,33 +230,53 @@ export default function Location() {
         </div>
       </section>
 
-      {/* Interactive Map Section */}
+      {/* Interactive Map Section with Interior Showcase */}
       <section className="bg-gray-50 py-12 sm:py-16 lg:py-20">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-              Find Us on the Map
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Located in the heart of Kochi's business district, our workspace is easily accessible 
-              and surrounded by all the amenities you need.
-            </p>
-          </div>
-          
-          {/* Map Placeholder */}
-          <div className="bg-white rounded-2xl shadow-sm p-6 mb-8">
-            <div className="bg-gray-100 rounded-xl h-64 sm:h-80 lg:h-96 flex items-center justify-center">
-              <div className="text-center">
-                <LocationIcon />
-                <p className="text-gray-600 mt-4 font-medium">Interactive Map</p>
-                <p className="text-sm text-gray-500 mt-2">Center of Kochi, Kerala, India</p>
-                <div className="mt-4">
-                  <Link 
-                    to="/contact"
-                    className="inline-flex items-center bg-lime-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-lime-700 transition-colors duration-300"
-                  >
-                    Get Detailed Directions
-                  </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12">
+            {/* Map Section */}
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                Find Us on the Map
+              </h2>
+              <p className="text-gray-600 mb-6">
+                Located in the heart of Kochi's business district, our workspace is easily accessible 
+                and surrounded by all the amenities you need.
+              </p>
+              
+              <div className="bg-white rounded-2xl shadow-sm p-6">
+                <div className="bg-gray-100 rounded-xl h-64 sm:h-80 flex items-center justify-center">
+                  <div className="text-center">
+                    <LocationIcon />
+                    <p className="text-gray-600 mt-4 font-medium">Interactive Map</p>
+                    <p className="text-sm text-gray-500 mt-2">Center of Kochi, Kerala, India</p>
+                    <div className="mt-4">
+                      <Link 
+                        to="/contact"
+                        className="inline-flex items-center bg-lime-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-lime-700 transition-colors duration-300"
+                      >
+                        Get Detailed Directions
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Interior Showcase */}
+            <div className="relative">
+              <div 
+                className="rounded-2xl overflow-hidden shadow-lg h-64 sm:h-80 lg:h-96 bg-cover bg-center relative group cursor-pointer"
+                style={{
+                  backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1759947739/DSCN0683_dlbtql.jpg)'
+                }}
+              >
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Comfortable Workspace</h3>
+                    <p className="text-sm text-gray-600">Modern interiors designed for productivity and collaboration</p>
+                  </div>
                 </div>
               </div>
             </div>
