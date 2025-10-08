@@ -9,7 +9,7 @@ const QuoteIcon = () => (
 
 const Hero= () => {
   // NOTE: Replace this with the actual URL or path to your hero image.
-  const heroImageUrl = 'https://res.cloudinary.com/dobqxxtml/image/upload/v1759083000/b16da8c5-83c7-49aa-a157-725f02ca5753.png';
+  const heroImageUrl = 'https://res.cloudinary.com/dobqxxtml/image/upload/v1759943792/modern-office-space-with-desktops-with-modern-computers-created-with-generative-ai-technology_zzxldy.jpg';
 
   return (
     <div 
