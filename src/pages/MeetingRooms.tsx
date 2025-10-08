@@ -153,31 +153,44 @@ export default function MeetingRooms() {
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="text-center">
-          <div className="flex justify-center mb-6">
-            <MeetingIcon />
-          </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Premium <span className="text-lime-600">Meeting Rooms</span>
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
-            Impress your clients and collaborate effectively in our state-of-the-art meeting rooms. 
-            From intimate 4-seater huddle rooms to executive boardrooms, we have the perfect space for every occasion.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center justify-center bg-lime-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-lime-700 transition-colors duration-300"
-            >
-              Book a Room
-            </Link>
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center justify-center border-2 border-lime-600 text-lime-600 font-semibold py-3 px-8 rounded-lg hover:bg-lime-50 transition-colors duration-300"
-            >
-              View Availability
-            </Link>
+      <section 
+        className="relative py-12 sm:py-16 lg:py-20"
+        style={{
+          backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1759944074/IMG_6143_w63elj.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-white/20 backdrop-blur-sm rounded-full">
+                <MeetingIcon />
+              </div>
+            </div>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Premium <span className="text-lime-400">Meeting Rooms</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
+              Impress your clients and collaborate effectively in our state-of-the-art meeting rooms. 
+              From intimate 4-seater huddle rooms to executive boardrooms, we have the perfect space for every occasion.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center justify-center bg-lime-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-lime-700 transition-colors duration-300"
+              >
+                Book a Room
+              </Link>
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center justify-center border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white/10 transition-colors duration-300"
+              >
+                View Availability
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -197,11 +210,11 @@ export default function MeetingRooms() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
-                <div className="mb-4">
+              <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-lime-200 transition-all duration-300 group">
+                <div className="mb-4 p-2 bg-lime-50 rounded-lg group-hover:bg-lime-100 transition-colors duration-300 w-fit">
                   <feature.icon />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-lime-700 transition-colors duration-300">{feature.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
               </div>
             ))}
@@ -210,13 +223,22 @@ export default function MeetingRooms() {
       </section>
 
       {/* Room Types & Pricing */}
-      <section className="py-12 sm:py-16 lg:py-20">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="relative py-12 sm:py-16 lg:py-20"
+        style={{
+          backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1759948504/empty-business-meeting-conference-room-with-graphs-diagrams-tv-background_x8qtf5.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60" aria-hidden="true"></div>
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
               Meeting Room Options
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-white/90 max-w-2xl mx-auto">
               Choose from our range of professionally designed meeting spaces, each equipped with 
               premium technology and tailored for different group sizes and meeting types.
             </p>
@@ -285,10 +307,10 @@ export default function MeetingRooms() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {bookingOptions.map((option, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{option.title}</h3>
+              <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-lime-200 transition-all duration-300 group">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-lime-700 transition-colors duration-300">{option.title}</h3>
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed">{option.description}</p>
-                <div className="text-2xl font-bold text-lime-600 mb-4">{option.price}</div>
+                <div className="text-2xl font-bold text-lime-600 mb-4 group-hover:text-lime-700 transition-colors duration-300">{option.price}</div>
                 <ul className="space-y-2">
                   {option.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
@@ -306,8 +328,8 @@ export default function MeetingRooms() {
       {/* Amenities & CTA Section */}
       <section className="py-12 sm:py-16 lg:py-20">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
+            <div className="lg:col-span-2">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
                 Complete Meeting Experience
               </h2>
@@ -316,55 +338,73 @@ export default function MeetingRooms() {
                 ensuring your meetings are productive and your guests are impressed.
               </p>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 {amenities.map((amenity, index) => (
-                  <div key={index} className="flex items-start">
+                  <div key={index} className="flex items-start hover:bg-gray-50 p-2 rounded-lg transition-colors duration-200">
                     <CheckIcon />
                     <span className="ml-3 text-gray-700 text-sm">{amenity}</span>
                   </div>
                 ))}
               </div>
-            </div>
 
-            <div className="bg-lime-600 rounded-2xl p-6 sm:p-8 text-white">
-              <h3 className="text-xl sm:text-2xl font-bold mb-4">Ready to Book?</h3>
-              <p className="text-lime-100 mb-6">
-                Reserve your meeting room today and experience the difference premium facilities make. 
-                Our team is ready to help you plan the perfect meeting or event.
-              </p>
-              
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center text-sm">
-                  <ClockIcon />
-                  <span className="ml-3">Available 7 days a week</span>
+              <div className="bg-lime-600 rounded-2xl p-6 sm:p-8 text-white">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4">Ready to Book?</h3>
+                <p className="text-lime-100 mb-6">
+                  Reserve your meeting room today and experience the difference premium facilities make. 
+                  Our team is ready to help you plan the perfect meeting or event.
+                </p>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm">
+                    <ClockIcon />
+                    <span className="ml-3">Available 7 days a week</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <VideoIcon />
+                    <span className="ml-3">Advanced A/V technology included</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <CateringIcon />
+                    <span className="ml-3">Catering services available</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <ShieldIcon />
+                    <span className="ml-3">Private and secure environment</span>
+                  </div>
                 </div>
-                <div className="flex items-center text-sm">
-                  <VideoIcon />
-                  <span className="ml-3">Advanced A/V technology included</span>
-                </div>
-                <div className="flex items-center text-sm">
-                  <CateringIcon />
-                  <span className="ml-3">Catering services available</span>
-                </div>
-                <div className="flex items-center text-sm">
-                  <ShieldIcon />
-                  <span className="ml-3">Private and secure environment</span>
+
+                <div className="space-y-3">
+                  <Link 
+                    to="/contact"
+                    className="block w-full bg-white text-lime-600 text-center font-semibold py-3 px-6 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                  >
+                    Book Meeting Room
+                  </Link>
+                  <Link 
+                    to="/contact"
+                    className="block w-full border-2 border-white text-white text-center font-semibold py-3 px-6 rounded-lg hover:bg-lime-700 transition-colors duration-300"
+                  >
+                    Check Availability
+                  </Link>
                 </div>
               </div>
+            </div>
 
-              <div className="space-y-3">
-                <Link 
-                  to="/contact"
-                  className="block w-full bg-white text-lime-600 text-center font-semibold py-3 px-6 rounded-lg hover:bg-gray-50 transition-colors duration-300"
-                >
-                  Book Meeting Room
-                </Link>
-                <Link 
-                  to="/contact"
-                  className="block w-full border-2 border-white text-white text-center font-semibold py-3 px-6 rounded-lg hover:bg-lime-700 transition-colors duration-300"
-                >
-                  Check Availability
-                </Link>
+            {/* Interactive Meeting Room Showcase */}
+            <div className="relative">
+              <div 
+                className="rounded-2xl overflow-hidden shadow-xl h-80 lg:h-96 bg-cover bg-center relative group cursor-pointer"
+                style={{
+                  backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1759948586/IMG_2935_xsa1h4.jpg)'
+                }}
+              >
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 transform group-hover:scale-105 transition-transform duration-300">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Executive Boardroom</h3>
+                    <p className="text-sm text-gray-600">Premium meeting space with advanced presentation technology</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
