@@ -30,8 +30,15 @@ export default function About() {
 	return (
 		<main className="bg-white">
 			{/* Hero Section */}
-			<section className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-				<div className="text-center">
+			<section 
+				className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 relative"
+				style={{
+					// removed placeholder image to avoid broken/placeholder asset
+				}}
+			>
+				{/* subtle gradient overlay for visual interest and contrast */}
+				<div className="absolute inset-0 bg-gradient-to-b from-lime-50/40 to-white pointer-events-none" aria-hidden="true"></div>
+				<div className="relative text-center">
 					<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
 						About <span className="text-lime-600">Covspace</span>
 					</h1>
@@ -43,19 +50,29 @@ export default function About() {
 			</section>
 
 			{/* Mission Section */}
-			<section className="bg-gray-50 py-12 sm:py-16 lg:py-20">
-				<div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+			<section 
+				className="relative py-12 sm:py-16 lg:py-20"
+				style={{
+					backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1759945551/guy-shows-document-girl-group-young-freelancers-office-have-conversation-working_ftvh2b.jpg)',
+					backgroundSize: 'cover',
+					backgroundPosition: 'center',
+					backgroundRepeat: 'no-repeat'
+				}}
+			>
+				{/* dark overlay to improve contrast with white text */}
+				<div className="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+				<div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 						<div>
-							<h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+							<h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6">
 								Our Mission
 							</h2>
-							<p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
+							<p className="text-base sm:text-lg text-white/90 mb-6 leading-relaxed">
 								We believe that the workspace you choose can make or break your productivity. That's why we've created 
 								bold workspaces built to inspire you, fostering an environment where innovation thrives and 
 								professional connections flourish.
 							</p>
-							<p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+							<p className="text-base sm:text-lg text-white/90 leading-relaxed">
 								Our mission is to provide flexible, fully managed workspace solutions that adapt to your business needs, 
 								whether you're a startup, established company, or independent professional looking for a collaborative environment.
 							</p>
@@ -90,8 +107,18 @@ export default function About() {
 			</section>
 
 			{/* Services Overview */}
-			<section className="py-12 sm:py-16 lg:py-20">
-				<div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+			<section 
+				className="py-12 sm:py-16 lg:py-20 relative"
+				style={{
+					backgroundImage: 'url(https://res.clouinary.com/dobqxxtml/image/upload/v1759945668/group-business-executives-working-together_m0lxs8.jpg)',
+					backgroundSize: 'cover',
+					backgroundPosition: 'center',
+					backgroundRepeat: 'no-repeat'
+				}}
+			>
+				{/* light overlay so white cards remain legible */}
+				<div className="absolute inset-0 bg-black/10" aria-hidden="true"></div>
+				<div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 					<div className="text-center mb-12">
 						<h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
 							Our Workspace Solutions
@@ -155,29 +182,38 @@ export default function About() {
 			</section>
 
 			{/* Location & Contact */}
-			<section className="bg-gray-50 py-12 sm:py-16 lg:py-20">
-				<div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+			<section 
+				className="relative py-12 sm:py-16 lg:py-20"
+				style={{
+					backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1759946073/new_litted_g4kces.jpg)',
+					backgroundSize: 'cover',
+					backgroundPosition: 'center',
+					backgroundRepeat: 'no-repeat'
+				}}
+			>
+				<div className="absolute inset-0 bg-black/40" aria-hidden="true"></div>
+				<div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
 						<div>
 							<div className="flex items-center mb-6">
 								<LocationIcon />
-								<h2 className="text-2xl sm:text-3xl font-bold text-gray-900 ml-3">
+								<h2 className="text-2xl sm:text-3xl font-bold text-white ml-3">
 									Located in Kochi, Kerala
 								</h2>
 							</div>
-							<p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
+							<p className="text-base sm:text-lg text-white/90 mb-6 leading-relaxed">
 								Strategically positioned in the center of Kochi, Covspace offers easy accessibility and puts you 
 								at the heart of Kerala's business district. Our location provides the perfect blend of urban 
 								convenience and professional atmosphere.
 							</p>
 							<div className="space-y-4">
 								<div className="flex items-start">
-									<span className="text-lime-600 font-semibold text-sm uppercase tracking-wide w-20 flex-shrink-0">Address:</span>
-									<span className="text-gray-600">Center of Kochi, Kerala, India</span>
+									<span className="text-lime-200 font-semibold text-sm uppercase tracking-wide w-20 flex-shrink-0">Address:</span>
+									<span className="text-white/90">Center of Kochi, Kerala, India</span>
 								</div>
 								<div className="flex items-start">
-									<span className="text-lime-600 font-semibold text-sm uppercase tracking-wide w-20 flex-shrink-0">Features:</span>
-									<span className="text-gray-600">30+ Private Offices, 65+ Workstations, Premium Meeting Rooms</span>
+									<span className="text-lime-200 font-semibold text-sm uppercase tracking-wide w-20 flex-shrink-0">Features:</span>
+									<span className="text-white/90">30+ Private Offices, 65+ Workstations, Premium Meeting Rooms</span>
 								</div>
 							</div>
 						</div>
@@ -207,7 +243,12 @@ export default function About() {
 			</section>
 
 			{/* Bottom Navigation */}
-			<section className="py-8 sm:py-12">
+			<section 
+				className="py-8 sm:py-12"
+				style={{
+					// removed placeholder background for footer to avoid broken asset and keep footer clean
+				}}
+			>
 				<div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 					<Link 
 						to="/" 
@@ -222,4 +263,4 @@ export default function About() {
 			</section>
 		</main>
 	);
-} 
+}
