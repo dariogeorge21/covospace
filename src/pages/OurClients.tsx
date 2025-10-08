@@ -148,26 +148,39 @@ export default function OurClients() {
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="text-center">
-          <div className="flex justify-center mb-6">
-            <ClientsIcon />
-          </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Our <span className="text-lime-600">Clients</span>
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
-            From innovative startups to established enterprises, we're proud to serve a diverse community of 
-            professionals who call Covspace their workspace home in the heart of Kochi, Kerala.
-          </p>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-4xl mx-auto">
-            {successMetrics.map((metric, index) => (
-              <div key={index} className="text-center">
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-lime-600 mb-2">{metric.number}</div>
-                <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-1">{metric.label}</h3>
-                <p className="text-xs sm:text-sm text-gray-600">{metric.description}</p>
+      <section 
+        className="relative py-12 sm:py-16 lg:py-20"
+        style={{
+          backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1759945551/guy-shows-document-girl-group-young-freelancers-office-have-conversation-working_ftvh2b.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-white/20 backdrop-blur-sm rounded-full">
+                <ClientsIcon />
               </div>
-            ))}
+            </div>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Our <span className="text-lime-400">Clients</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-12">
+              From innovative startups to established enterprises, we're proud to serve a diverse community of 
+              professionals who call Covspace their workspace home in the heart of Kochi, Kerala.
+            </p>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-4xl mx-auto">
+              {successMetrics.map((metric, index) => (
+                <div key={index} className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-colors duration-300">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-lime-400 mb-2">{metric.number}</div>
+                  <h3 className="text-sm sm:text-base font-semibold text-white mb-1">{metric.label}</h3>
+                  <p className="text-xs sm:text-sm text-white/80">{metric.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -187,20 +200,20 @@ export default function OurClients() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             {clientCategories.map((category, index) => (
-              <div key={index} className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
+              <div key={index} className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-lime-200 transition-all duration-300 group">
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
+                  <div className="flex-shrink-0 p-2 bg-lime-50 rounded-lg group-hover:bg-lime-100 transition-colors duration-300">
                     <category.icon />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-3">
-                      <h3 className="text-xl font-semibold text-gray-900">{category.title}</h3>
-                      <span className="bg-lime-100 text-lime-800 text-sm font-medium px-3 py-1 rounded-full">{category.count}</span>
+                      <h3 className="text-xl font-semibold text-gray-900 group-hover:text-lime-700 transition-colors duration-300">{category.title}</h3>
+                      <span className="bg-lime-100 text-lime-800 text-sm font-medium px-3 py-1 rounded-full group-hover:bg-lime-600 group-hover:text-white transition-colors duration-300">{category.count}</span>
                     </div>
                     <p className="text-gray-600 mb-4 text-sm leading-relaxed">{category.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {category.services.map((service, serviceIndex) => (
-                        <span key={serviceIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-md">
+                        <span key={serviceIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-md hover:bg-lime-100 hover:text-lime-800 transition-colors duration-200">
                           {service}
                         </span>
                       ))}
@@ -214,20 +227,29 @@ export default function OurClients() {
       </section>
 
       {/* Client Testimonials */}
-      <section className="py-12 sm:py-16 lg:py-20">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="relative py-12 sm:py-16 lg:py-20"
+        style={{
+          backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1759948234/group-young-business-people-working-office_ajzmno.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/70" aria-hidden="true"></div>
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-white/90 max-w-2xl mx-auto">
               Hear from the businesses and professionals who have made Covspace their workspace of choice.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100">
+              <div key={index} className="bg-white/95 backdrop-blur-sm p-6 sm:p-8 rounded-xl shadow-lg border border-white/20 hover:bg-white transition-colors duration-300">
                 <div className="mb-4">
                   <QuoteIcon />
                 </div>
@@ -279,8 +301,8 @@ export default function OurClients() {
       {/* Why Clients Choose Us */}
       <section className="py-12 sm:py-16 lg:py-20">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
+            <div className="lg:col-span-2">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
                 Why Businesses Choose Covspace
               </h2>
@@ -289,55 +311,73 @@ export default function OurClients() {
                 We provide an ecosystem that supports business growth, professional networking, and operational efficiency.
               </p>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start">
+                  <div key={index} className="flex items-start hover:bg-gray-50 p-2 rounded-lg transition-colors duration-200">
                     <CheckIcon />
                     <span className="ml-3 text-gray-700 text-sm">{benefit}</span>
                   </div>
                 ))}
               </div>
-            </div>
 
-            <div className="bg-lime-600 rounded-2xl p-6 sm:p-8 text-white">
-              <h3 className="text-xl sm:text-2xl font-bold mb-4">Join Our Community</h3>
-              <p className="text-lime-100 mb-6">
-                Become part of Kochi's most vibrant professional community. Whether you're a startup, 
-                established business, or independent professional, we have the perfect workspace solution for you.
-              </p>
-              
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center text-sm">
-                  <CheckIcon />
-                  <span className="ml-3">Flexible membership options</span>
+              <div className="bg-lime-600 rounded-2xl p-6 sm:p-8 text-white">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4">Join Our Community</h3>
+                <p className="text-lime-100 mb-6">
+                  Become part of Kochi's most vibrant professional community. Whether you're a startup, 
+                  established business, or independent professional, we have the perfect workspace solution for you.
+                </p>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm">
+                    <CheckIcon />
+                    <span className="ml-3">Flexible membership options</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <CheckIcon />
+                    <span className="ml-3">Prime Kochi location</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <CheckIcon />
+                    <span className="ml-3">Professional networking events</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <CheckIcon />
+                    <span className="ml-3">24x7 access and support</span>
+                  </div>
                 </div>
-                <div className="flex items-center text-sm">
-                  <CheckIcon />
-                  <span className="ml-3">Prime Kochi location</span>
-                </div>
-                <div className="flex items-center text-sm">
-                  <CheckIcon />
-                  <span className="ml-3">Professional networking events</span>
-                </div>
-                <div className="flex items-center text-sm">
-                  <CheckIcon />
-                  <span className="ml-3">24x7 access and support</span>
+
+                <div className="space-y-3">
+                  <Link 
+                    to="/contact"
+                    className="block w-full bg-white text-lime-600 text-center font-semibold py-3 px-6 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                  >
+                    Schedule a Tour
+                  </Link>
+                  <Link 
+                    to="/contact"
+                    className="block w-full border-2 border-white text-white text-center font-semibold py-3 px-6 rounded-lg hover:bg-lime-700 transition-colors duration-300"
+                  >
+                    Get Membership Info
+                  </Link>
                 </div>
               </div>
+            </div>
 
-              <div className="space-y-3">
-                <Link 
-                  to="/contact"
-                  className="block w-full bg-white text-lime-600 text-center font-semibold py-3 px-6 rounded-lg hover:bg-gray-50 transition-colors duration-300"
-                >
-                  Schedule a Tour
-                </Link>
-                <Link 
-                  to="/contact"
-                  className="block w-full border-2 border-white text-white text-center font-semibold py-3 px-6 rounded-lg hover:bg-lime-700 transition-colors duration-300"
-                >
-                  Get Membership Info
-                </Link>
+            {/* Interactive Image Showcase */}
+            <div className="relative">
+              <div 
+                className="rounded-2xl overflow-hidden shadow-xl h-80 lg:h-96 bg-cover bg-center relative group cursor-pointer"
+                style={{
+                  backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1759948248/working-designers_xmdcqe.jpg)'
+                }}
+              >
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 transform group-hover:scale-105 transition-transform duration-300">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Collaborative Environment</h3>
+                    <p className="text-sm text-gray-600">Professional workspace designed for creativity and productivity</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
