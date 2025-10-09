@@ -148,31 +148,44 @@ export default function FlexiDesk() {
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="text-center">
-          <div className="flex justify-center mb-6">
-            <FlexibilityIcon />
-          </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            <span className="text-lime-600">Flexi Desk</span> Solutions
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
-            Work your way with flexible desk arrangements in an aesthetically crafted coworking environment. 
-            Perfect for entrepreneurs, freelancers, and businesses seeking ultimate workspace flexibility in Kochi.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center justify-center bg-lime-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-lime-700 transition-colors duration-300"
-            >
-              Start Today
-            </Link>
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center justify-center border-2 border-lime-600 text-lime-600 font-semibold py-3 px-8 rounded-lg hover:bg-lime-50 transition-colors duration-300"
-            >
-              Try Free Day Pass
-            </Link>
+      <section 
+        className="relative py-12 sm:py-16 lg:py-20"
+        style={{
+          backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1759947739/DSCN0683_dlbtql.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-white/20 backdrop-blur-sm rounded-full">
+                <FlexibilityIcon />
+              </div>
+            </div>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <span className="text-lime-400">Flexi Desk</span> Solutions
+            </h1>
+            <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
+              Work your way with flexible desk arrangements in an aesthetically crafted coworking environment. 
+              Perfect for entrepreneurs, freelancers, and businesses seeking ultimate workspace flexibility in Kochi.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center justify-center bg-lime-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-lime-700 transition-colors duration-300"
+              >
+                Start Today
+              </Link>
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center justify-center border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white/10 transition-colors duration-300"
+              >
+                Try Free Day Pass
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -191,8 +204,8 @@ export default function FlexiDesk() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-16">
             {flexibilityFeatures.map((feature, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+              <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-lime-200 transition-all duration-300 group">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-lime-700 transition-colors duration-300">{feature.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             ))}
@@ -200,11 +213,11 @@ export default function FlexiDesk() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
-                <div className="mb-4">
+              <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-lime-200 transition-all duration-300 group">
+                <div className="mb-4 p-2 bg-lime-50 rounded-lg group-hover:bg-lime-100 transition-colors duration-300 w-fit">
                   <feature.icon />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-lime-700 transition-colors duration-300">{feature.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
               </div>
             ))}
@@ -213,13 +226,22 @@ export default function FlexiDesk() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-12 sm:py-16 lg:py-20">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="relative py-12 sm:py-16 lg:py-20"
+        style={{
+          backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1760025130/DSCN0680_snhc64.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60" aria-hidden="true"></div>
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
               Flexible Pricing Plans
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-white/90 max-w-2xl mx-auto">
               Daily, weekly, or monthly - choose the plan that fits your work style and budget. 
               No long-term commitments, maximum flexibility.
             </p>
@@ -275,8 +297,8 @@ export default function FlexiDesk() {
       {/* Benefits & CTA Section */}
       <section className="bg-gray-50 py-12 sm:py-16 lg:py-20">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
+            <div className="lg:col-span-2">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
                 Everything You Need to Work Productively
               </h2>
@@ -285,55 +307,73 @@ export default function FlexiDesk() {
                 Just bring your laptop and ideas - we'll handle everything else.
               </p>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start">
+                  <div key={index} className="flex items-start hover:bg-gray-100 p-2 rounded-lg transition-colors duration-200">
                     <CheckIcon />
                     <span className="ml-3 text-gray-700 text-sm">{benefit}</span>
                   </div>
                 ))}
               </div>
-            </div>
 
-            <div className="bg-lime-600 rounded-2xl p-6 sm:p-8 text-white">
-              <h3 className="text-xl sm:text-2xl font-bold mb-4">Start Working Today!</h3>
-              <p className="text-lime-100 mb-6">
-                No setup fees, no deposits, no long-term contracts. Walk in and start working immediately 
-                in our premium coworking space in the heart of Kochi.
-              </p>
-              
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center text-sm">
-                  <ClockIcon />
-                  <span className="ml-3">Available 24x7 with flexible access</span>
+              <div className="bg-lime-600 rounded-2xl p-6 sm:p-8 text-white">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4">Start Working Today!</h3>
+                <p className="text-lime-100 mb-6">
+                  No setup fees, no deposits, no long-term contracts. Walk in and start working immediately 
+                  in our premium coworking space in the heart of Kochi.
+                </p>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm">
+                    <ClockIcon />
+                    <span className="ml-3">Available 24x7 with flexible access</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <WifiIcon />
+                    <span className="ml-3">High-speed internet included</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <MailIcon />
+                    <span className="ml-3">Professional mail handling</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <UsersIcon />
+                    <span className="ml-3">Access to networking community</span>
+                  </div>
                 </div>
-                <div className="flex items-center text-sm">
-                  <WifiIcon />
-                  <span className="ml-3">High-speed internet included</span>
-                </div>
-                <div className="flex items-center text-sm">
-                  <MailIcon />
-                  <span className="ml-3">Professional mail handling</span>
-                </div>
-                <div className="flex items-center text-sm">
-                  <UsersIcon />
-                  <span className="ml-3">Access to networking community</span>
+
+                <div className="space-y-3">
+                  <Link 
+                    to="/contact"
+                    className="block w-full bg-white text-lime-600 text-center font-semibold py-3 px-6 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                  >
+                    Book Your Spot Now
+                  </Link>
+                  <Link 
+                    to="/contact"
+                    className="block w-full border-2 border-white text-white text-center font-semibold py-3 px-6 rounded-lg hover:bg-lime-700 transition-colors duration-300"
+                  >
+                    Get Free Trial
+                  </Link>
                 </div>
               </div>
+            </div>
 
-              <div className="space-y-3">
-                <Link 
-                  to="/contact"
-                  className="block w-full bg-white text-lime-600 text-center font-semibold py-3 px-6 rounded-lg hover:bg-gray-50 transition-colors duration-300"
-                >
-                  Book Your Spot Now
-                </Link>
-                <Link 
-                  to="/contact"
-                  className="block w-full border-2 border-white text-white text-center font-semibold py-3 px-6 rounded-lg hover:bg-lime-700 transition-colors duration-300"
-                >
-                  Get Free Trial
-                </Link>
+            {/* Interactive Designer Workspace Showcase */}
+            <div className="relative">
+              <div 
+                className="rounded-2xl overflow-hidden shadow-xl h-80 lg:h-96 bg-cover bg-center relative group cursor-pointer"
+                style={{
+                  backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1760025182/graphic-designers-working-their-desk_l0d9gk.jpg)'
+                }}
+              >
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 transform group-hover:scale-105 transition-transform duration-300">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Creative Professionals</h3>
+                    <p className="text-sm text-gray-600">Flexible workspace perfect for designers, developers, and creative teams</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -348,39 +388,97 @@ export default function FlexiDesk() {
               How FlexiDesk Works
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-              Getting started with FlexiDesk is simple and straightforward. Here's how you can begin working today.
+              Getting started with our flexible workspace is simple. Choose your plan, walk in, and start working immediately.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-            <div className="text-center">
-              <div className="bg-lime-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center group">
+              <div className="bg-lime-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-lime-200 group-hover:scale-110 transition-all duration-300">
                 <span className="text-2xl font-bold text-lime-600">1</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Choose Your Plan</h3>
-              <p className="text-gray-600">
-                Select from our daily, weekly, or monthly plans based on your needs. No advance booking required for daily passes.
+              <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-lime-700 transition-colors duration-300">Choose Your Plan</h3>
+              <p className="text-gray-600 text-sm">
+                Select from daily, weekly, or monthly passes based on your work schedule and requirements.
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="bg-lime-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center group">
+              <div className="bg-lime-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-lime-200 group-hover:scale-110 transition-all duration-300">
                 <span className="text-2xl font-bold text-lime-600">2</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Walk In & Work</h3>
-              <p className="text-gray-600">
-                Simply walk into our Kochi location, show your membership or pay at reception, and choose any available desk.
+              <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-lime-700 transition-colors duration-300">Walk In & Work</h3>
+              <p className="text-gray-600 text-sm">
+                No reservations needed. Simply walk in, find an available desk, and start working immediately.
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="bg-lime-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center group">
+              <div className="bg-lime-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-lime-200 group-hover:scale-110 transition-all duration-300">
                 <span className="text-2xl font-bold text-lime-600">3</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Enjoy Full Access</h3>
-              <p className="text-gray-600">
-                Access all amenities, connect with the community, and focus on what matters most - growing your business.
+              <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-lime-700 transition-colors duration-300">Enjoy Premium Amenities</h3>
+              <p className="text-gray-600 text-sm">
+                Access high-speed internet, meeting rooms, printing services, and our vibrant community network.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="bg-gray-50 py-12 sm:py-16 lg:py-20">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+              Get answers to common questions about our flexible desk solutions and workspace amenities.
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            <div className="space-y-6">
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Do I need to book in advance?
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  No advance booking required! FlexiDesk operates on a walk-in basis. Simply arrive and choose from available desks. 
+                  However, booking ahead guarantees your preferred spot.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  What's included with my FlexiDesk pass?
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  All passes include high-speed internet, access to common areas, tea/coffee, basic printing, 
+                  and community networking events. Higher tier passes include additional perks like meeting room credits.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Can I upgrade my plan later?
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Absolutely! You can upgrade from daily to weekly or monthly passes at any time. 
+                  You can also switch to dedicated desks or private offices as your business grows.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  What are the operating hours?
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Our FlexiDesk areas are available 24x7 for monthly pass holders. Daily and weekly pass holders 
+                  have access from 6 AM to 11 PM on all days.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -402,4 +500,4 @@ export default function FlexiDesk() {
       </section>
     </main>
   );
-} 
+}
