@@ -195,44 +195,57 @@ export default function PrivateOffices() {
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="text-center">
-          <div className="flex justify-center mb-6">
-            <OfficeIcon />
-          </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            <span className="text-lime-600">Private Offices</span> for Modern Business
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
-            Experience the ultimate in workspace privacy and professionalism with our fully managed private office experience. 
-            From solo entrepreneurs to growing teams, we have the perfect space for your business in the heart of Kochi.
-          </p>
-          <div className="bg-lime-50 rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto mb-8">
-            <div className="text-center">
-              <p className="text-sm text-gray-600 mb-2">Starting from</p>
-              <div className="text-3xl sm:text-4xl font-bold text-lime-600 mb-2">INR 9,500</div>
-              <p className="text-gray-600">per person, per month</p>
-              <div className="flex items-center justify-center mt-3">
-                {[...Array(5)].map((_, i) => (
-                  <StarIcon key={i} />
-                ))}
-                <span className="ml-2 text-sm text-gray-600">All-inclusive pricing</span>
+      <section 
+        className="relative py-12 sm:py-16 lg:py-20"
+        style={{
+          backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1759949675/ChatGPT_Image_Sep_13_2025_05_13_23_PM_sfk2jq.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-white/20 backdrop-blur-sm rounded-full">
+                <OfficeIcon />
               </div>
             </div>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center justify-center bg-lime-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-lime-700 transition-colors duration-300"
-            >
-              Get Quick Quote
-            </Link>
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center justify-center border-2 border-lime-600 text-lime-600 font-semibold py-3 px-8 rounded-lg hover:bg-lime-50 transition-colors duration-300"
-            >
-              Schedule Office Tour
-            </Link>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <span className="text-lime-400">Private Offices</span> for Modern Business
+            </h1>
+            <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
+              Experience the ultimate in workspace privacy and professionalism with our fully managed private office experience. 
+              From solo entrepreneurs to growing teams, we have the perfect space for your business in the heart of Kochi.
+            </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto mb-8">
+              <div className="text-center">
+                <p className="text-sm text-white/80 mb-2">Starting from</p>
+                <div className="text-3xl sm:text-4xl font-bold text-lime-400 mb-2">INR 9,500</div>
+                <p className="text-white/90">per person, per month</p>
+                <div className="flex items-center justify-center mt-3">
+                  {[...Array(5)].map((_, i) => (
+                    <StarIcon key={i} />
+                  ))}
+                  <span className="ml-2 text-sm text-white/80">All-inclusive pricing</span>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center justify-center bg-lime-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-lime-700 transition-colors duration-300"
+              >
+                Get Quick Quote
+              </Link>
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center justify-center border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white/10 transition-colors duration-300"
+              >
+                Schedule Office Tour
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -252,11 +265,11 @@ export default function PrivateOffices() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
-                <div className="mb-4">
+              <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-lime-200 transition-all duration-300 group">
+                <div className="mb-4 p-2 bg-lime-50 rounded-lg group-hover:bg-lime-100 transition-colors duration-300 w-fit">
                   <feature.icon />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-lime-700 transition-colors duration-300">{feature.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
               </div>
             ))}
@@ -265,13 +278,22 @@ export default function PrivateOffices() {
       </section>
 
       {/* Office Types & Pricing */}
-      <section className="py-12 sm:py-16 lg:py-20">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="relative py-12 sm:py-16 lg:py-20"
+        style={{
+          backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1759949767/work_l4rreg.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60" aria-hidden="true"></div>
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
               Choose Your Perfect Office
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-white/90 max-w-2xl mx-auto">
               From individual offices to executive suites, we offer flexible private office solutions 
               that grow with your business needs.
             </p>
@@ -327,13 +349,22 @@ export default function PrivateOffices() {
       </section>
 
       {/* Why Choose Private Offices */}
-      <section className="bg-gray-50 py-12 sm:py-16 lg:py-20">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="relative py-12 sm:py-16 lg:py-20"
+        style={{
+          backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1759949983/group-business-executives-discussing-laptop-their-des_wvizvi.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/70" aria-hidden="true"></div>
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Private Offices?
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-white/90 max-w-2xl mx-auto">
               Private offices offer the perfect balance of privacy, professionalism, and flexibility 
               for businesses that need their own dedicated space.
             </p>
@@ -341,7 +372,7 @@ export default function PrivateOffices() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {whyChoosePrivate.map((reason, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+              <div key={index} className="bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/20 hover:bg-white transition-colors duration-300">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{reason.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{reason.description}</p>
               </div>
@@ -353,8 +384,8 @@ export default function PrivateOffices() {
       {/* Included Services & CTA */}
       <section className="py-12 sm:py-16 lg:py-20">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
+            <div className="lg:col-span-2">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
                 Everything Included in Your Office
               </h2>
@@ -363,55 +394,73 @@ export default function PrivateOffices() {
                 Everything you need to run your business is included in one simple monthly payment.
               </p>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                 {includedServices.map((service, index) => (
-                  <div key={index} className="flex items-start">
+                  <div key={index} className="flex items-start hover:bg-gray-50 p-2 rounded-lg transition-colors duration-200">
                     <CheckIcon />
                     <span className="ml-3 text-gray-700 text-sm">{service}</span>
                   </div>
                 ))}
               </div>
-            </div>
 
-            <div className="bg-lime-600 rounded-2xl p-6 sm:p-8 text-white">
-              <h3 className="text-xl sm:text-2xl font-bold mb-4">Ready to Move In?</h3>
-              <p className="text-lime-100 mb-6">
-                Your private office can be ready in 24-48 hours. All you need to bring is your laptop 
-                and ideas - we'll handle everything else. Experience the Covspace difference today.
-              </p>
-              
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center text-sm">
-                  <SecurityIcon />
-                  <span className="ml-3">24x7 secure access</span>
+              <div className="bg-lime-600 rounded-2xl p-6 sm:p-8 text-white">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4">Ready to Move In?</h3>
+                <p className="text-lime-100 mb-6">
+                  Your private office can be ready in 24-48 hours. All you need to bring is your laptop 
+                  and ideas - we'll handle everything else. Experience the Covspace difference today.
+                </p>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm">
+                    <SecurityIcon />
+                    <span className="ml-3">24x7 secure access</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <AllInclusiveIcon />
+                    <span className="ml-3">All-inclusive services</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <FlexibilityIcon />
+                    <span className="ml-3">Flexible lease terms</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <FurnitureIcon />
+                    <span className="ml-3">Fully furnished & equipped</span>
+                  </div>
                 </div>
-                <div className="flex items-center text-sm">
-                  <AllInclusiveIcon />
-                  <span className="ml-3">All-inclusive services</span>
-                </div>
-                <div className="flex items-center text-sm">
-                  <FlexibilityIcon />
-                  <span className="ml-3">Flexible lease terms</span>
-                </div>
-                <div className="flex items-center text-sm">
-                  <FurnitureIcon />
-                  <span className="ml-3">Fully furnished & equipped</span>
+
+                <div className="space-y-3">
+                  <Link 
+                    to="/contact"
+                    className="block w-full bg-white text-lime-600 text-center font-semibold py-3 px-6 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                  >
+                    Book Office Today
+                  </Link>
+                  <Link 
+                    to="/contact"
+                    className="block w-full border-2 border-white text-white text-center font-semibold py-3 px-6 rounded-lg hover:bg-lime-700 transition-colors duration-300"
+                  >
+                    Schedule a Tour
+                  </Link>
                 </div>
               </div>
+            </div>
 
-              <div className="space-y-3">
-                <Link 
-                  to="/contact"
-                  className="block w-full bg-white text-lime-600 text-center font-semibold py-3 px-6 rounded-lg hover:bg-gray-50 transition-colors duration-300"
-                >
-                  Book Office Today
-                </Link>
-                <Link 
-                  to="/contact"
-                  className="block w-full border-2 border-white text-white text-center font-semibold py-3 px-6 rounded-lg hover:bg-lime-700 transition-colors duration-300"
-                >
-                  Schedule a Tour
-                </Link>
+            {/* Interactive Office Showcase */}
+            <div className="relative">
+              <div 
+                className="rounded-2xl overflow-hidden shadow-xl h-80 lg:h-96 bg-cover bg-center relative group cursor-pointer"
+                style={{
+                  backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1759950077/IMG_2930_pgjfod.jpg)'
+                }}
+              >
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 transform group-hover:scale-105 transition-transform duration-300">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Private Office Interior</h3>
+                    <p className="text-sm text-gray-600">Modern, fully-furnished workspace ready for immediate occupancy</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -158,29 +158,51 @@ export default function Contact() {
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Get in <span className="text-lime-600">Touch</span>
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your work experience? Contact us to learn more about our workspace solutions, 
-            schedule a tour, or get a personalized quote for your business needs.
-          </p>
+      <section 
+        className="relative py-12 sm:py-16 lg:py-20"
+        style={{
+          backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1759947548/DSCN0759_eaza4f.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 sm:p-12 max-w-4xl mx-auto">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                Get in <span className="text-lime-400">Touch</span>
+              </h1>
+              <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+                Ready to transform your work experience? Contact us to learn more about our workspace solutions, 
+                schedule a tour, or get a personalized quote for your business needs.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Contact Information */}
       <section className="bg-gray-50 py-12 sm:py-16 lg:py-20">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Contact Information
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+              Multiple ways to reach us and get the support you need for your workspace requirements.
+            </p>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             
             {/* Location */}
-            <div className="bg-white p-6 rounded-xl shadow-sm text-center">
-              <div className="flex justify-center mb-4">
+            <div className="bg-white p-6 rounded-xl shadow-sm text-center hover:shadow-lg hover:scale-105 transition-all duration-300 group">
+              <div className="flex justify-center mb-4 p-3 bg-lime-50 rounded-full w-fit mx-auto group-hover:bg-lime-100 transition-colors duration-300">
                 <LocationIcon />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Location</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-lime-700 transition-colors duration-300">Location</h3>
               <p className="text-gray-600 text-sm">
                 Center of Kochi<br />
                 Kerala, India
@@ -188,11 +210,11 @@ export default function Contact() {
             </div>
 
             {/* Phone */}
-            <div className="bg-white p-6 rounded-xl shadow-sm text-center">
-              <div className="flex justify-center mb-4">
+            <div className="bg-white p-6 rounded-xl shadow-sm text-center hover:shadow-lg hover:scale-105 transition-all duration-300 group">
+              <div className="flex justify-center mb-4 p-3 bg-lime-50 rounded-full w-fit mx-auto group-hover:bg-lime-100 transition-colors duration-300">
                 <PhoneIcon />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-lime-700 transition-colors duration-300">Phone</h3>
               <p className="text-gray-600 text-sm">
                 +91 XXXXX XXXXX<br />
                 <span className="text-xs text-gray-500">Available 24/7</span>
@@ -200,11 +222,11 @@ export default function Contact() {
             </div>
 
             {/* Email */}
-            <div className="bg-white p-6 rounded-xl shadow-sm text-center">
-              <div className="flex justify-center mb-4">
+            <div className="bg-white p-6 rounded-xl shadow-sm text-center hover:shadow-lg hover:scale-105 transition-all duration-300 group">
+              <div className="flex justify-center mb-4 p-3 bg-lime-50 rounded-full w-fit mx-auto group-hover:bg-lime-100 transition-colors duration-300">
                 <EmailIcon />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-lime-700 transition-colors duration-300">Email</h3>
               <p className="text-gray-600 text-sm">
                 info@covspace.com<br />
                 <span className="text-xs text-gray-500">Quick response guaranteed</span>
@@ -212,11 +234,11 @@ export default function Contact() {
             </div>
 
             {/* Business Hours */}
-            <div className="bg-white p-6 rounded-xl shadow-sm text-center">
-              <div className="flex justify-center mb-4">
+            <div className="bg-white p-6 rounded-xl shadow-sm text-center hover:shadow-lg hover:scale-105 transition-all duration-300 group">
+              <div className="flex justify-center mb-4 p-3 bg-lime-50 rounded-full w-fit mx-auto group-hover:bg-lime-100 transition-colors duration-300">
                 <ClockIcon />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Business Hours</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-lime-700 transition-colors duration-300">Business Hours</h3>
               <p className="text-gray-600 text-sm">
                 Mon - Fri: 9AM - 6PM<br />
                 <span className="text-xs text-gray-500">24x7 Access Available</span>
@@ -232,7 +254,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             
             {/* Contact Form */}
-            <div>
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                 Send us a Message
               </h2>
@@ -465,6 +487,74 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Consultation Showcase Section */}
+      <section 
+        className="relative py-12 sm:py-16 lg:py-20"
+        style={{
+          backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1759948956/Covspace_-short_gekd2n.tiff)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60" aria-hidden="true"></div>
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6">
+                Professional Consultation
+              </h2>
+              <p className="text-base sm:text-lg text-white/90 mb-8 leading-relaxed">
+                Our experienced team provides personalized workspace solutions tailored to your business needs. 
+                Schedule a consultation to explore how Covspace can enhance your productivity and business growth.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex items-center text-white/90">
+                  <CheckCircleIcon />
+                  <span className="ml-3 text-sm">Free workspace assessment</span>
+                </div>
+                <div className="flex items-center text-white/90">
+                  <CheckCircleIcon />
+                  <span className="ml-3 text-sm">Customized solution recommendations</span>
+                </div>
+                <div className="flex items-center text-white/90">
+                  <CheckCircleIcon />
+                  <span className="ml-3 text-sm">Flexible membership options</span>
+                </div>
+                <div className="flex items-center text-white/90">
+                  <CheckCircleIcon />
+                  <span className="ml-3 text-sm">Same-day space availability</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">Book Your Visit</h3>
+              <p className="text-white/90 mb-6">
+                Experience our workspace firsthand and discover why businesses across Kochi choose Covspace 
+                for their professional needs.
+              </p>
+              
+              <div className="space-y-4">
+                <Link 
+                  to="/contact"
+                  className="block w-full bg-lime-600 text-white text-center font-semibold py-3 px-6 rounded-lg hover:bg-lime-700 transition-colors duration-300"
+                >
+                  Schedule Consultation
+                </Link>
+                <Link 
+                  to="/contact"
+                  className="block w-full border-2 border-white text-white text-center font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors duration-300"
+                >
+                  Virtual Tour Available
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Map/Location Section */}
       <section className="bg-gray-50 py-12 sm:py-16 lg:py-20">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -482,8 +572,10 @@ export default function Contact() {
           <div className="bg-white rounded-2xl shadow-sm p-6">
             <div className="bg-gray-100 rounded-xl h-64 sm:h-80 lg:h-96 flex items-center justify-center">
               <div className="text-center">
-                <LocationIcon />
-                <p className="text-gray-600 mt-2">Interactive map coming soon</p>
+                <div className="p-4 bg-lime-50 rounded-full w-fit mx-auto mb-4">
+                  <LocationIcon />
+                </div>
+                <p className="text-gray-600 mt-2 font-medium">Interactive map coming soon</p>
                 <p className="text-sm text-gray-500">Center of Kochi, Kerala, India</p>
               </div>
             </div>
@@ -507,4 +599,4 @@ export default function Contact() {
       </section>
     </main>
   );
-} 
+}
