@@ -175,39 +175,52 @@ export default function VirtualOffices() {
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="text-center">
-          <div className="flex justify-center mb-6">
-            <VirtualIcon />
-          </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            <span className="text-lime-600">Virtual Offices</span> for Modern Business
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
-            Establish your business presence in the heart of Kochi without the overhead of a physical office. 
-            Our virtual office solutions provide everything you need to operate professionally from anywhere.
-          </p>
-          <div className="bg-lime-50 rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto mb-8">
-            <div className="text-center">
-              <p className="text-sm text-gray-600 mb-2">Starting from</p>
-              <div className="text-3xl sm:text-4xl font-bold text-lime-600 mb-2">INR 2,500</div>
-              <p className="text-gray-600">per month</p>
-              <p className="text-sm text-gray-500 mt-2">Prime business address included</p>
+      <section 
+        className="relative py-12 sm:py-16 lg:py-20"
+        style={{
+          backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1760030834/diverse-people-working-office_xca7y2.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-white/20 backdrop-blur-sm rounded-full">
+                <VirtualIcon />
+              </div>
             </div>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center justify-center bg-lime-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-lime-700 transition-colors duration-300"
-            >
-              Get Started Today
-            </Link>
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center justify-center border-2 border-lime-600 text-lime-600 font-semibold py-3 px-8 rounded-lg hover:bg-lime-50 transition-colors duration-300"
-            >
-              Learn More
-            </Link>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <span className="text-lime-400">Virtual Offices</span> for Modern Business
+            </h1>
+            <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
+              Establish your business presence in the heart of Kochi without the overhead of a physical office. 
+              Our virtual office solutions provide everything you need to operate professionally from anywhere.
+            </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto mb-8">
+              <div className="text-center">
+                <p className="text-sm text-white/80 mb-2">Starting from</p>
+                <div className="text-3xl sm:text-4xl font-bold text-lime-400 mb-2">INR 2,500</div>
+                <p className="text-white/90">per month</p>
+                <p className="text-sm text-white/70 mt-2">Prime business address included</p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center justify-center bg-lime-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-lime-700 transition-colors duration-300"
+              >
+                Get Started Today
+              </Link>
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center justify-center border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white/10 transition-colors duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -226,11 +239,11 @@ export default function VirtualOffices() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
-                <div className="mb-4">
+              <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-lime-200 transition-all duration-300 group">
+                <div className="mb-4 p-2 bg-lime-50 rounded-lg group-hover:bg-lime-100 transition-colors duration-300 w-fit">
                   <feature.icon />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-lime-700 transition-colors duration-300">{feature.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
               </div>
             ))}
@@ -239,13 +252,22 @@ export default function VirtualOffices() {
       </section>
 
       {/* Packages Section */}
-      <section className="py-12 sm:py-16 lg:py-20">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="relative py-12 sm:py-16 lg:py-20"
+        style={{
+          backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1760030829/Office_new_file_nvoedi.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60" aria-hidden="true"></div>
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
               Virtual Office Packages
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-white/90 max-w-2xl mx-auto">
               Choose the package that best fits your business needs, from basic address services 
               to comprehensive virtual office solutions.
             </p>
@@ -313,13 +335,13 @@ export default function VirtualOffices() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100">
+              <div key={index} className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-lime-200 transition-all duration-300 group">
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
+                  <div className="flex-shrink-0 p-2 bg-lime-50 rounded-lg group-hover:bg-lime-100 transition-colors duration-300">
                     <useCase.icon />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{useCase.title}</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-lime-700 transition-colors duration-300">{useCase.title}</h3>
                     <p className="text-gray-600 leading-relaxed">{useCase.description}</p>
                   </div>
                 </div>
@@ -332,8 +354,8 @@ export default function VirtualOffices() {
       {/* Benefits & CTA Section */}
       <section className="py-12 sm:py-16 lg:py-20">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
+            <div className="lg:col-span-2">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
                 Why Choose Virtual Offices?
               </h2>
@@ -342,55 +364,73 @@ export default function VirtualOffices() {
                 professional credibility, and cost-effectiveness without the constraints of a physical office.
               </p>
               
-              <div className="grid grid-cols-1 gap-4">
+              <div className="grid grid-cols-1 gap-4 mb-8">
                 {whyChooseVirtual.map((benefit, index) => (
-                  <div key={index} className="flex items-start">
+                  <div key={index} className="flex items-start hover:bg-gray-50 p-2 rounded-lg transition-colors duration-200">
                     <CheckIcon />
                     <span className="ml-3 text-gray-700 text-sm">{benefit}</span>
                   </div>
                 ))}
               </div>
-            </div>
 
-            <div className="bg-lime-600 rounded-2xl p-6 sm:p-8 text-white">
-              <h3 className="text-xl sm:text-2xl font-bold mb-4">Ready to Go Virtual?</h3>
-              <p className="text-lime-100 mb-6">
-                Start your virtual office today and give your business the professional presence it deserves. 
-                Our team will have you set up and operational within 24-48 hours.
-              </p>
-              
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center text-sm">
-                  <AddressIcon />
-                  <span className="ml-3">Prime Kochi business address</span>
+              <div className="bg-lime-600 rounded-2xl p-6 sm:p-8 text-white">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4">Ready to Go Virtual?</h3>
+                <p className="text-lime-100 mb-6">
+                  Start your virtual office today and give your business the professional presence it deserves. 
+                  Our team will have you set up and operational within 24-48 hours.
+                </p>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm">
+                    <AddressIcon />
+                    <span className="ml-3">Prime Kochi business address</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <PhoneIcon />
+                    <span className="ml-3">Professional call answering</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <MailIcon />
+                    <span className="ml-3">Complete mail management</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <MeetingIcon />
+                    <span className="ml-3">Meeting room access available</span>
+                  </div>
                 </div>
-                <div className="flex items-center text-sm">
-                  <PhoneIcon />
-                  <span className="ml-3">Professional call answering</span>
-                </div>
-                <div className="flex items-center text-sm">
-                  <MailIcon />
-                  <span className="ml-3">Complete mail management</span>
-                </div>
-                <div className="flex items-center text-sm">
-                  <MeetingIcon />
-                  <span className="ml-3">Meeting room access available</span>
+
+                <div className="space-y-3">
+                  <Link 
+                    to="/contact"
+                    className="block w-full bg-white text-lime-600 text-center font-semibold py-3 px-6 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                  >
+                    Start Virtual Office
+                  </Link>
+                  <Link 
+                    to="/contact"
+                    className="block w-full border-2 border-white text-white text-center font-semibold py-3 px-6 rounded-lg hover:bg-lime-700 transition-colors duration-300"
+                  >
+                    Contact Our Team
+                  </Link>
                 </div>
               </div>
+            </div>
 
-              <div className="space-y-3">
-                <Link 
-                  to="/contact"
-                  className="block w-full bg-white text-lime-600 text-center font-semibold py-3 px-6 rounded-lg hover:bg-gray-50 transition-colors duration-300"
-                >
-                  Start Virtual Office
-                </Link>
-                <Link 
-                  to="/contact"
-                  className="block w-full border-2 border-white text-white text-center font-semibold py-3 px-6 rounded-lg hover:bg-lime-700 transition-colors duration-300"
-                >
-                  Contact Our Team
-                </Link>
+            {/* Interactive Meeting Room Showcase */}
+            <div className="relative">
+              <div 
+                className="rounded-2xl overflow-hidden shadow-xl h-80 lg:h-96 bg-cover bg-center relative group cursor-pointer"
+                style={{
+                  backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1760031315/modern-empty-business-corporate-office-meeting-room-is-ready-businesspeople-late-night_mxc7ye.jpg)'
+                }}
+              >
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 transform group-hover:scale-105 transition-transform duration-300">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Professional Meeting Rooms</h3>
+                    <p className="text-sm text-gray-600">Access to premium meeting spaces when you need to meet clients in person</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -411,7 +451,7 @@ export default function VirtualOffices() {
 
           <div className="max-w-3xl mx-auto">
             <div className="space-y-6">
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-lime-200 transition-all duration-300">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   Can I use the virtual office address for company registration?
                 </h3>
@@ -421,7 +461,7 @@ export default function VirtualOffices() {
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-lime-200 transition-all duration-300">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   How quickly can I get started with a virtual office?
                 </h3>
@@ -431,7 +471,7 @@ export default function VirtualOffices() {
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-lime-200 transition-all duration-300">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   Do I get access to meeting rooms with virtual office packages?
                 </h3>
@@ -441,7 +481,7 @@ export default function VirtualOffices() {
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-lime-200 transition-all duration-300">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   How does the mail forwarding service work?
                 </h3>
