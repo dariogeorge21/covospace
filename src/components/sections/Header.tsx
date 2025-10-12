@@ -143,10 +143,6 @@ const Header = () => {
                   </div>
                 )}
                 
-                <Link to="/" className="block w-full px-3 py-3 rounded-md text-center font-bold text-white bg-black hover:bg-gray-800 transition-colors">
-                  ENTERPRISE SOLUTION
-                </Link>
-
                 <Link to="/company-registration" className="block w-full px-3 py-3 rounded-md text-center font-bold text-white bg-black hover:bg-gray-800 transition-colors">
                   COMPANY REGISTRATION
                 </Link>
