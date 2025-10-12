@@ -31,7 +31,7 @@ const Pricing = () => {
     '65 Private Offices',
   ];
 
-  const PricingImageUrl="https://res.cloudinary.com/dobqxxtml/image/upload/v1759943792/modern-office-space-with-desktops-with-modern-computers-created-with-generative-ai-technology_zzxldy.jpg"
+  const PricingImageUrl="https://res.cloudinary.com/dobqxxtml/image/upload/v1759946073/new_litted_g4kces.jpg";
 
   return (
       <div 
