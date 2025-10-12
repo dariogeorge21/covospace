@@ -42,6 +42,7 @@ const QuoteIcon = () => (
 const Gallery = () => {
   return (
     <section className="relative bg-white py-8 sm:py-12 md:py-16 lg:py-20 font-sans overflow-hidden">
+      <style>{`.hide-below-824{display:block} @media (max-width:823px){.hide-below-824{display:none !important}} .hide-below-694{display:block} @media (max-width:693px){.hide-below-694{display:none !important}}`}</style>
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Title Section - Mobile Responsive */}
@@ -57,15 +58,15 @@ const Gallery = () => {
         <div className="mb-8 sm:mb-12 md:mb-16 flex gap-4 items-end justify-center">
           {/* <Image /> */}
           <div className="flex flex-col gap-4">
-              <LeftClipped className="h-[300px] w-[250px] rounded-xl overflow-clip">
+              <LeftClipped className="h-[300px] w-[250px] rounded-xl overflow-clip hide-below-824">
               <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/l1.jpg"  />
             </LeftClipped>
-            <div className="rounded-xl overflow-clip h-[150px] w-[250px]">
+            <div className="rounded-xl overflow-clip h-[150px] w-[250px] hide-below-824">
               <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/l3.jpg" />
             </div>
           </div>
           
-          <LeftClipped className="h-[300px] w-[250px] rounded-xl overflow-clip ">
+          <LeftClipped className="h-[300px] w-[250px] rounded-xl overflow-clip hide-below-694">
             <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/l2.jpg" />
           </LeftClipped>
           <div>
@@ -80,15 +81,15 @@ const Gallery = () => {
             </div>
           </div>
           
-          <RightClipped className="h-[300px] w-[250px]  rounded-xl overflow-clip">
+          <RightClipped className="h-[300px] w-[250px]  rounded-xl overflow-clip hide-below-694">
             <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/r1.jpg" />
           </RightClipped>
           <div className="flex flex-col gap-2">
-              <RightClipped className="h-[300px] w-[250px]  rounded-xl overflow-clip">
+              <RightClipped className="h-[300px] w-[250px]  rounded-xl overflow-clip hide-below-824">
               <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/r2.jpg" />
             </RightClipped>
             {/* <RightClipped className="h-[150px] w-[250px] rounded-[40px]"> */}
-            <div className="rounded-xl overflow-clip h-[150px] w-[250px]">
+            <div className="rounded-xl overflow-clip h-[150px] w-[250px] hide-below-824">
               <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/r3.jpg" />
 
             </div>
