@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import QuotePanel from '../ui/QuotePanel';
+
 // Icon component for the button, recreated as an SVG
 const QuoteIcon = () => (
   <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -10,6 +13,16 @@ const QuoteIcon = () => (
 const Hero= () => {
   // NOTE: Replace this with the actual URL or path to your hero image.
   const heroImageUrl = 'https://res.cloudinary.com/dobqxxtml/image/upload/v1759943792/modern-office-space-with-desktops-with-modern-computers-created-with-generative-ai-technology_zzxldy.jpg';
+  
+  const [isQuotePanelOpen, setIsQuotePanelOpen] = useState(false);
+
+  const handleQuoteClick = () => {
+    setIsQuotePanelOpen(true);
+  };
+
+  const handleQuotePanelClose = () => {
+    setIsQuotePanelOpen(false);
+  };
 
   return (
     <div 
@@ -50,6 +63,7 @@ const Hero= () => {
           {/* Quick Quote Button - mobile-optimized */}
           <div className="mt-6 sm:mt-8 flex justify-center sm:justify-start">
             <button 
+              onClick={handleQuoteClick}
               className="flex items-center justify-center space-x-2 text-white font-bold py-3 px-4 sm:px-6 rounded-md hover:bg-lime-600 active:bg-lime-700 transition-colors duration-300 shadow-md min-h-[48px] min-w-[140px] text-sm sm:text-base touch-manipulation" 
               style={{ backgroundColor: '#5AB834' }}
               aria-label="Get a quick quote for our workspace services"
@@ -71,6 +85,12 @@ const Hero= () => {
           </svg>
         </div>
       </div>
+
+      {/* Quote Panel */}
+      <QuotePanel 
+        isOpen={isQuotePanelOpen} 
+        onClose={handleQuotePanelClose} 
+      />
     </div>
   );
 };
