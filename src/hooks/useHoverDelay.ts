@@ -1,10 +1,8 @@
 import { useCallback, useRef } from 'react';
 
 /**
- * Custom hook for implementing hover delay functionality
- * Prevents flickering when mouse moves quickly across elements
- * 
- * @param callback - Function to execute after delay
+ * Custom hook for debouncing hover events to prevent flickering
+ * @param callback - Function to call after the delay
  * @param delay - Delay in milliseconds (default: 150ms)
  * @returns Object with onMouseEnter and onMouseLeave handlers
  */
@@ -19,11 +17,10 @@ export const useHoverDelay = (
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
-
-    // Set new timeout for the callback
+    
+    // Set new timeout
     timeoutRef.current = setTimeout(() => {
       callback();
-      timeoutRef.current = null;
     }, delay);
   }, [callback, delay]);
 
@@ -35,11 +32,10 @@ export const useHoverDelay = (
     }
   }, []);
 
-  // Cleanup function to clear timeout on unmount
+  // Cleanup on unmount
   const cleanup = useCallback(() => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
-      timeoutRef.current = null;
     }
   }, []);
 

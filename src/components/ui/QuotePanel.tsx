@@ -14,6 +14,7 @@ const QuotePanel = ({ isOpen, onClose }: QuotePanelProps) => {
   const [selectedPricingOption, setSelectedPricingOption] = useState<PricingOption | undefined>();
   const [announcement, setAnnouncement] = useState<string>('');
   const panelRef = useRef<HTMLDivElement>(null);
+  const pricingRef = useRef<HTMLDivElement>(null);
 
   // Handle click outside to close
   useEffect(() => {
@@ -111,6 +112,16 @@ const QuotePanel = ({ isOpen, onClose }: QuotePanelProps) => {
     setSelectedService(service);
     setSelectedPricingOption(undefined); // Reset pricing option when service changes
     setAnnouncement(`${service.name} selected. Starting from ${service.startingPrice} ${service.startingPeriod}.`);
+    
+    // Auto scroll to pricing section on mobile
+    if (pricingRef.current && window.innerWidth < 1024) {
+      setTimeout(() => {
+        pricingRef.current?.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        });
+      }, 100);
+    }
   };
 
   const handleServiceHover = (service: ServicePricing | null) => {
@@ -157,7 +168,7 @@ const QuotePanel = ({ isOpen, onClose }: QuotePanelProps) => {
           fixed top-0 left-0 right-0 bg-white shadow-2xl z-50
           transform transition-transform duration-300 ease-out
           ${isOpen ? 'translate-y-0' : '-translate-y-full'}
-          lg:top-[140px] sm:top-[120px] top-[100px]
+          lg:top-[90px] sm:top-[120px] top-[100px]
         `}
         style={{
           maxHeight: 'calc(100vh - 100px)',
@@ -213,7 +224,7 @@ const QuotePanel = ({ isOpen, onClose }: QuotePanelProps) => {
           </div>
 
           {/* Right Column - Pricing Display */}
-          <div className="lg:w-1/2 bg-gray-50 lg:bg-gray-50">
+          <div ref={pricingRef} className="lg:w-1/2 bg-gray-50 lg:bg-gray-50">
             <PricingDisplay
               service={displayService}
               selectedPricingOption={selectedPricingOption}
