@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import QuotePanel from '../ui/QuotePanel';
-
 // Icon component for the button, recreated as an SVG
 const QuoteIcon = () => (
   <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -12,7 +11,7 @@ const QuoteIcon = () => (
 
 const Hero= () => {
   // NOTE: Replace this with the actual URL or path to your hero image.
-  const heroImageUrl = 'https://res.cloudinary.com/dobqxxtml/image/upload/v1759943792/modern-office-space-with-desktops-with-modern-computers-created-with-generative-ai-technology_zzxldy.jpg';
+  const heroImageUrl = 'https://res.cloudinary.com/dobqxxtml/image/upload/v1759083000/b16da8c5-83c7-49aa-a157-725f02ca5753.png';
   
   const [isQuotePanelOpen, setIsQuotePanelOpen] = useState(false);
 
@@ -28,13 +27,13 @@ const Hero= () => {
     <div 
       className="relative w-full min-h-[100vh] sm:h-[500px] md:h-[600px] lg:h-[900px] bg-cover bg-center font-sans"
       style={{ 
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(${heroImageUrl})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${heroImageUrl})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center', 
       }}
     >
       {/* Overlay to darken the image slightly for better text readability */}
-      <div className="absolute inset-0 bg-black opacity-20 sm:opacity-30"></div>
+      <div className="absolute inset-0 bg-black opacity-20 sm:opacity-20"></div>
 
       {/* Container to position the content - mobile-first responsive */}
       <div className="relative h-full flex items-center justify-center sm:justify-start max-w-screen-2xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
