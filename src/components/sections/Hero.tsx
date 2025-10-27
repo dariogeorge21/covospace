@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import QuotePanel from '../ui/QuotePanel';
-
 // Icon component for the button, recreated as an SVG
 const QuoteIcon = () => (
   <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -12,7 +11,7 @@ const QuoteIcon = () => (
 
 const Hero= () => {
   // NOTE: Replace this with the actual URL or path to your hero image.
-  const heroImageUrl = 'https://res.cloudinary.com/dobqxxtml/image/upload/v1759943792/modern-office-space-with-desktops-with-modern-computers-created-with-generative-ai-technology_zzxldy.jpg';
+  const heroImageUrl = 'https://res.cloudinary.com/dobqxxtml/image/upload/v1759083000/b16da8c5-83c7-49aa-a157-725f02ca5753.png';
   
   const [isQuotePanelOpen, setIsQuotePanelOpen] = useState(false);
 
