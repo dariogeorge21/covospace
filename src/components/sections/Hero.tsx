@@ -27,13 +27,13 @@ const Hero= () => {
     <div 
       className="relative w-full min-h-[100vh] sm:h-[500px] md:h-[600px] lg:h-[900px] bg-cover bg-center font-sans"
       style={{ 
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(${heroImageUrl})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${heroImageUrl})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center', 
       }}
     >
       {/* Overlay to darken the image slightly for better text readability */}
-      <div className="absolute inset-0 bg-black opacity-20 sm:opacity-30"></div>
+      <div className="absolute inset-0 bg-black opacity-20 sm:opacity-20"></div>
 
       {/* Container to position the content - mobile-first responsive */}
       <div className="relative h-full flex items-center justify-center sm:justify-start max-w-screen-2xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
