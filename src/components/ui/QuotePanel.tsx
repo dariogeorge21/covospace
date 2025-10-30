@@ -167,13 +167,13 @@ const QuotePanel = ({ isOpen, onClose }: QuotePanelProps) => {
     if (!displayService?.seats) return 50; // Default fallback
     
     // Extract numbers from strings like "9 seats" or "4 Total (3 Chair + 1 Manager)"
-    const match = displayService.seats.match(/(\d+)\s*(?:Total|seats?)/i);
+    const match = String(displayService.seats).match(/(\d+)\s*(?:Total|seats?)/i);
     if (match) {
       return parseInt(match[1], 10);
     }
     
     // Fallback: try to extract first number
-    const firstNumber = displayService.seats.match(/\d+/);
+    const firstNumber = String(displayService.seats).match(/\d+/);
     return firstNumber ? parseInt(firstNumber[0], 10) : 50;
   };
 
@@ -318,7 +318,7 @@ const QuotePanel = ({ isOpen, onClose }: QuotePanelProps) => {
                   </div>
 
                   {/* Workspace Details - Compact */}
-                  {(displayService.area || displayService.seats) && (
+                  {(displayService.area || displayService.seatsDescription) && (
                     <div className="mb-4 grid grid-cols-2 gap-3">
                       {displayService.area && (
                         <div className="p-3 bg-white rounded-lg border border-gray-200">
@@ -331,7 +331,7 @@ const QuotePanel = ({ isOpen, onClose }: QuotePanelProps) => {
                           <p className="text-sm font-semibold text-gray-900">{displayService.area}</p>
                         </div>
                       )}
-                      {displayService.seats && (
+                      {displayService.seatsDescription && (
                         <div className="p-3 bg-white rounded-lg border border-gray-200">
                           <div className="flex items-center space-x-2 mb-1">
                             <svg className="w-4 h-4 text-lime-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -339,7 +339,7 @@ const QuotePanel = ({ isOpen, onClose }: QuotePanelProps) => {
                             </svg>
                             <p className="text-xs text-gray-500 font-medium">Capacity</p>
                           </div>
-                          <p className="text-sm font-semibold text-gray-900">{displayService.seats}</p>
+                          <p className="text-sm font-semibold text-gray-900">{displayService.seatsDescription}</p>
                         </div>
                       )}
                     </div>

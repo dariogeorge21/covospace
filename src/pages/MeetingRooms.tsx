@@ -91,30 +91,19 @@ export default function MeetingRooms() {
 
   const roomTypes = [
     {
-      type: "Huddle Room",
-      capacity: "4 Seater",
-      price: "INR 400",
-      period: "per hour",
-      description: "Perfect for small team meetings and quick discussions",
-      features: ["Seats up to 4 people", "40-inch display screen", "Basic audio/video setup", "Whiteboard included", "2-hour minimum booking"],
-      highlight: false
-    },
-    {
+      spaceId: "CS2-C1",
       type: "Conference Room",
-      capacity: "6-8 Seater",
-      price: "INR 500",
-      period: "per hour",
+      capacity: "8 Seater",
+      area: "160 Sq.ft",
+      price: "₹700",
+      period: "per hour +GST",
       description: "Ideal for client meetings and team presentations",
-      features: ["Seats 6-8 people comfortably", "55-inch 4K display", "Professional conferencing system", "Wireless presentation", "Catering setup available", "Full-day packages available"],
+      features: [
+        "Complimentary Beverages and Cookies",
+        "Interactive Display",
+        "Unlimited Wi-Fi"
+      ],
       highlight: true
-    },
-    {
-      type: "Boardroom",
-      capacity: "10+ Seater",
-      price: "INR 750",
-      period: "per hour",
-      description: "Premium space for executive meetings and large presentations",
-      features: ["Seats 10+ people", "65-inch premium display", "Advanced A/V technology", "Executive furniture", "Dedicated catering service", "Personal meeting assistant", "Priority booking"]
     }
   ];
 
@@ -173,10 +162,16 @@ export default function MeetingRooms() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               Premium <span className="text-lime-400">Meeting Rooms</span>
             </h1>
-            <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
-              Impress your clients and collaborate effectively in our state-of-the-art meeting rooms. 
-              From intimate 4-seater huddle rooms to executive boardrooms, we have the perfect space for every occasion.
+            <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-4">
+              Impress your clients and collaborate effectively in our state-of-the-art meeting rooms.
+              Professional conference room with interactive display and complimentary refreshments.
             </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 max-w-md mx-auto mb-8">
+              <div className="text-white/90 text-sm">
+                <p><strong>Space ID:</strong> CS2-C1 | <strong>Area:</strong> 160 Sq.ft | <strong>Seats:</strong> 8</p>
+                <p className="mt-2"><strong>Price:</strong> ₹700/Hour +GST</p>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
@@ -244,7 +239,7 @@ export default function MeetingRooms() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="max-w-md mx-auto">
             {roomTypes.map((room, index) => (
               <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 p-6 lg:p-8 ${
                 room.highlight ? 'border-lime-500 ring-2 ring-lime-500 ring-opacity-50' : 'border-gray-200'
@@ -252,14 +247,18 @@ export default function MeetingRooms() {
                 {room.highlight && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-lime-600 text-white px-4 py-1 text-sm font-semibold rounded-full">
-                      Most Popular
+                      Available
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
+                  <div className="bg-lime-50 text-lime-700 px-3 py-1 rounded-full text-xs font-semibold mb-3 inline-block">
+                    {room.spaceId}
+                  </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-1">{room.type}</h3>
-                  <p className="text-lime-600 font-medium mb-3">{room.capacity}</p>
+                  <p className="text-lime-600 font-medium mb-1">{room.capacity}</p>
+                  <p className="text-sm text-gray-500 mb-3">{room.area}</p>
                   <div className="mb-2">
                     <span className="text-3xl font-bold text-gray-900">{room.price}</span>
                     <span className="text-gray-500 ml-2">{room.period}</span>
@@ -276,13 +275,9 @@ export default function MeetingRooms() {
                   ))}
                 </ul>
 
-                <Link 
+                <Link
                   to="/contact"
-                  className={`block w-full text-center font-semibold py-3 px-6 rounded-lg transition-colors duration-300 ${
-                    room.highlight 
-                      ? 'bg-lime-600 text-white hover:bg-lime-700' 
-                      : 'border-2 border-lime-600 text-lime-600 hover:bg-lime-50'
-                  }`}
+                  className="block w-full text-center font-semibold py-3 px-6 rounded-lg transition-colors duration-300 bg-lime-600 text-white hover:bg-lime-700"
                 >
                   Book Now
                 </Link>

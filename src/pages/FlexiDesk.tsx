@@ -92,26 +92,33 @@ export default function FlexiDesk() {
   const pricingPlans = [
     {
       type: "Daily Pass",
-      price: "INR 199",
-      period: "per day",
+      price: "₹500",
+      period: "per day +GST",
       description: "Perfect for occasional users and testing our workspace",
-      features: ["Access to flexi desks", "High-speed internet", "Basic amenities", "Community access", "8-hour usage"],
+      features: [
+        "Access to flexi desks",
+        "Unlimited WiFi Access",
+        "Reception Desk & Guest Service",
+        "Mail & Courier Management",
+        "Print / Photocopy Facility (50 Prints)",
+        "Scan Facilities"
+      ],
       highlight: false
     },
     {
-      type: "Weekly Pass",
-      price: "INR 999",
-      period: "per week",
-      description: "Great for short-term projects and freelancers",
-      features: ["All daily pass benefits", "Extended 12-hour usage", "Mail handling services", "Meeting room credits", "Storage options"],
-      highlight: true
-    },
-    {
       type: "Monthly Pass",
-      price: "INR 3,000",
-      period: "per month",
+      price: "₹5,500",
+      period: "per month +GST",
       description: "Best value for regular flexible workspace users",
-      features: ["All weekly pass benefits", "Unlimited daily usage", "Priority desk selection", "Free printing allowance", "Business address usage", "Guest pass credits"]
+      features: [
+        "5 Day / 10 Day / Unlimited Plan",
+        "Reception Desk & Guest Service",
+        "Unlimited WiFi Access",
+        "Mail & Courier Management",
+        "Print / Photocopy Facility (50 Prints)",
+        "Scan Facilities"
+      ],
+      highlight: true
     }
   ];
 
@@ -168,10 +175,15 @@ export default function FlexiDesk() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               <span className="text-lime-400">Flexi Desk</span> Solutions
             </h1>
-            <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
-              Work your way with flexible desk arrangements in an aesthetically crafted coworking environment. 
+            <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-4">
+              Work your way with flexible desk arrangements in an aesthetically crafted coworking environment.
               Perfect for entrepreneurs, freelancers, and businesses seeking ultimate workspace flexibility in Kochi.
             </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 max-w-md mx-auto mb-8">
+              <div className="text-white/90 text-sm">
+                <p><strong>Space ID:</strong> CS2-01 | <strong>Area:</strong> 207 Sq.ft | <strong>Seats:</strong> 9</p>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 

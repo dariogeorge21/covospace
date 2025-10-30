@@ -79,26 +79,15 @@ export default function DedicatedDesk() {
 
   const pricingPlans = [
     {
-      type: "Daily Pass",
-      price: "INR 299",
-      period: "per day",
-      description: "Perfect for trying out our workspace",
-      features: ["Dedicated desk for the day", "High-speed internet", "Basic amenities access", "Community networking"]
-    },
-    {
-      type: "Weekly Plan",
-      price: "INR 1,499",
-      period: "per week",
-      description: "Ideal for short-term projects",
-      features: ["Dedicated desk for 7 days", "All daily pass benefits", "Mail handling services", "Meeting room credits"],
-      popular: true
-    },
-    {
       type: "Monthly Plan",
-      price: "INR 7,500",
-      period: "per month",
-      description: "Best value for regular users",
-      features: ["Your own dedicated desk", "All weekly plan benefits", "Storage locker included", "Unlimited meeting room access", "Business address usage"]
+      price: "₹5,500",
+      period: "per month +GST",
+      description: "Best value for dedicated workspace users",
+      features: [
+        "Includes all Flexi Desk facilities",
+        "Conference Room Access 3 Hours/Month (Additional hours chargeable)"
+      ],
+      popular: true
     }
   ];
 
@@ -136,10 +125,15 @@ export default function DedicatedDesk() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               <span className="text-lime-400">Dedicated Desk</span> Solutions
             </h1>
-            <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
-              Work your way with a dedicated desk in an aesthetically crafted coworking environment. 
+            <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-4">
+              Work your way with a dedicated desk in an aesthetically crafted coworking environment.
               Enjoy the perfect blend of personal workspace and collaborative community in the heart of Kochi.
             </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 max-w-md mx-auto mb-8">
+              <div className="text-white/90 text-sm">
+                <p><strong>Space ID:</strong> CS2-04 | <strong>Area:</strong> 203 Sq.ft | <strong>Seats:</strong> 8</p>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
@@ -205,7 +199,7 @@ export default function DedicatedDesk() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="max-w-md mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 p-6 lg:p-8 ${
                 plan.popular ? 'border-lime-500 ring-2 ring-lime-500 ring-opacity-50' : 'border-gray-200'
@@ -213,11 +207,11 @@ export default function DedicatedDesk() {
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-lime-600 text-white px-4 py-1 text-sm font-semibold rounded-full">
-                      Most Popular
+                      Recommended
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.type}</h3>
                   <div className="mb-2">
@@ -236,13 +230,9 @@ export default function DedicatedDesk() {
                   ))}
                 </ul>
 
-                <Link 
+                <Link
                   to="/contact"
-                  className={`block w-full text-center font-semibold py-3 px-6 rounded-lg transition-colors duration-300 ${
-                    plan.popular 
-                      ? 'bg-lime-600 text-white hover:bg-lime-700' 
-                      : 'border-2 border-lime-600 text-lime-600 hover:bg-lime-50'
-                  }`}
+                  className="block w-full text-center font-semibold py-3 px-6 rounded-lg transition-colors duration-300 bg-lime-600 text-white hover:bg-lime-700"
                 >
                   Get Started
                 </Link>
