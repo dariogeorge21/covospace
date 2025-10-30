@@ -14,30 +14,6 @@ const testimonialsData = [
     handle: "@kevinjohn",
     imageUrl: "https://randomuser.me/api/portraits/men/86.jpg"
   },
-  {
-    quote: "Their smart panels transformed our classrooms. Teaching is more interactive, and students love it.",
-    name: "Emily Johnson",
-    handle: "@emilyjohnson",
-    imageUrl: "https://randomuser.me/api/portraits/women/44.jpg"
-  },
-  {
-    quote: "Their smart panels transformed our classrooms. Teaching is more interactive, and students love it.",
-    name: "Rohan Patel",
-    handle: "@rohanpatel",
-    imageUrl: "https://randomuser.me/api/portraits/men/32.jpg"
-  },
-  {
-    quote: "Their smart panels transformed our classrooms. Teaching is more interactive, and students love it.",
-    name: "Kevin John",
-    handle: "@kevinjohn",
-    imageUrl: "https://randomuser.me/api/portraits/men/86.jpg"
-  },
-  {
-    quote: "Their smart panels transformed our classrooms. Teaching is more interactive, and students love it.",
-    name: "Emily Johnson",
-    handle: "@emilyjohnson",
-    imageUrl: "https://randomuser.me/api/portraits/women/44.jpg"
-  },
 ];
 
 // --- Reusable SVG Quote Icon ---
