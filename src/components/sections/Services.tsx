@@ -1,9 +1,12 @@
 // import {ReactComponent as Ellipse} from '../Ellipse.svg'
 
+import { useNavigate } from 'react-router-dom';
+
 const servicesData = [
   {
     title: 'Private Offices',
     description: 'Your team deserves more than space — enjoy a premier, fully managed private office experience.',
+    route: '/private-offices',
     features: [
       'Flexible Plans',
       '24x7 Security & Access',
@@ -13,6 +16,7 @@ const servicesData = [
   {
     title: 'Dedicated Desk',
     description: 'Work your way with a dedicated desk in an aesthetically crafted coworking environment.',
+    route: '/dedicated-desk',
     features: [
       'Daily-Weekly-Monthly Plans',
       'Free Secure Internet & WiFi',
@@ -22,6 +26,7 @@ const servicesData = [
   {
     title: 'Meeting Rooms',
     description: 'Reserve premium meeting rooms designed with cutting-edge technology and complete amenities.',
+    route: '/meeting-rooms',
     features: [
       '4 - 8 Seater Meeting Rooms',
       'Audio and Video Conferencing',
@@ -31,6 +36,7 @@ const servicesData = [
   {
     title: 'Virtual Offices',
     description: 'Establish your presence at a prime business address without the upfront cost.',
+    route: '/virtual-offices',
     features: [
       'Prime Business Address',
       'Mail & Courier Handling',
@@ -40,6 +46,7 @@ const servicesData = [
   {
     title: 'Business Address',
     description: 'Company registration made simple — use our address.',
+    route: '/contact',
     features: [
       'Company and GST Registration',
       'Bank Account Support',
@@ -49,13 +56,6 @@ const servicesData = [
 ];
 
 const Background = () => (
-  // <div className="absolute inset-0 overflow-hidden z-0">
-  //   <img 
-  //     src="https://res.cloudinary.com/dobqxxtml/image/upload/v1759120026/bg-services_o7mjxe.png" 
-  //     alt="bg" 
-  //     className="w-full h-full object-cover"
-  //   />
-  // </div>
        <div className="hidden absolute inset-0 sm:flex items-center justify-center pointer-events-none bg-white ">
       {/* <Ellipse className="top-0"/> */}
       <div className="position absolute -left-20 bottom-[-300px] ">
@@ -70,8 +70,8 @@ const Background = () => (
       <div className="position absolute right-0 top-20 ">
         <img src="/Rectangle.svg"/>
       </div>
-      
-        <div className="text-[25rem] sm:text-[35rem] md:text-[50rem] lg:text-[70rem] font-bold text-transparent koulen-regular pt-10" 
+
+        <div className="text-[25rem] sm:text-[35rem] md:text-[50rem] lg:text-[70rem] font-bold text-transparent koulen-regular pt-10"
              style={{
                WebkitTextStroke: '2px #E69464',
               //  opacity: 0.1
@@ -93,26 +93,40 @@ interface ServiceCardProps {
   title: string;
   description: string;
   features: string[];
+  route: string;
 }
 
 // The main card component that will be rendered for each service
-const ServiceCard = ({ title, description, features }: ServiceCardProps) => (
-  <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/80 shadow-sm h-full flex flex-col">
-    <h3 className="text-xl font-bold text-gray-800">{title}</h3>
-    <p className="mt-2 text-sm text-gray-600 flex-grow">{description}</p>
-    <ul className="mt-4 space-y-2 text-sm text-gray-600 list-disc list-inside">
-      {features.map((feature, index) => (
-        <li key={index}>{feature}</li>
-      ))}
-    </ul>
-    <div className="mt-6">
-      <button className="flex items-center space-x-2 bg-lime-500 text-white font-bold text-xs py-2 px-4 rounded-md hover:bg-lime-600 transition-colors">
-        <span>ENQUIRE NOW</span>
-        <EnquireIcon />
-      </button>
+const ServiceCard = ({ title, description, features, route }: ServiceCardProps) => {
+  const navigate = useNavigate();
+
+  const handleEnquireClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate(route);
+    window.scrollTo(0, 0);
+  };
+
+  return (
+    <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/80 shadow-sm h-full flex flex-col">
+      <h3 className="text-xl font-bold text-gray-800">{title}</h3>
+      <p className="mt-2 text-sm text-gray-600 flex-grow">{description}</p>
+      <ul className="mt-4 space-y-2 text-sm text-gray-600 list-disc list-inside">
+        {features.map((feature, index) => (
+          <li key={index}>{feature}</li>
+        ))}
+      </ul>
+      <div className="mt-6">
+        <button 
+          onClick={handleEnquireClick}
+          className="flex items-center space-x-2 bg-lime-500 text-white font-bold text-xs py-2 px-4 rounded-md hover:bg-lime-600 transition-colors"
+        >
+          <span>ENQUIRE NOW</span>
+          <EnquireIcon />
+        </button>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 
 // The main export component
@@ -121,12 +135,12 @@ const ServicesSection = () => {
     <section className="relative py-16 md:py-24 bg-gray-50 font-sans overflow-hidden">
       <Background />
       <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Title */}
         <div className="relative inline-block mb-12">
           <svg width="419" height="75" viewBox="0 0 419 75" fill="none" xmlns="http://www.w3.org/2000/svg">
             <foreignObject x="-30.6" y="-30.6" width="479.7" height="136.2">
-              <div 
+              <div
                 style={{
                   backdropFilter: 'blur(15.3px)',
                   clipPath: 'url(#bgblur_0_61_10583_clip_path)',
@@ -152,11 +166,12 @@ const ServicesSection = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 tracking-wide">
           {servicesData.map((service, index) => (
-            <ServiceCard 
-              key={index} 
+            <ServiceCard
+              key={index}
               title={service.title}
               description={service.description}
               features={service.features}
+              route={service.route}
             />
           ))}
         </div>
