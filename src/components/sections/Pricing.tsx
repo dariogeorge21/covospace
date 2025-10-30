@@ -32,7 +32,7 @@ const Pricing = () => {
     'CS2-01 Virtual Office',
   ];
 
-  const PricingImageUrl="https://res.cloudinary.com/dobqxxtml/image/upload/v1759946073/new_litted_g4kces.jpg";
+  const PricingImageUrl = 'https://res.cloudinary.com/dobqxxtml/image/upload/v1759946073/new_litted_g4kces.jpg';
 
   return (
       <div 
