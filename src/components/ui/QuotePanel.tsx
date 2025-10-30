@@ -385,17 +385,37 @@ const QuotePanel = ({ isOpen, onClose }: QuotePanelProps) => {
 
                   {/* Total Summary - Only when option selected */}
                   {selectedPricingOption && (
-                    <div className="mb-4 p-4 bg-gradient-to-r from-lime-50 to-lime-100 rounded-lg border-2 border-lime-300">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm font-semibold text-gray-700">Total Amount</span>
-                        <span className="text-2xl font-bold text-lime-700">
-                          {calculateTotalPrice(selectedPricingOption.price)}
-                        </span>
+                    <div className="mb-4">
+                      <div className="p-4 bg-gradient-to-r from-lime-50 to-lime-100 rounded-lg border-2 border-lime-300 mb-3">
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm font-semibold text-gray-700">Total Amount</span>
+                          <span className="text-2xl font-bold text-lime-700">
+                            {calculateTotalPrice(selectedPricingOption.price)}
+                          </span>
+                        </div>
+                        <div className="text-xs text-gray-600 mt-1 flex justify-between">
+                          <span>{seatCount} seat{seatCount > 1 ? 's' : ''} • {selectedPricingOption.type}</span>
+                          <span className="font-medium">{selectedPricingOption.period}</span>
+                        </div>
                       </div>
-                      <div className="text-xs text-gray-600 mt-1 flex justify-between">
-                        <span>{seatCount} seat{seatCount > 1 ? 's' : ''} • {selectedPricingOption.type}</span>
-                        <span className="font-medium">{selectedPricingOption.period}</span>
-                      </div>
+                      
+                      <button
+                        onClick={() => {
+                          // Add payment logic here
+                          console.log('Payment initiated for:', {
+                            service: displayService?.name,
+                            plan: selectedPricingOption.type,
+                            seats: seatCount,
+                            total: calculateTotalPrice(selectedPricingOption.price)
+                          });
+                        }}
+                        className="w-full py-3 px-4 bg-lime-600 hover:bg-lime-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center space-x-2"
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <span>Pay Now</span>
+                      </button>
                     </div>
                   )}
 
