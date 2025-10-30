@@ -21,180 +21,304 @@ export interface ServicePricing {
   popular?: boolean;
   startingPrice: string;
   startingPeriod: string;
+  spaceId?: string;
+  area?: string;
+  seats?: string;
+  facilities?: string[];
 }
 
 // Consolidated service data from existing pages
 export const quoteServices: ServicePricing[] = [
   {
-    id: 'flexi-desk',
-    name: 'Flexi Desk',
+    id: 'cs2-01',
+    spaceId: 'CS2-01',
+    name: 'Flexi Desk / Hot Desk',
     description: 'Flexible workspace solution with no fixed commitments. Perfect for freelancers and remote workers.',
     category: 'workspace',
+    area: '207 Sq.ft',
+    seats: '9',
     features: [
-      'No advance booking required',
-      'Access to premium amenities',
-      'High-speed internet & WiFi',
-      'Complimentary refreshments',
-      'Professional environment'
+      'Reception Desk & Guest Service',
+      'Unlimited WiFi Access',
+      'Mail & Courier Management',
+      'Print / Photocopy Facility (50 Prints)',
+      'Scan Facilities'
+    ],
+    facilities: [
+      '5 Day / 10 Day / Unlimited Plan',
+      'Reception Desk & Guest Service',
+      'Unlimited WiFi Access',
+      'Mail & Courier Management',
+      'Print / Photocopy Facility (50 Prints)',
+      'Scan Facilities'
     ],
     popular: true,
-    startingPrice: 'INR 199',
+    startingPrice: '₹500',
     startingPeriod: 'per day',
     pricingOptions: [
       {
-        type: 'Daily Pass',
-        price: 'INR 199',
-        period: 'per day',
+        type: 'Daily Plan',
+        price: '₹500',
+        period: 'per day +GST',
         description: 'Perfect for occasional users and testing our workspace',
         features: [
           'Access to flexi desks',
-          'High-speed internet',
-          'Basic amenities',
-          'Community access',
-          '8-hour usage'
+          'Unlimited WiFi Access',
+          'Reception Desk & Guest Service',
+          'Mail & Courier Management',
+          'Print / Photocopy Facility (50 Prints)',
+          'Scan Facilities'
         ]
-      },
-      {
-        type: 'Weekly Pass',
-        price: 'INR 999',
-        period: 'per week',
-        description: 'Great for short-term projects and freelancers',
-        features: [
-          'All daily pass benefits',
-          'Extended 12-hour usage',
-          'Mail handling services',
-          'Meeting room credits',
-          'Storage options'
-        ],
-        highlight: true
-      },
-      {
-        type: 'Monthly Pass',
-        price: 'INR 3,000',
-        period: 'per month',
-        description: 'Best value for regular flexible workspace users',
-        features: [
-          'All weekly pass benefits',
-          'Unlimited daily usage',
-          'Priority desk selection',
-          'Free printing allowance',
-          'Business address usage',
-          'Guest pass credits'
-        ]
-      }
-    ]
-  },
-  {
-    id: 'dedicated-desk',
-    name: 'Dedicated Desk',
-    description: 'Your personal workspace in our aesthetically crafted coworking environment.',
-    category: 'workspace',
-    features: [
-      'Your own dedicated desk',
-      'High-speed internet & WiFi',
-      'Mail & courier handling',
-      '24x7 security access',
-      'Storage solutions'
-    ],
-    startingPrice: 'INR 299',
-    startingPeriod: 'per day',
-    pricingOptions: [
-      {
-        type: 'Daily Pass',
-        price: 'INR 299',
-        period: 'per day',
-        description: 'Perfect for trying out our workspace',
-        features: [
-          'Dedicated desk for the day',
-          'High-speed internet',
-          'Basic amenities access',
-          'Community networking'
-        ]
-      },
-      {
-        type: 'Weekly Plan',
-        price: 'INR 1,499',
-        period: 'per week',
-        description: 'Ideal for short-term projects',
-        features: [
-          'Dedicated desk for 7 days',
-          'All daily pass benefits',
-          'Mail handling services',
-          'Meeting room credits'
-        ],
-        popular: true
       },
       {
         type: 'Monthly Plan',
-        price: 'INR 7,500',
-        period: 'per month',
-        description: 'Best value for regular users',
+        price: '₹5,500',
+        period: 'per month +GST',
+        description: 'Best value for regular flexible workspace users',
         features: [
-          'Your own dedicated desk',
-          'All weekly plan benefits',
-          'Storage locker included',
-          'Unlimited meeting room access',
-          'Business address usage'
+          '5 Day / 10 Day / Unlimited Plan',
+          'Reception Desk & Guest Service',
+          'Unlimited WiFi Access',
+          'Mail & Courier Management',
+          'Print / Photocopy Facility (50 Prints)',
+          'Scan Facilities'
+        ],
+        highlight: true
+      }
+    ]
+  },
+  {
+    id: 'cs2-04',
+    spaceId: 'CS2-04',
+    name: 'Dedicated Work Space',
+    description: 'Your personal workspace in our aesthetically crafted coworking environment.',
+    category: 'workspace',
+    area: '203 Sq.ft',
+    seats: '8',
+    features: [
+      'All Flexi Desk facilities',
+      'Conference Room Access 3 Hours/Month',
+      'High-speed internet & WiFi',
+      'Mail & courier handling',
+      'Professional environment'
+    ],
+    facilities: [
+      'Includes all Flexi Desk facilities',
+      'Conference Room Access 3 Hours/Month',
+      'Additional hours chargeable',
+      'Reception Desk & Guest Service',
+      'Unlimited WiFi Access',
+      'Mail & Courier Management',
+      'Print / Photocopy Facility (50 Prints)',
+      'Scan Facilities'
+    ],
+    startingPrice: '₹5,500',
+    startingPeriod: 'per month',
+    pricingOptions: [
+      {
+        type: 'Monthly Plan',
+        price: '₹5,500',
+        period: 'per month +GST',
+        description: 'Best value for dedicated workspace users',
+        features: [
+          'Includes all Flexi Desk facilities',
+          'Conference Room Access 3 Hours/Month',
+          'Additional hours chargeable',
+          'Reception Desk & Guest Service',
+          'Unlimited WiFi Access',
+          'Mail & Courier Management',
+          'Print / Photocopy Facility (50 Prints)',
+          'Scan Facilities'
+        ],
+        popular: true
+      }
+    ]
+  },
+  {
+    id: 'cs2-02',
+    spaceId: 'CS2-02',
+    name: 'Office Suit',
+    description: 'Fully managed private office experience for small teams.',
+    category: 'office',
+    area: '143 Sq.ft',
+    seats: '4 Total (3 Chair + 1 Manager)',
+    features: [
+      '5 Day / 10 Day / Unlimited Plan',
+      'Reception Desk & Guest Service',
+      'Unlimited WiFi Access',
+      'Mail & Courier Management',
+      'Print / Photocopy Facility (50 Prints)'
+    ],
+    facilities: [
+      '5 Day / 10 Day / Unlimited Plan',
+      'Reception Desk & Guest Service',
+      'Unlimited WiFi Access',
+      'Mail & Courier Management',
+      'Print / Photocopy Facility (50 Prints)',
+      'Scan Facilities'
+    ],
+    startingPrice: '₹30,000',
+    startingPeriod: 'per month',
+    pricingOptions: [
+      {
+        type: 'Monthly Plan',
+        price: '₹30,000',
+        period: 'per month +GST',
+        description: 'Perfect for small teams (4 Total: 3 Chair + 1 Manager)',
+        features: [
+          '5 Day / 10 Day / Unlimited Plan',
+          'Reception Desk & Guest Service',
+          'Unlimited WiFi Access',
+          'Mail & Courier Management',
+          'Print / Photocopy Facility (50 Prints)',
+          'Scan Facilities'
         ]
       }
     ]
   },
   {
-    id: 'private-offices',
-    name: 'Private Offices',
-    description: 'Fully managed private office experience for teams and businesses.',
+    id: 'cs2-03',
+    spaceId: 'CS2-03',
+    name: 'Office Suit',
+    description: 'Fully managed private office with conference room access.',
     category: 'office',
+    area: '145 Sq.ft',
+    seats: '4 Total (3 Chair + 1 Manager + 2 Visitors)',
     features: [
-      'Fully furnished workspace',
-      'Flexible plans available',
-      '24x7 security & access',
-      'All-inclusive services',
-      'Professional environment'
+      'Includes all CS2-02 facilities',
+      'Conference Room Access 12 Hours/Month',
+      'Additional hours chargeable',
+      'Reception Desk & Guest Service',
+      'Unlimited WiFi Access'
     ],
-    startingPrice: 'INR 9,500',
-    startingPeriod: 'per person/month',
+    facilities: [
+      'Includes all CS2-02 facilities',
+      'Conference Room Access 12 Hours/Month',
+      'Additional hours chargeable',
+      '5 Day / 10 Day / Unlimited Plan',
+      'Reception Desk & Guest Service',
+      'Unlimited WiFi Access',
+      'Mail & Courier Management',
+      'Print / Photocopy Facility (50 Prints)',
+      'Scan Facilities'
+    ],
+    startingPrice: '₹30,000',
+    startingPeriod: 'per month',
     pricingOptions: [
       {
-        type: 'Solo Office',
-        price: 'INR 9,500',
-        period: 'per person/month',
-        description: 'Perfect for entrepreneurs and small startups (1-2 People, 80-120 sq ft)',
+        type: 'Monthly Plan',
+        price: '₹30,000',
+        period: 'per month +GST',
+        description: 'Ideal for teams with meeting needs (4 Total: 3 Chair + 1 Manager + 2 Visitors)',
         features: [
-          'Fully furnished workspace',
-          'Ergonomic furniture included',
-          'Natural lighting',
-          'Storage solutions',
-          '24x7 access',
-          'Business address usage'
-        ]
-      },
-      {
-        type: 'Team Office',
-        price: 'INR 8,500',
-        period: 'per person/month',
-        description: 'Ideal for growing teams and small businesses (3-6 People, 150-300 sq ft)',
-        features: [
-          'All Solo Office benefits',
-          'Dedicated meeting area',
-          'Team collaboration space',
-          'Additional storage',
-          'Printing allowance',
-          'Guest reception services'
+          'Includes all CS2-02 facilities',
+          'Conference Room Access 12 Hours/Month',
+          'Additional hours chargeable',
+          '5 Day / 10 Day / Unlimited Plan',
+          'Reception Desk & Guest Service',
+          'Unlimited WiFi Access',
+          'Mail & Courier Management',
+          'Print / Photocopy Facility (50 Prints)',
+          'Scan Facilities'
         ],
         highlight: true
-      },
+      }
+    ]
+  },
+  {
+    id: 'cs2-05',
+    spaceId: 'CS2-05',
+    name: 'Office Suit',
+    description: 'Premium office with business address and GST registration.',
+    category: 'office',
+    area: '172 Sq.ft',
+    seats: '5 Total (4 Chair + 1 Manager + 2 Visitors)',
+    features: [
+      'Premium Business Address',
+      'GST Registration',
+      'Current Account',
+      'Reception Desk & Guest Service',
+      'Unlimited WiFi Access'
+    ],
+    facilities: [
+      'Premium Business Address',
+      'GST Registration',
+      'Current Account',
+      '5 Day / 10 Day / Unlimited Plan',
+      'Reception Desk & Guest Service',
+      'Unlimited WiFi Access',
+      'Mail & Courier Management',
+      'Print / Photocopy Facility (50 Prints)',
+      'Scan Facilities'
+    ],
+    startingPrice: '₹35,000',
+    startingPeriod: 'per month',
+    pricingOptions: [
       {
-        type: 'Enterprise Office',
-        price: 'INR 7,500',
-        period: 'per person/month',
-        description: 'Perfect for established businesses (7+ People, 400+ sq ft)',
+        type: 'Monthly Plan',
+        price: '₹35,000',
+        period: 'per month +GST',
+        description: 'Premium office for growing businesses (5 Total: 4 Chair + 1 Manager + 2 Visitors)',
         features: [
-          'All Team Office benefits',
-          'Multiple meeting rooms',
-          'Dedicated reception area',
-          'Custom branding options',
-          'Priority support',
-          'Flexible lease terms'
+          'Premium Business Address',
+          'GST Registration',
+          'Current Account',
+          '5 Day / 10 Day / Unlimited Plan',
+          'Reception Desk & Guest Service',
+          'Unlimited WiFi Access',
+          'Mail & Courier Management',
+          'Print / Photocopy Facility (50 Prints)',
+          'Scan Facilities'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'cs2-06',
+    spaceId: 'CS2-06',
+    name: 'Office Suit',
+    description: 'Setup and register your company at our prestigious address.',
+    category: 'office',
+    area: '171 Sq.ft',
+    seats: '5 Total (4 Chair + 1 Manager + 2 Visitors)',
+    features: [
+      'Setup and Register your Company',
+      'Prestigious Address',
+      'Premium Business Address',
+      'GST Registration',
+      'Current Account'
+    ],
+    facilities: [
+      'Setup and Register your Company at our Prestigious Address',
+      'Premium Business Address',
+      'GST Registration',
+      'Current Account',
+      '5 Day / 10 Day / Unlimited Plan',
+      'Reception Desk & Guest Service',
+      'Unlimited WiFi Access',
+      'Mail & Courier Management',
+      'Print / Photocopy Facility (50 Prints)',
+      'Scan Facilities'
+    ],
+    startingPrice: '₹35,000',
+    startingPeriod: 'per month',
+    pricingOptions: [
+      {
+        type: 'Monthly Plan',
+        price: '₹35,000',
+        period: 'per month +GST',
+        description: 'Complete company setup solution (5 Total: 4 Chair + 1 Manager + 2 Visitors)',
+        features: [
+          'Setup and Register your Company at our Prestigious Address',
+          'Premium Business Address',
+          'GST Registration',
+          'Current Account',
+          '5 Day / 10 Day / Unlimited Plan',
+          'Reception Desk & Guest Service',
+          'Unlimited WiFi Access',
+          'Mail & Courier Management',
+          'Print / Photocopy Facility (50 Prints)',
+          'Scan Facilities'
         ]
       }
     ]
