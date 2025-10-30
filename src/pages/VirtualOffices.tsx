@@ -92,51 +92,22 @@ export default function VirtualOffices() {
 
   const packages = [
     {
-      type: "Basic Virtual Office",
-      price: "INR 2,500",
-      period: "per month",
-      description: "Essential virtual office services for startups and freelancers",
+      spaceId: "CS2-01",
+      type: "Virtual Office",
+      price: "₹11,500",
+      period: "per year +GST",
+      description: "Complete virtual office solution with 1 Day/Year access",
       features: [
-        "Prime business address usage",
-        "Mail receiving and holding",
-        "Monthly mail forwarding",
-        "Basic phone number",
-        "Call forwarding service",
-        "Business registration support"
-      ],
-      highlight: false
-    },
-    {
-      type: "Professional Virtual Office",
-      price: "INR 4,500",
-      period: "per month",
-      description: "Comprehensive virtual office solution for growing businesses",
-      features: [
-        "All Basic features included",
-        "Weekly mail forwarding",
-        "Professional call answering",
-        "Digital mail scanning",
-        "Visitor notification service",
-        "2 hours meeting room access",
-        "Company formation assistance"
+        "Business Address",
+        "GST Registration",
+        "MSME Registration",
+        "Current Account",
+        "Mail and Courier",
+        "Temp Sign Board",
+        "Reception Support",
+        "Conference Room (2 Hours / Year)"
       ],
       highlight: true
-    },
-    {
-      type: "Premium Virtual Office",
-      price: "INR 6,500",
-      period: "per month",
-      description: "Complete virtual office package for established companies",
-      features: [
-        "All Professional features included",
-        "Daily mail forwarding",
-        "Dedicated receptionist",
-        "Priority customer service",
-        "5 hours meeting room access",
-        "Guest reception services",
-        "Custom phone greeting",
-        "Mail scanning within 2 hours"
-      ]
     }
   ];
 
@@ -201,10 +172,10 @@ export default function VirtualOffices() {
             </p>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto mb-8">
               <div className="text-center">
-                <p className="text-sm text-white/80 mb-2">Starting from</p>
-                <div className="text-3xl sm:text-4xl font-bold text-lime-400 mb-2">INR 2,500</div>
-                <p className="text-white/90">per month</p>
-                <p className="text-sm text-white/70 mt-2">Prime business address included</p>
+                <p className="text-sm text-white/80 mb-2">Complete Package</p>
+                <div className="text-3xl sm:text-4xl font-bold text-lime-400 mb-2">₹11,500</div>
+                <p className="text-white/90">per year +GST</p>
+                <p className="text-sm text-white/70 mt-2">Business Address | GST & MSME Registration | 1 Day/Year Access</p>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -273,7 +244,7 @@ export default function VirtualOffices() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="max-w-md mx-auto">
             {packages.map((pkg, index) => (
               <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 p-6 lg:p-8 ${
                 pkg.highlight ? 'border-lime-500 ring-2 ring-lime-500 ring-opacity-50' : 'border-gray-200'
@@ -281,18 +252,22 @@ export default function VirtualOffices() {
                 {pkg.highlight && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-lime-600 text-white px-4 py-1 text-sm font-semibold rounded-full">
-                      Most Popular
+                      Complete Package
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
+                  <div className="bg-lime-50 text-lime-700 px-3 py-1 rounded-full text-xs font-semibold mb-3 inline-block">
+                    {pkg.spaceId}
+                  </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{pkg.type}</h3>
                   <div className="mb-2">
                     <span className="text-3xl font-bold text-gray-900">{pkg.price}</span>
                     <span className="text-gray-500 ml-2">{pkg.period}</span>
                   </div>
-                  <p className="text-sm text-gray-600">{pkg.description}</p>
+                  <p className="text-sm text-gray-600 mb-2">{pkg.description}</p>
+                  <p className="text-xs text-lime-600 font-medium">1 Day / Year Access</p>
                 </div>
 
                 <ul className="space-y-3 mb-8">
@@ -304,13 +279,9 @@ export default function VirtualOffices() {
                   ))}
                 </ul>
 
-                <Link 
+                <Link
                   to="/contact"
-                  className={`block w-full text-center font-semibold py-3 px-6 rounded-lg transition-colors duration-300 ${
-                    pkg.highlight 
-                      ? 'bg-lime-600 text-white hover:bg-lime-700' 
-                      : 'border-2 border-lime-600 text-lime-600 hover:bg-lime-50'
-                  }`}
+                  className="block w-full text-center font-semibold py-3 px-6 rounded-lg transition-colors duration-300 bg-lime-600 text-white hover:bg-lime-700"
                 >
                   Choose Package
                 </Link>
