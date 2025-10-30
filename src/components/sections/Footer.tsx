@@ -34,8 +34,8 @@ const footerLinks = [
 ];
 
 const socialLinks = [
-  { name: 'Facebook', href: '#', icon: FacebookIcon },
-  { name: 'Instagram', href: '#', icon: InstagramIcon },
+  { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61581623110489', icon: FacebookIcon },
+  { name: 'Instagram', href: 'https://www.instagram.com/cov_space/?hl=en', icon: InstagramIcon },
   { name: 'Twitter', href: '#', icon: TwitterIcon },
   { name: 'LinkedIn', href: '#', icon: LinkedInIcon },
 ];
