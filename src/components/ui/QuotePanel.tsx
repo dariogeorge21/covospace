@@ -110,22 +110,29 @@ const QuotePanel = ({ isOpen, onClose }: QuotePanelProps) => {
 
   const handleServiceSelect = (service: ServicePricing) => {
     setSelectedService(service);
+    setHoveredService(null); // Clear hover state on selection to prevent conflicts
     setSelectedPricingOption(undefined); // Reset pricing option when service changes
     setSeatCount(1); // Reset seat count when service changes
     setAnnouncement(`${service.name} selected. Starting from ${service.startingPrice} ${service.startingPeriod}.`);
     
     // Auto scroll to pricing section on mobile
     if (pricingRef.current && window.innerWidth < 1024) {
-      setTimeout(() => {
+      // Use requestAnimationFrame for smoother scroll without flicker
+      requestAnimationFrame(() => {
         pricingRef.current?.scrollIntoView({ 
           behavior: 'smooth', 
           block: 'start' 
         });
-      }, 100);
+      });
     }
   };
 
   const handleServiceHover = (service: ServicePricing | null) => {
+    // Disable hover effects on mobile/touch devices to prevent flicker
+    if (window.innerWidth < 1024) {
+      return;
+    }
+    
     setHoveredService(service);
     if (service && service !== selectedService) {
       setSelectedPricingOption(undefined); // Reset pricing option when hovering different service
