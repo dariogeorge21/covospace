@@ -1,3 +1,5 @@
+import { useQuotePanel } from '../ui/QuotePanelProvider';
+
 const ArrowIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -13,6 +15,7 @@ const ArrowIcon = () => (
 
 // Main Pricing Component
 const Pricing = () => {
+  const { openQuote } = useQuotePanel();
   // Data for the pricing list to keep the code clean
   const services = [
     { name: 'Private Offices', price: '- From ₹30,000 per month +GST' },
@@ -86,7 +89,7 @@ const Pricing = () => {
 
             {/* Learn More Button */}
             <div className="pt-6">
-              <button className="bg-black text-white font-bold py-3 pl-6 pr-3 rounded-full flex items-center gap-4 group transition-all duration-300 hover:shadow-2xl">
+              <button onClick={openQuote} className="bg-black text-white font-bold py-3 pl-6 pr-3 rounded-full flex items-center gap-4 group transition-all duration-300 hover:shadow-2xl">
                 LEARN MORE
                 <div className="bg-[#84cc16] rounded-full p-2 transform group-hover:translate-x-1 transition-transform duration-300">
                   <ArrowIcon />

@@ -18,6 +18,7 @@ import Location from './pages/Location';
 import OurClients from './pages/OurClients';
 import Contact from './pages/Contact';
 import CompanyRegistration from './pages/CompanyRegistration';
+import { QuotePanelProvider } from './components/ui/QuotePanelProvider';
 
 function Home() {
   return (
@@ -37,20 +38,22 @@ function Home() {
 function App() {
   return (
     <div className="min-h-screen">
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/private-offices" element={<PrivateOffices />} />
-        <Route path="/dedicated-desk" element={<DedicatedDesk />} />
-        <Route path="/flexi-desk" element={<FlexiDesk />} />
-        <Route path="/virtual-offices" element={<VirtualOffices />} />
-        <Route path="/meeting-rooms" element={<MeetingRooms />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/location" element={<Location />} />
-        <Route path="/our-clients" element={<OurClients />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/company-registration" element={<CompanyRegistration />} />
-      </Routes>
+      <QuotePanelProvider>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/private-offices" element={<PrivateOffices />} />
+          <Route path="/dedicated-desk" element={<DedicatedDesk />} />
+          <Route path="/flexi-desk" element={<FlexiDesk />} />
+          <Route path="/virtual-offices" element={<VirtualOffices />} />
+          <Route path="/meeting-rooms" element={<MeetingRooms />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/location" element={<Location />} />
+          <Route path="/our-clients" element={<OurClients />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/company-registration" element={<CompanyRegistration />} />
+        </Routes>
+      </QuotePanelProvider>
     </div>
   );
 }

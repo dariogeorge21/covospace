@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useQuotePanel } from '../components/ui/QuotePanelProvider';
 
 // Icon components
 const PhoneIcon = () => (
@@ -65,6 +66,7 @@ export default function Contact() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const { openQuote } = useQuotePanel();
 
   const services = [
     'Private Offices',
@@ -461,12 +463,12 @@ export default function Contact() {
                   >
                     Schedule a Tour
                   </Link>
-                  <Link
-                    to="/"
+                  <button
+                    onClick={openQuote}
                     className="block w-full border-2 border-lime-600 text-lime-600 text-center font-semibold py-3 px-6 rounded-lg hover:bg-lime-50 transition-colors duration-300"
                   >
                     Get Quick Quote
-                  </Link>
+                  </button>
                 </div>
 
                 {/* Additional Services */}
