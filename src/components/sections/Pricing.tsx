@@ -15,20 +15,21 @@ const ArrowIcon = () => (
 const Pricing = () => {
   // Data for the pricing list to keep the code clean
   const services = [
-    { name: 'Private Offices', price: '- From INR. 9,500 per person, per month' },
-    { name: 'Dedicated Desks', price: '- From INR. 7,500 per person, per month' },
-    { name: 'Flexi Desk', price: '- From INR. 3,000 per person, per month' },
-    { name: 'Virtual Office', price: '- From INR. 1,500 per month' },
-    { name: 'Meeting Rooms', price: '- From INR. 500 per hour' },
-    { name: 'Business Address', price: '- From INR. 40,000 annually' },
+    { name: 'Private Offices', price: '- From ₹30,000 per month +GST' },
+    { name: 'Dedicated Desks', price: '- From ₹5,500 per month +GST' },
+    { name: 'Flexi Desk', price: '- From ₹5,500 per month +GST | ₹500 per day +GST' },
+    { name: 'Virtual Office', price: '- ₹11,500 per year +GST' },
+    { name: 'Meeting Rooms', price: '- ₹700 per hour +GST' },
+    { name: 'Business Address', price: '- From ₹40,000 annually +GST' },
   ];
 
   // Data for the green office type buttons
   const officeTypes = [
-    '30 Private Offices',
-    '65 Private Offices',
-    '65 Private Offices',
-    '65 Private Offices',
+    'CS2-01 Flexi Desk',
+    'CS2-04 Dedicated Desk',
+    'CS2-02/03/05/06 Office Suits',
+    'CS2-C1 Conference Room',
+    'CS2-01 Virtual Office',
   ];
 
   const PricingImageUrl="https://res.cloudinary.com/dobqxxtml/image/upload/v1759946073/new_litted_g4kces.jpg";
