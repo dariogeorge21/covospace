@@ -98,54 +98,62 @@ export default function PrivateOffices() {
 
   const officeTypes = [
     {
-      type: "Solo Office",
-      capacity: "1-2 People",
-      size: "80-120 sq ft",
-      price: "INR 9,500",
-      period: "per person/month",
-      description: "Perfect for entrepreneurs and small startups",
+      spaceId: "CS2-02",
+      type: "Office Suit",
+      capacity: "3 Chair + 1 Manager (Total - 4)",
+      size: "143 sq ft",
+      price: "₹30,000",
+      period: "per month +GST",
+      description: "Perfect for small teams",
       features: [
-        "Fully furnished workspace",
-        "Ergonomic furniture included",
-        "Natural lighting",
-        "Storage solutions",
-        "24x7 access",
-        "Business address usage"
+        "5 Day / 10 Day / Unlimited Plan",
+        "Reception Desk & Guest Service",
+        "Unlimited WiFi Access",
+        "Mail & Courier Management",
+        "Print / Photocopy Facility (50 Prints)",
+        "Scan Facilities"
       ],
       highlight: false
     },
     {
-      type: "Team Office",
-      capacity: "3-6 People", 
-      size: "150-300 sq ft",
-      price: "INR 8,500",
-      period: "per person/month",
-      description: "Ideal for growing teams and small businesses",
+      spaceId: "CS2-03",
+      type: "Office Suit",
+      capacity: "3 Chair + 1 Manager + 2 Visitors (Total - 4)",
+      size: "145 sq ft",
+      price: "₹30,000",
+      period: "per month +GST",
+      description: "Ideal for teams with meeting needs",
       features: [
-        "All Solo Office benefits",
-        "Dedicated meeting area",
-        "Team collaboration space",
-        "Additional storage",
-        "Printing allowance",
-        "Guest reception services"
+        "Includes all CS2-02 facilities",
+        "Conference Room Access 12 Hours/Month (Additional hours chargeable)"
       ],
       highlight: true
     },
     {
-      type: "Executive Suite",
-      capacity: "8-15 People",
-      size: "400-800 sq ft", 
-      price: "INR 7,500",
-      period: "per person/month",
-      description: "Premium offices for established businesses",
+      spaceId: "CS2-05",
+      type: "Office Suit",
+      capacity: "4 Chair + 1 Manager + 2 Visitors (Total - 5)",
+      size: "172 sq ft",
+      price: "₹35,000",
+      period: "per month +GST",
+      description: "Premium office for growing businesses",
       features: [
-        "All Team Office benefits",
-        "Private conference room",
-        "Executive furniture",
-        "Dedicated phone line",
-        "Priority meeting room access",
-        "Concierge services",
-        "Custom branding options"
+        "Premium Business Address",
+        "GST Registration",
+        "Current Account"
+      ]
+    },
+    {
+      spaceId: "CS2-06",
+      type: "Office Suit",
+      capacity: "4 Chair + 1 Manager + 2 Visitors (Total - 5)",
+      size: "171 sq ft",
+      price: "₹35,000",
+      period: "per month +GST",
+      description: "Complete company setup solution",
+      features: [
+        "Setup and Register your Company at our Prestigious Address",
+        "Includes facilities listed for CS2-05"
       ]
     }
   ];
@@ -222,8 +230,8 @@ export default function PrivateOffices() {
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto mb-8">
               <div className="text-center">
                 <p className="text-sm text-white/80 mb-2">Starting from</p>
-                <div className="text-3xl sm:text-4xl font-bold text-lime-400 mb-2">INR 9,500</div>
-                <p className="text-white/90">per person, per month</p>
+                <div className="text-3xl sm:text-4xl font-bold text-lime-400 mb-2">₹30,000</div>
+                <p className="text-white/90">per month +GST</p>
                 <div className="flex items-center justify-center mt-3">
                   {[...Array(5)].map((_, i) => (
                     <StarIcon key={i} />
@@ -299,7 +307,7 @@ export default function PrivateOffices() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {officeTypes.map((office, index) => (
               <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 p-6 lg:p-8 ${
                 office.highlight ? 'border-lime-500 ring-2 ring-lime-500 ring-opacity-50' : 'border-gray-200'
@@ -311,32 +319,35 @@ export default function PrivateOffices() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">{office.type}</h3>
-                  <p className="text-lime-600 font-medium mb-1">{office.capacity}</p>
-                  <p className="text-sm text-gray-500 mb-3">{office.size}</p>
-                  <div className="mb-2">
-                    <span className="text-3xl font-bold text-gray-900">{office.price}</span>
-                    <span className="text-gray-500 ml-2 text-sm">{office.period}</span>
+                  <div className="bg-lime-50 text-lime-700 px-3 py-1 rounded-full text-xs font-semibold mb-3 inline-block">
+                    {office.spaceId}
                   </div>
-                  <p className="text-sm text-gray-600">{office.description}</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-1">{office.type}</h3>
+                  <p className="text-lime-600 font-medium mb-1 text-xs">{office.capacity}</p>
+                  <p className="text-xs text-gray-500 mb-3">{office.size}</p>
+                  <div className="mb-2">
+                    <span className="text-2xl font-bold text-gray-900">{office.price}</span>
+                    <span className="text-gray-500 ml-2 text-xs">{office.period}</span>
+                  </div>
+                  <p className="text-xs text-gray-600">{office.description}</p>
                 </div>
 
                 <ul className="space-y-3 mb-8">
                   {office.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                    <li key={featureIndex} className="flex items-start text-xs text-gray-600">
                       <CheckIcon />
                       <span className="ml-3">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <Link 
+                <Link
                   to="/contact"
                   className={`block w-full text-center font-semibold py-3 px-6 rounded-lg transition-colors duration-300 ${
-                    office.highlight 
-                      ? 'bg-lime-600 text-white hover:bg-lime-700' 
+                    office.highlight
+                      ? 'bg-lime-600 text-white hover:bg-lime-700'
                       : 'border-2 border-lime-600 text-lime-600 hover:bg-lime-50'
                   }`}
                 >
