@@ -127,7 +127,7 @@ export const quoteServices: ServicePricing[] = [
   {
     id: 'cs2-02',
     spaceId: 'CS2-02',
-    name: 'Office Suit',
+    name: 'Office Suite',
     description: 'Fully managed private office experience for small teams.',
     category: 'office',
     area: '143 Sq.ft',
@@ -170,7 +170,7 @@ export const quoteServices: ServicePricing[] = [
   {
     id: 'cs2-03',
     spaceId: 'CS2-03',
-    name: 'Office Suit',
+    name: 'Office Suite',
     description: 'Fully managed private office with conference room access.',
     category: 'office',
     area: '145 Sq.ft',
@@ -206,7 +206,7 @@ export const quoteServices: ServicePricing[] = [
   {
     id: 'cs2-05',
     spaceId: 'CS2-05',
-    name: 'Office Suit',
+    name: 'Office Suite',
     description: 'Premium office with business address and GST registration.',
     category: 'office',
     area: '172 Sq.ft',
@@ -243,7 +243,7 @@ export const quoteServices: ServicePricing[] = [
   {
     id: 'cs2-06',
     spaceId: 'CS2-06',
-    name: 'Office Suit',
+    name: 'Office Suite',
     description: 'Setup and register your company at our prestigious address.',
     category: 'office',
     area: '171 Sq.ft',
