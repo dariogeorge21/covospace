@@ -211,7 +211,7 @@ export default function About() {
 							<div className="space-y-4">
 								<div className="flex items-start">
 									<span className="text-lime-200 font-semibold text-sm uppercase tracking-wide w-20 flex-shrink-0">Address:</span>
-									<span className="text-white/90">Center of Kochi, Kerala, India</span>
+									<span className="text-white/90">GK Tower, Chakkarapparambu Road, Near to NH 66 Bypass, Near Holiday Inn Hotel, Ernakulam- 682028</span>
 								</div>
 								<div className="flex items-start">
 									<span className="text-lime-200 font-semibold text-sm uppercase tracking-wide w-20 flex-shrink-0">Features:</span>
