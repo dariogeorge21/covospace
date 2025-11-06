@@ -219,7 +219,6 @@ export default function Contact() {
               <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-lime-700 transition-colors duration-300">Phone</h3>
               <p className="text-gray-600 text-sm">
                 +91 XXXXX XXXXX<br />
-                <span className="text-xs text-gray-500">Available 24/7</span>
               </p>
             </div>
 
@@ -243,7 +242,6 @@ export default function Contact() {
               <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-lime-700 transition-colors duration-300">Business Hours</h3>
               <p className="text-gray-600 text-sm">
                 Mon - Fri: 9AM - 6PM<br />
-                <span className="text-xs text-gray-500">24x7 Access Available</span>
               </p>
             </div>
           </div>
