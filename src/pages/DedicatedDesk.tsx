@@ -80,7 +80,7 @@ export default function DedicatedDesk() {
   const pricingPlans = [
     {
       type: "Monthly Plan",
-      price: "₹5,500",
+      price: "₹6,000",
       period: "per month +GST",
       description: "Best value for dedicated workspace users",
       features: [
