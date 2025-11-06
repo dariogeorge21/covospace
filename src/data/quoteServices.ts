@@ -23,15 +23,14 @@ export const quoteServices: ServicePricing[] = [
     name: 'Flexi Desk',
     description: 'Flexible workspace solution for dynamic professionals',
     pricing: {
-      daily: 'INR 199',
-      weekly: 'INR 999',
-      monthly: 'INR 3,000'
+      daily: 'INR 500',
+      monthly: 'INR 5,500'
     },
     features: [
       'Access to flexi desks',
       'High-speed internet',
-      'Basic amenities',
-      'Community access',
+      'Conference Room Access 3 Hours/Month',
+      'Flexible access',
       'No advance booking required'
     ],
     popular: true,
@@ -42,16 +41,14 @@ export const quoteServices: ServicePricing[] = [
     name: 'Dedicated Desk',
     description: 'Your personal workspace in a collaborative environment',
     pricing: {
-      daily: 'INR 299',
-      weekly: 'INR 1,499',
-      monthly: 'INR 7,500'
+      monthly: 'INR 6,000'
     },
     features: [
       'Dedicated desk exclusively yours',
+      'All Flexi Desk facilities',
+      'Conference Room Access 3 Hours/Month',
       'High-speed internet & WiFi',
-      'Mail & courier services',
-      '24x7 security & access',
-      'Storage locker included'
+      'Professional environment'
     ],
     bookingUrl: '/dedicated-desk'
   },
@@ -60,15 +57,16 @@ export const quoteServices: ServicePricing[] = [
     name: 'Private Offices',
     description: 'Fully managed private office experience for teams',
     pricing: {
-      monthly: 'From INR 9,500 per person'
+      monthly: 'From INR 30,000'
     },
     features: [
       'Fully furnished workspace',
-      'Ergonomic furniture included',
-      'Natural lighting',
-      '24x7 access',
-      'Business address usage',
-      'Meeting room credits'
+      'Conference Room Access 12 Hours/Month',
+      'Access Timing 9am-9pm',
+      'Reserved Parking',
+      'Premium Business Address',
+      'GST Registration Support',
+      'Current Account Opening Support'
     ],
     bookingUrl: '/private-offices'
   },
@@ -77,15 +75,15 @@ export const quoteServices: ServicePricing[] = [
     name: 'Virtual Office',
     description: 'Prime business address without the upfront cost',
     pricing: {
-      monthly: 'From INR 2,500'
+      monthly: 'INR 9,500'
     },
     features: [
-      'Prime business address usage',
-      'Mail receiving and holding',
-      'Call forwarding service',
-      'Business registration support',
-      'Professional receptionist',
-      'Meeting room access'
+      'Business Address',
+      'GST Registration',
+      'MSME Registration',
+      'Current Account Opening Support',
+      'Mail and Courier',
+      'Conference Room (2 Hours / Year)'
     ],
     bookingUrl: '/virtual-offices'
   },
@@ -94,15 +92,14 @@ export const quoteServices: ServicePricing[] = [
     name: 'Meeting Rooms',
     description: 'Premium meeting rooms with cutting-edge technology',
     pricing: {
-      hourly: 'From INR 400'
+      hourly: 'INR 700'
     },
     features: [
-      '4-8 seater meeting rooms',
-      'Audio and video conferencing',
-      'Wireless presentation',
-      'Professional setup',
-      'Catering on request',
-      'Full-day packages available'
+      'Interactive Display',
+      'Unlimited Wi-Fi',
+      'Complimentary Beverages and Cookies',
+      'Professional ambiance',
+      'Flexible booking options'
     ],
     bookingUrl: '/meeting-rooms'
   },
