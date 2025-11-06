@@ -96,14 +96,14 @@ export default function VirtualOffices() {
     {
       spaceId: "CS2-01",
       type: "Virtual Office",
-      price: "₹11,500",
-      period: "per year +GST",
+      price: "₹9,500",
+      period: "per month +GST",
       description: "Complete virtual office solution with 1 Day/Year access",
       features: [
         "Business Address",
         "GST Registration",
         "MSME Registration",
-        "Current Account",
+        "Current Account Opening Support",
         "Mail and Courier",
         "Temp Sign Board",
         "Reception Support",
