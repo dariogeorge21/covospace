@@ -128,7 +128,6 @@ export default function OurClients() {
   ];
 
   const successMetrics = [
-    { number: "500+", label: "Happy Clients", description: "Businesses trust us with their workspace needs" },
     { number: "95%", label: "Client Retention", description: "Long-term partnerships built on satisfaction" },
     { number: "24/7", label: "Support Available", description: "Round-the-clock assistance for our clients" },
     { number: "100%", label: "Satisfaction Rate", description: "Committed to exceeding expectations" }
