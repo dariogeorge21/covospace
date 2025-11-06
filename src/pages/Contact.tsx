@@ -206,8 +206,9 @@ export default function Contact() {
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-lime-700 transition-colors duration-300">Location</h3>
               <p className="text-gray-600 text-sm">
-                Center of Kochi<br />
-                Kerala, India
+                GK Tower, Chakkarapparambu Road<br />
+                Near to NH 66 Bypass, Near Holiday Inn Hotel<br />
+                Ernakulam- 682028
               </p>
             </div>
 
@@ -218,7 +219,8 @@ export default function Contact() {
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-lime-700 transition-colors duration-300">Phone</h3>
               <p className="text-gray-600 text-sm">
-                +91 XXXXX XXXXX<br />
+                +91 918893 9892<br />
+                +91 735659 3629
               </p>
             </div>
 
@@ -556,7 +558,7 @@ export default function Contact() {
       </section>
 
       {/* Map/Location Section */}
-      <section className="bg-gray-50 py-12 sm:py-16 lg:py-20">
+      <section className="bg-gray-50 py-12 sm:py-16 lg:py-20" id="map">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
@@ -568,17 +570,19 @@ export default function Contact() {
             </p>
           </div>
           
-          {/* Map Placeholder */}
-          <div className="bg-white rounded-2xl shadow-sm p-6">
-            <div className="bg-gray-100 rounded-xl h-64 sm:h-80 lg:h-96 flex items-center justify-center">
-              <div className="text-center">
-                <div className="p-4 bg-lime-50 rounded-full w-fit mx-auto mb-4">
-                  <LocationIcon />
-                </div>
-                <p className="text-gray-600 mt-2 font-medium">Interactive map coming soon</p>
-                <p className="text-sm text-gray-500">Center of Kochi, Kerala, India</p>
-              </div>
-            </div>
+          {/* Map */}
+          <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2453.265626960014!2d76.31614754833943!3d9.990565632699571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d006e49b46d%3A0xdb35e1a513b8a76d!2sGK%20Tower!5e1!3m2!1sen!2sin!4v1762436077413!5m2!1sen!2sin" 
+              width="100%" 
+              height="400" 
+              style={{ border: 0 }} 
+              allowFullScreen={true} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-64 sm:h-80 lg:h-96 rounded-xl"
+              title="GK Tower Location - Covspace"
+            />
           </div>
         </div>
       </section>
