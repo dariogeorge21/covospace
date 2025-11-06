@@ -108,12 +108,12 @@ export const quoteServices: ServicePricing[] = [
       'Includes all Flexi Desk facilities',
       'Conference Room Access 3 Hours/Month (Additional hours chargeable)'
     ],
-    startingPrice: '₹5,500',
+    startingPrice: '₹6,000',
     startingPeriod: 'per month',
     pricingOptions: [
       {
         type: 'Monthly Plan',
-        price: '₹5,500',
+        price: '₹6,000',
         period: 'per month +GST',
         description: 'Best value for dedicated workspace users',
         features: [
@@ -322,7 +322,7 @@ export const quoteServices: ServicePricing[] = [
       'Business Address',
       'GST Registration',
       'MSME Registration',
-      'Current Account',
+      'Current Account Opening Support',
       'Mail and Courier',
       'Temp Sign Board',
       'Reception Support',
@@ -332,25 +332,25 @@ export const quoteServices: ServicePricing[] = [
       'Business Address',
       'GST Registration',
       'MSME Registration',
-      'Current Account',
+      'Current Account Opening Support',
       'Mail and Courier',
       'Temp Sign Board',
       'Reception Support',
       'Conference Room (2 Hours / Year)'
     ],
-    startingPrice: '₹11,500',
-    startingPeriod: 'per year',
+    startingPrice: '₹9,500',
+    startingPeriod: 'per month',
     pricingOptions: [
       {
         type: 'Virtual Office',
-        price: '₹11,500',
-        period: 'per year +GST',
+        price: '₹9,500',
+        period: 'per month +GST',
         description: 'Complete virtual office solution with 1 Day/Year access',
         features: [
           'Business Address',
           'GST Registration',
           'MSME Registration',
-          'Current Account',
+          'Current Account Opening Support',
           'Mail and Courier',
           'Temp Sign Board',
           'Reception Support',
