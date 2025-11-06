@@ -111,20 +111,20 @@ export default function MeetingRooms() {
     {
       title: "Hourly Booking",
       description: "Book meeting rooms by the hour for flexible scheduling",
-      price: "From INR 400/hour",
+      price: "INR 700/hour",
       benefits: ["Pay only for time used", "Easy online booking", "Last-minute availability"]
     },
     {
       title: "Half-Day Package",
       description: "4-hour package with complimentary refreshments",
-      price: "From INR 1,800",
-      benefits: ["4 hours of room time", "Free tea/coffee service", "15% cost savings", "Setup assistance"]
+      price: "INR 2,800",
+      benefits: ["4 hours of room time", "Free tea/coffee service", "Complimentary Beverages and Cookies", "Setup assistance"]
     },
     {
       title: "Full-Day Package",
       description: "8-hour package with catering options",
-      price: "From INR 3,200",
-      benefits: ["8 hours of room time", "Catering service included", "25% cost savings", "Dedicated support", "Equipment setup included"]
+      price: "INR 5,600",
+      benefits: ["8 hours of room time", "Complimentary Beverages and Cookies", "Interactive Display", "Dedicated support", "Equipment setup included"]
     }
   ];
 

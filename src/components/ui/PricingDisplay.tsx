@@ -1,5 +1,6 @@
 import { ServicePricing, PricingOption } from '../data/quoteServices';
 import { Link } from 'react-router-dom';
+import { useQuotePanel } from './QuotePanelProvider';
 
 interface PricingDisplayProps {
   service: ServicePricing | null;
@@ -7,11 +8,12 @@ interface PricingDisplayProps {
   onPricingOptionSelect?: (option: PricingOption) => void;
 }
 
-const PricingDisplay = ({ 
-  service, 
-  selectedPricingOption, 
-  onPricingOptionSelect 
+const PricingDisplay = ({
+  service,
+  selectedPricingOption,
+  onPricingOptionSelect
 }: PricingDisplayProps) => {
+  const { openQuote } = useQuotePanel();
   if (!service) {
     return (
       <div className="flex flex-col items-center justify-center h-full min-h-[400px] text-center p-8">
@@ -174,12 +176,12 @@ const PricingDisplay = ({
           </svg>
         </Link>
         
-        <Link
-          to={`/${service.id.replace('-', '-')}`}
+        <button
+          onClick={openQuote}
           className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-lg font-medium text-center hover:bg-gray-50 transition-colors duration-200 block"
         >
           Learn More
-        </Link>
+        </button>
       </div>
     </div>
   );

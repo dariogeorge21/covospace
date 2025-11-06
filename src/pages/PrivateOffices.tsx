@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useQuotePanel } from '../components/ui/QuotePanelProvider';
 
 // Icon components
 const OfficeIcon = () => (
@@ -63,6 +64,7 @@ const StarIcon = () => (
 );
 
 export default function PrivateOffices() {
+  const { openQuote } = useQuotePanel();
   const features = [
     {
       icon: SecurityIcon,
@@ -96,67 +98,7 @@ export default function PrivateOffices() {
     }
   ];
 
-  const officeTypes = [
-    {
-      spaceId: "CS2-02",
-      type: "Office Suit",
-      capacity: "3 Chair + 1 Manager (Total - 4)",
-      size: "143 sq ft",
-      price: "₹30,000",
-      period: "per month +GST",
-      description: "Perfect for small teams",
-      features: [
-        "5 Day / 10 Day / Unlimited Plan",
-        "Reception Desk & Guest Service",
-        "Unlimited WiFi Access",
-        "Mail & Courier Management",
-        "Print / Photocopy Facility (50 Prints)",
-        "Scan Facilities"
-      ],
-      highlight: false
-    },
-    {
-      spaceId: "CS2-03",
-      type: "Office Suit",
-      capacity: "3 Chair + 1 Manager + 2 Visitors (Total - 4)",
-      size: "145 sq ft",
-      price: "₹30,000",
-      period: "per month +GST",
-      description: "Ideal for teams with meeting needs",
-      features: [
-        "Includes all CS2-02 facilities",
-        "Conference Room Access 12 Hours/Month (Additional hours chargeable)"
-      ],
-      highlight: true
-    },
-    {
-      spaceId: "CS2-05",
-      type: "Office Suit",
-      capacity: "4 Chair + 1 Manager + 2 Visitors (Total - 5)",
-      size: "172 sq ft",
-      price: "₹35,000",
-      period: "per month +GST",
-      description: "Premium office for growing businesses",
-      features: [
-        "Premium Business Address",
-        "GST Registration",
-        "Current Account"
-      ]
-    },
-    {
-      spaceId: "CS2-06",
-      type: "Office Suit",
-      capacity: "4 Chair + 1 Manager + 2 Visitors (Total - 5)",
-      size: "171 sq ft",
-      price: "₹35,000",
-      period: "per month +GST",
-      description: "Complete company setup solution",
-      features: [
-        "Setup and Register your Company at our Prestigious Address",
-        "Includes facilities listed for CS2-05"
-      ]
-    }
-  ];
+
 
   const includedServices = [
     "Premium business address in center of Kochi",
@@ -241,12 +183,12 @@ export default function PrivateOffices() {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <button
+                onClick={openQuote}
                 className="inline-flex items-center justify-center bg-lime-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-lime-700 transition-colors duration-300"
               >
                 Get Quick Quote
-              </Link>
+              </button>
               <Link 
                 to="/contact" 
                 className="inline-flex items-center justify-center border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white/10 transition-colors duration-300"
@@ -307,54 +249,123 @@ export default function PrivateOffices() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            {officeTypes.map((office, index) => (
-              <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 p-6 lg:p-8 ${
-                office.highlight ? 'border-lime-500 ring-2 ring-lime-500 ring-opacity-50' : 'border-gray-200'
-              }`}>
-                {office.highlight && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-lime-600 text-white px-4 py-1 text-sm font-semibold rounded-full">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
+          {/* Single Unified Private Office Card */}
+          <div className="max-w-4xl mx-auto">
+            <div className="relative bg-white rounded-2xl shadow-xl border-2 border-lime-500 p-8 lg:p-12">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-lime-600 text-white px-6 py-2 text-sm font-semibold rounded-full shadow-lg">
+                  Premium Private Offices
+                </span>
+              </div>
 
-                <div className="text-center mb-6">
-                  <div className="bg-lime-50 text-lime-700 px-3 py-1 rounded-full text-xs font-semibold mb-3 inline-block">
-                    {office.spaceId}
+              <div className="text-center mb-8 pt-4">
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">Private Office Suites</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                  <div className="text-center">
+                    <p className="text-sm text-gray-500 mb-1">Capacity Range</p>
+                    <p className="text-xl font-bold text-lime-600">3-5 People</p>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">{office.type}</h3>
-                  <p className="text-lime-600 font-medium mb-1 text-xs">{office.capacity}</p>
-                  <p className="text-xs text-gray-500 mb-3">{office.size}</p>
-                  <div className="mb-2">
-                    <span className="text-2xl font-bold text-gray-900">{office.price}</span>
-                    <span className="text-gray-500 ml-2 text-xs">{office.period}</span>
+                  <div className="text-center">
+                    <p className="text-sm text-gray-500 mb-1">Office Size</p>
+                    <p className="text-xl font-bold text-lime-600">143-172 sq ft</p>
                   </div>
-                  <p className="text-xs text-gray-600">{office.description}</p>
+                  <div className="text-center">
+                    <p className="text-sm text-gray-500 mb-1">Starting From</p>
+                    <p className="text-3xl font-bold text-gray-900">₹30,000<span className="text-sm text-gray-500 ml-1">/month +GST</span></p>
+                  </div>
                 </div>
+                <p className="text-gray-600 text-lg">Complete office solutions with flexible configurations to match your team size and business needs</p>
+              </div>
 
-                <ul className="space-y-3 mb-8">
-                  {office.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start text-xs text-gray-600">
-                      <CheckIcon />
-                      <span className="ml-3">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+              {/* Available Office Configurations */}
+              <div className="mb-8">
+                <h4 className="text-lg font-semibold text-gray-900 mb-4 text-center">Available Office Configurations</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="bg-lime-100 text-lime-700 px-2 py-1 rounded text-xs font-semibold">CS2-02 & CS2-03</span>
+                      <span className="font-bold text-lime-600">₹30,000/month</span>
+                    </div>
+                    <p className="text-sm text-gray-600 mb-1">4 Total Seats (3 Chair + 1 Manager)</p>
+                    <p className="text-xs text-gray-500">143-145 sq ft • Perfect for small teams</p>
+                  </div>
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="bg-lime-100 text-lime-700 px-2 py-1 rounded text-xs font-semibold">CS2-05 & CS2-06</span>
+                      <span className="font-bold text-lime-600">₹35,000/month</span>
+                    </div>
+                    <p className="text-sm text-gray-600 mb-1">5 Total Seats (4 Chair + 1 Manager)</p>
+                    <p className="text-xs text-gray-500">171-172 sq ft • Ideal for growing teams</p>
+                  </div>
+                </div>
+              </div>
 
+              {/* All Inclusive Features */}
+              <div className="mb-8">
+                <h4 className="text-lg font-semibold text-gray-900 mb-6 text-center">Everything Included</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="flex items-start space-x-3">
+                    <CheckIcon />
+                    <span className="text-sm text-gray-700">Flexible Plans (5/10/Unlimited Days)</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckIcon />
+                    <span className="text-sm text-gray-700">Reception & Guest Services</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckIcon />
+                    <span className="text-sm text-gray-700">Unlimited WiFi Access</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckIcon />
+                    <span className="text-sm text-gray-700">Mail & Courier Management</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckIcon />
+                    <span className="text-sm text-gray-700">Print/Scan Facilities (50 free prints)</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckIcon />
+                    <span className="text-sm text-gray-700">Conference Room Access</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckIcon />
+                    <span className="text-sm text-gray-700">Premium Business Address</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckIcon />
+                    <span className="text-sm text-gray-700">GST Registration Support</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckIcon />
+                    <span className="text-sm text-gray-700">Company Setup Services</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={openQuote}
+                  className="bg-lime-600 text-white font-semibold py-4 px-8 rounded-lg hover:bg-lime-700 transition-colors duration-300 shadow-lg"
+                >
+                  Get Custom Quote
+                </button>
                 <Link
                   to="/contact"
-                  className={`block w-full text-center font-semibold py-3 px-6 rounded-lg transition-colors duration-300 ${
-                    office.highlight
-                      ? 'bg-lime-600 text-white hover:bg-lime-700'
-                      : 'border-2 border-lime-600 text-lime-600 hover:bg-lime-50'
-                  }`}
+                  className="border-2 border-lime-600 text-lime-600 font-semibold py-4 px-8 rounded-lg hover:bg-lime-50 transition-colors duration-300 text-center"
                 >
-                  Get Quote
+                  Schedule Office Visit
                 </Link>
               </div>
-            ))}
+
+              {/* Additional Info */}
+              <div className="mt-6 text-center">
+                <p className="text-sm text-gray-500">
+                  <span className="font-semibold">Ready in 24-48 hours</span> • All-inclusive pricing • No hidden fees • Flexible lease terms
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

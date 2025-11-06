@@ -2,7 +2,7 @@
 // This is a recreation of the logo from the image as an SVG.
 import { useState } from 'react';
 import CovspaceLogo from "../ui/CovspaceLogo";
-import QuotePanel from "../ui/QuotePanel";
+import { useQuotePanel } from "../ui/QuotePanelProvider";
 import { Link } from 'react-router-dom';
 
 
@@ -10,23 +10,10 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileWorkspacesOpen, setIsMobileWorkspacesOpen] = useState(false);
   const [isWorkspacesOpen, setIsWorkspacesOpen] = useState(false);
-  const [isQuotePanelOpen, setIsQuotePanelOpen] = useState(false);
+  const { isOpen: isQuotePanelOpen, openQuote, closeQuote } = useQuotePanel();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
-
-  const toggleQuotePanel = () => {
-    setIsQuotePanelOpen(!isQuotePanelOpen);
-    // Close other dropdowns when opening quote panel
-    if (!isQuotePanelOpen) {
-      setIsWorkspacesOpen(false);
-      setIsMenuOpen(false);
-    }
-  };
-
-  const closeQuotePanel = () => {
-    setIsQuotePanelOpen(false);
   };
   return (
     <header className="bg-white font-sans">
@@ -76,7 +63,7 @@ const Header = () => {
                 <div className="relative group">
                   <button className="flex items-center space-x-2 border border-gray-400 rounded-md px-4 xl:px-5 py-2.5 text-[12px] xl:text-[13px] font-bold hover:bg-gray-50 transition-colors" onClick={() => {
                     setIsWorkspacesOpen(v => !v);
-                    setIsQuotePanelOpen(false);
+                    closeQuote();
                   }}>
                     <span>WORKSPACES</span>
                     <svg className={`w-4 h-4 transition-transform duration-200 ${isWorkspacesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -93,7 +80,7 @@ const Header = () => {
 
                 {/* Get Quote Button */}
                 <button
-                  onClick={toggleQuotePanel}
+                  onClick={() => { openQuote(); setIsWorkspacesOpen(false); setIsMenuOpen(false); }}
                   className="flex items-center space-x-2 border border-lime-500 text-lime-600 px-4 xl:px-5 py-2.5 rounded-md text-[12px] xl:text-[13px] font-bold hover:bg-lime-50 transition-colors"
                   aria-expanded={isQuotePanelOpen}
                   aria-controls="quote-panel"
@@ -127,7 +114,7 @@ const Header = () => {
               <button
                 onClick={() => {
                   toggleMenu();
-                  setIsQuotePanelOpen(false);
+                  closeQuote();
                 }}
                 className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lime-500 transition-colors"
                 aria-expanded="false"
@@ -181,7 +168,7 @@ const Header = () => {
                 <button
                   onClick={() => {
                     setIsMenuOpen(false);
-                    setIsQuotePanelOpen(true);
+                    openQuote();
                   }}
                   className="block w-full px-3 py-3 rounded-md text-center font-bold text-lime-600 bg-lime-50 border border-lime-500 hover:bg-lime-100 transition-colors"
                 >
@@ -197,11 +184,7 @@ const Header = () => {
         )}
       </div>
 
-      {/* Quote Panel */}
-      <QuotePanel
-        isOpen={isQuotePanelOpen}
-        onClose={closeQuotePanel}
-      />
+
     </header>
   );
 };

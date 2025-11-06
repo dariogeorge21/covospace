@@ -1,3 +1,5 @@
+import { useQuotePanel } from '../ui/QuotePanelProvider';
+
 const ArrowIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -13,12 +15,13 @@ const ArrowIcon = () => (
 
 // Main Pricing Component
 const Pricing = () => {
+  const { openQuote } = useQuotePanel();
   // Data for the pricing list to keep the code clean
   const services = [
     { name: 'Private Offices', price: '- From ₹30,000 per month +GST' },
-    { name: 'Dedicated Desks', price: '- From ₹5,500 per month +GST' },
+    { name: 'Dedicated Desks', price: '- From ₹6,000 per month +GST' },
     { name: 'Flexi Desk', price: '- From ₹5,500 per month +GST | ₹500 per day +GST' },
-    { name: 'Virtual Office', price: '- ₹11,500 per year +GST' },
+    { name: 'Virtual Office', price: '- ₹9,500 per month +GST' },
     { name: 'Meeting Rooms', price: '- ₹700 per hour +GST' },
     { name: 'Business Address', price: '- From ₹40,000 annually +GST' },
   ];
@@ -32,7 +35,7 @@ const Pricing = () => {
     'CS2-01 Virtual Office',
   ];
 
-  const PricingImageUrl="https://res.cloudinary.com/dobqxxtml/image/upload/v1759946073/new_litted_g4kces.jpg";
+  const PricingImageUrl = 'https://res.cloudinary.com/dobqxxtml/image/upload/v1759946073/new_litted_g4kces.jpg';
 
   return (
       <div 
@@ -86,7 +89,7 @@ const Pricing = () => {
 
             {/* Learn More Button */}
             <div className="pt-6">
-              <button className="bg-black text-white font-bold py-3 pl-6 pr-3 rounded-full flex items-center gap-4 group transition-all duration-300 hover:shadow-2xl">
+              <button onClick={openQuote} className="bg-black text-white font-bold py-3 pl-6 pr-3 rounded-full flex items-center gap-4 group transition-all duration-300 hover:shadow-2xl">
                 LEARN MORE
                 <div className="bg-[#84cc16] rounded-full p-2 transform group-hover:translate-x-1 transition-transform duration-300">
                   <ArrowIcon />

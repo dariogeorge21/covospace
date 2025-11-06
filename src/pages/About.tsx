@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useQuotePanel } from '../components/ui/QuotePanelProvider';
 
 // Icon components for features section
 const OfficeIcon = () => (
@@ -27,6 +28,7 @@ const LocationIcon = () => (
 );
 
 export default function About() {
+	const { openQuote } = useQuotePanel();
 	return (
 		<main className="bg-white">
 			{/* Hero Section */}
@@ -209,7 +211,7 @@ export default function About() {
 							<div className="space-y-4">
 								<div className="flex items-start">
 									<span className="text-lime-200 font-semibold text-sm uppercase tracking-wide w-20 flex-shrink-0">Address:</span>
-									<span className="text-white/90">Center of Kochi, Kerala, India</span>
+									<span className="text-white/90">GK Tower, Chakkarapparambu Road, Near to NH 66 Bypass, Near Holiday Inn Hotel, Ernakulam- 682028</span>
 								</div>
 								<div className="flex items-start">
 									<span className="text-lime-200 font-semibold text-sm uppercase tracking-wide w-20 flex-shrink-0">Features:</span>
@@ -224,12 +226,12 @@ export default function About() {
 								Ready to upgrade your office experience? Contact us to schedule a tour or learn more about our workspace solutions.
 							</p>
 							<div className="space-y-4">
-								<Link 
-									to="/" 
+								<button
+									onClick={openQuote}
 									className="inline-flex items-center justify-center w-full bg-lime-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-lime-700 transition-colors duration-300"
 								>
 									Quick Quote
-								</Link>
+								</button>
 								<Link 
 									to="/" 
 									className="inline-flex items-center justify-center w-full border-2 border-lime-600 text-lime-600 font-semibold py-3 px-6 rounded-lg hover:bg-lime-50 transition-colors duration-300"

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 // Icon components
 const LocationIcon = () => (
@@ -58,6 +58,19 @@ const CheckIcon = () => (
 );
 
 export default function Location() {
+  const navigate = useNavigate();
+
+  const handleMapNavigation = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate('/contact');
+    setTimeout(() => {
+      const mapSection = document.getElementById('map');
+      if (mapSection) {
+        mapSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  };
+
   const transportationOptions = [
     {
       icon: BusIcon,
@@ -111,10 +124,10 @@ export default function Location() {
   ];
 
   const facilityHighlights = [
-    { number: "30+", label: "Private Offices", description: "Fully furnished and ready-to-use" },
-    { number: "65+", label: "Workstations", description: "Flexible seating arrangements" },
+    { number: "4", label: "Private Offices", description: "Fully furnished and ready-to-use" },
+    { number: "17", label: "Workstations", description: "Flexible seating arrangements" },
     { number: "24x7", label: "Security", description: "Round-the-clock protection" },
-    { number: "100%", label: "Uptime", description: "Reliable internet and power" }
+    { number: "99.9%", label: "Uptime", description: "Reliable internet and power" }
   ];
 
   return (
@@ -149,14 +162,14 @@ export default function Location() {
                 <LocationIcon />
               </div>
               <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Covspace Kochi</h2>
-              <p className="text-white/90 text-lg mb-4">Center of Kochi, Kerala, India</p>
+              <p className="text-white/90 text-lg mb-4">GK Tower, Chakkarapparambu Road, Near to NH 66 Bypass, Near Holiday Inn Hotel, Ernakulam- 682028</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact" 
+                <button 
+                  onClick={handleMapNavigation}
                   className="inline-flex items-center justify-center bg-lime-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-lime-700 transition-colors duration-300"
                 >
                   Get Directions
-                </Link>
+                </button>
                 <Link 
                   to="/contact" 
                   className="inline-flex items-center justify-center border-2 border-white text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors duration-300"
@@ -244,22 +257,18 @@ export default function Location() {
                 and surrounded by all the amenities you need.
               </p>
               
-              <div className="bg-white rounded-2xl shadow-sm p-6">
-                <div className="bg-gray-100 rounded-xl h-64 sm:h-80 flex items-center justify-center">
-                  <div className="text-center">
-                    <LocationIcon />
-                    <p className="text-gray-600 mt-4 font-medium">Interactive Map</p>
-                    <p className="text-sm text-gray-500 mt-2">Center of Kochi, Kerala, India</p>
-                    <div className="mt-4">
-                      <Link 
-                        to="/contact"
-                        className="inline-flex items-center bg-lime-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-lime-700 transition-colors duration-300"
-                      >
-                        Get Detailed Directions
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+              <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2453.265626960014!2d76.31614754833943!3d9.990565632699571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d006e49b46d%3A0xdb35e1a513b8a76d!2sGK%20Tower!5e1!3m2!1sen!2sin!4v1762436077413!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="320" 
+                  style={{ border: 0 }} 
+                  allowFullScreen={true} 
+                  loading="lazy" PROGRAM CHART FOR FOLLOW-UP GATHERING
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-64 sm:h-80 rounded-xl"
+                  title="GK Tower Location - Covspace"
+                />
               </div>
             </div>
 
@@ -345,7 +354,7 @@ export default function Location() {
               <div className="space-y-3 mb-6">
                 <div className="flex items-center text-sm">
                   <LocationIcon />
-                  <span className="ml-3">Center of Kochi, Kerala</span>
+                  <span className="ml-3">GK Tower, Chakkarapparambu Road, Near to NH 66 Bypass, Near Holiday Inn Hotel, Ernakulam- 682028</span>
                 </div>
                 <div className="flex items-center text-sm">
                   <BusIcon />
