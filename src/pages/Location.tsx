@@ -133,15 +133,17 @@ export default function Location() {
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section 
-        className="relative py-12 sm:py-16 lg:py-20"
-        style={{
-          backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1759946953/DJI_0010_uy3uvp.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
+      <section className="relative py-12 sm:py-16 lg:py-20 overflow-hidden">
+        {/* Video Background */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="https://res.cloudinary.com/dobqxxtml/video/upload/v1762628043/covspace_bg_short_apqbm5.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-black/40" aria-hidden="true"></div>
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center">
@@ -264,7 +266,7 @@ export default function Location() {
                   height="320" 
                   style={{ border: 0 }} 
                   allowFullScreen={true} 
-                  loading="lazy" PROGRAM CHART FOR FOLLOW-UP GATHERING
+                  loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="w-full h-64 sm:h-80 rounded-xl"
                   title="GK Tower Location - Covspace"
