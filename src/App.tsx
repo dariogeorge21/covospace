@@ -20,6 +20,7 @@ import Contact from './pages/Contact';
 import CompanyRegistration from './pages/CompanyRegistration';
 import Gallery from './pages/Gallery';
 import { QuotePanelProvider } from './components/ui/QuotePanelProvider';
+import FloatingSocialMenu from './components/ui/FloatingSocialMenu';
 
 function Home() {
   return (
@@ -55,6 +56,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/company-registration" element={<CompanyRegistration />} />
         </Routes>
+        <FloatingSocialMenu />
       </QuotePanelProvider>
     </div>
   );
