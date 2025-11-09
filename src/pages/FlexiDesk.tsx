@@ -259,49 +259,51 @@ export default function FlexiDesk() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 p-6 lg:p-8 ${
-                plan.highlight ? 'border-lime-500 ring-2 ring-lime-500 ring-opacity-50' : 'border-gray-200'
-              }`}>
-                {plan.highlight && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-lime-600 text-white px-4 py-1 text-sm font-semibold rounded-full">
-                      Most Popular
-                    </span>
+          <div className="flex justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 p-6 lg:p-8 ${
+                  plan.highlight ? 'border-lime-500 ring-2 ring-lime-500 ring-opacity-50' : 'border-gray-200'
+                }`}>
+                  {plan.highlight && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-lime-600 text-white px-4 py-1 text-sm font-semibold rounded-full">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.type}</h3>
+                    <div className="mb-2">
+                      <span className="text-3xl font-bold text-gray-900">{plan.price}</span>
+                      <span className="text-gray-500 ml-2">{plan.period}</span>
+                    </div>
+                    <p className="text-sm text-gray-600">{plan.description}</p>
                   </div>
-                )}
-                
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.type}</h3>
-                  <div className="mb-2">
-                    <span className="text-3xl font-bold text-gray-900">{plan.price}</span>
-                    <span className="text-gray-500 ml-2">{plan.period}</span>
-                  </div>
-                  <p className="text-sm text-gray-600">{plan.description}</p>
+
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckIcon />
+                        <span className="ml-3">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link 
+                    to="/contact"
+                    className={`block w-full text-center font-semibold py-3 px-6 rounded-lg transition-colors duration-300 ${
+                      plan.highlight 
+                        ? 'bg-lime-600 text-white hover:bg-lime-700' 
+                        : 'border-2 border-lime-600 text-lime-600 hover:bg-lime-50'
+                    }`}
+                  >
+                    Get Started
+                  </Link>
                 </div>
-
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <CheckIcon />
-                      <span className="ml-3">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <Link 
-                  to="/contact"
-                  className={`block w-full text-center font-semibold py-3 px-6 rounded-lg transition-colors duration-300 ${
-                    plan.highlight 
-                      ? 'bg-lime-600 text-white hover:bg-lime-700' 
-                      : 'border-2 border-lime-600 text-lime-600 hover:bg-lime-50'
-                  }`}
-                >
-                  Get Started
-                </Link>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -28,14 +28,18 @@ const Header = () => {
                   <span className="hidden md:block">|</span>
                   <Link to="/location" className="hover:text-white transition-colors">LOCATION</Link>
                 </li>
+                <li className="flex items-center space-x-4 lg:space-x-8">
+                  <span className="hidden md:block">|</span>
+                  <Link to="/gallery" className="hover:text-white transition-colors">GALLERY</Link>
+                </li>
                 <li className="hidden md:flex items-center space-x-4 lg:space-x-8">
                   <span>|</span>
                   <Link to="/our-clients" className="hover:text-white transition-colors">OUR CLIENTS</Link>
                 </li>
                 <li className="flex items-center space-x-4 lg:space-x-8">
                   <span className="hidden md:block">|</span>
-                  <Link 
-                    to="/contact" 
+                  <Link
+                    to="/contact"
                     className="bg-white text-gray-800 px-3 py-1.5 sm:px-4 rounded-md text-[11px] sm:text-[13px] font-bold hover:bg-gray-200 transition-colors"
                   >
                     CONTACT
@@ -144,6 +148,7 @@ const Header = () => {
                 <div className="space-y-2">
                   <Link to="/about" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-white transition-colors">About</Link>
                   <Link to="/location" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-white transition-colors">Location</Link>
+                  <Link to="/gallery" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-white transition-colors">Gallery</Link>
                   <Link to="/our-clients" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-white transition-colors">Our Clients</Link>
                   <Link to="/contact" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-white transition-colors">Contact</Link>
                 </div>
