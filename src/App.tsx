@@ -7,7 +7,7 @@ import ClientMarquee from './components/sections/ClientMarquee';
 import Blog from './components/sections/Blog';
 import Testimonials from './components/sections/Testimonials';
 import Footer from './components/sections/Footer';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import PrivateOffices from './pages/PrivateOffices';
 import DedicatedDesk from './pages/DedicatedDesk';
 import FlexiDesk from './pages/FlexiDesk';
@@ -55,6 +55,7 @@ function App() {
           <Route path="/our-clients" element={<OurClients />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/company-registration" element={<CompanyRegistration />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <FloatingSocialMenu />
       </QuotePanelProvider>
