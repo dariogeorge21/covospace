@@ -1,7 +1,7 @@
 import Header from './components/sections/Header';
 import Hero from './components/sections/Hero';
 import Services from './components/sections/Services';
-import Gallery from './components/sections/Gallery';
+import GallerySection from './components/sections/Gallery';
 import Pricing from './components/sections/Pricing';
 import ClientMarquee from './components/sections/ClientMarquee';
 import Blog from './components/sections/Blog';
@@ -18,6 +18,7 @@ import Location from './pages/Location';
 import OurClients from './pages/OurClients';
 import Contact from './pages/Contact';
 import CompanyRegistration from './pages/CompanyRegistration';
+import Gallery from './pages/Gallery';
 import { QuotePanelProvider } from './components/ui/QuotePanelProvider';
 
 function Home() {
@@ -25,7 +26,7 @@ function Home() {
     <div className="min-h-screen">
       <Hero />
       <Services />
-      <Gallery />
+      <GallerySection />
       <Pricing />
       <ClientMarquee />
       <Blog />
@@ -49,6 +50,7 @@ function App() {
           <Route path="/meeting-rooms" element={<MeetingRooms />} />
           <Route path="/about" element={<About />} />
           <Route path="/location" element={<Location />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/our-clients" element={<OurClients />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/company-registration" element={<CompanyRegistration />} />
