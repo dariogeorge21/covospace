@@ -1,5 +1,6 @@
 import LeftClipped from "../leftClipped";
 import RightClipped from "../rightClipped";
+import { useNavigate } from 'react-router-dom';
 // const Image = () => (
 //   <div className="w-full h-full mx-auto max-w-4xl">
 //     <img 
@@ -40,6 +41,16 @@ const QuoteIcon = () => (
 
 
 const Gallery = () => {
+  const navigate = useNavigate();
+
+  const handleGalleryClick = () => {
+    navigate('/gallery');
+    // Scroll to top after navigation
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+  };
+
   return (
     <section className="relative bg-white py-8 sm:py-12 md:py-16 lg:py-20 font-sans overflow-hidden">
       <style>{`.hide-below-824{display:block} @media (max-width:823px){.hide-below-824{display:none !important}} .hide-below-694{display:block} @media (max-width:693px){.hide-below-694{display:none !important}}`}</style>
@@ -58,19 +69,23 @@ const Gallery = () => {
         <div className="mb-8 sm:mb-12 md:mb-16 flex gap-4 items-end justify-center">
           {/* <Image /> */}
           <div className="flex flex-col gap-4">
-              <LeftClipped className="h-[300px] w-[250px] rounded-xl overflow-clip hide-below-824">
-              <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/l1.jpg"  />
-            </LeftClipped>
-            <div className="rounded-xl overflow-clip h-[150px] w-[250px] hide-below-824">
+              <div className="cursor-pointer" onClick={handleGalleryClick}>
+                <LeftClipped className="h-[300px] w-[250px] rounded-xl overflow-clip hide-below-824">
+                <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/l1.jpg"  />
+              </LeftClipped>
+              </div>
+            <div className="rounded-xl overflow-clip h-[150px] w-[250px] hide-below-824 cursor-pointer" onClick={handleGalleryClick}>
               <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/l3.jpg" />
             </div>
           </div>
           
-          <LeftClipped className="h-[300px] w-[250px] rounded-xl overflow-clip hide-below-694">
-            <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/l2.jpg" />
-          </LeftClipped>
+          <div className="cursor-pointer" onClick={handleGalleryClick}>
+            <LeftClipped className="h-[300px] w-[250px] rounded-xl overflow-clip hide-below-694">
+              <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/l2.jpg" />
+            </LeftClipped>
+          </div>
           <div>
-          <div className="w-[250px] h-[300px] rounded-xl overflow-clip bg-red-400">
+          <div className="w-[250px] h-[300px] rounded-xl overflow-clip bg-red-400 cursor-pointer" onClick={handleGalleryClick}>
             <img  className=" w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/m.jpg" />
           </div>
                       {/* Connect Us Button - Mobile Optimized */}
@@ -81,15 +96,19 @@ const Gallery = () => {
             </div>
           </div>
           
-          <RightClipped className="h-[300px] w-[250px]  rounded-xl overflow-clip hide-below-694">
-            <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/r1.jpg" />
-          </RightClipped>
-          <div className="flex flex-col gap-2">
-              <RightClipped className="h-[300px] w-[250px]  rounded-xl overflow-clip hide-below-824">
-              <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/r2.jpg" />
+          <div className="cursor-pointer" onClick={handleGalleryClick}>
+            <RightClipped className="h-[300px] w-[250px]  rounded-xl overflow-clip hide-below-694">
+              <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/r1.jpg" />
             </RightClipped>
+          </div>
+          <div className="flex flex-col gap-2">
+              <div className="cursor-pointer" onClick={handleGalleryClick}>
+                <RightClipped className="h-[300px] w-[250px]  rounded-xl overflow-clip hide-below-824">
+                <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/r2.jpg" />
+              </RightClipped>
+              </div>
             {/* <RightClipped className="h-[150px] w-[250px] rounded-[40px]"> */}
-            <div className="rounded-xl overflow-clip h-[150px] w-[250px] hide-below-824">
+            <div className="rounded-xl overflow-clip h-[150px] w-[250px] hide-below-824 cursor-pointer" onClick={handleGalleryClick}>
               <img  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"  src="/gallery/r3.jpg" />
 
             </div>
@@ -119,9 +138,9 @@ const Gallery = () => {
 
           {/* Upgrade Link - Mobile Optimized */}
           <div className="order-1 lg:order-2 flex-shrink-0">
-            <a 
-              href="#" 
-              className="inline-flex items-center gap-3 sm:gap-4 text-gray-800 hover:text-lime-600 transition-colors duration-300 group"
+            <button 
+              onClick={handleGalleryClick}
+              className="inline-flex items-center gap-3 sm:gap-4 text-gray-800 hover:text-lime-600 transition-colors duration-300 group cursor-pointer"
             >
               <span className="text-sm sm:text-base md:text-lg font-medium">
                 Upgrade your office
@@ -129,7 +148,7 @@ const Gallery = () => {
               <div className="transform group-hover:translate-x-1 transition-transform duration-300">
                 <ArrowIcon />
               </div>
-            </a>
+            </button>
           </div>
         </div>
 
