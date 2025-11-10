@@ -87,6 +87,11 @@ const Pricing = () => {
               ))}
             </ul>
 
+            {/* GST Disclaimer */}
+            <div className="pt-2">
+              <p className="text-xs text-black/70 italic">* All prices are exclusive of GST</p>
+            </div>
+
             {/* Learn More Button */}
             <div className="pt-6">
               <button onClick={openQuote} className="bg-black text-white font-bold py-3 pl-6 pr-3 rounded-full flex items-center gap-4 group transition-all duration-300 hover:shadow-2xl">

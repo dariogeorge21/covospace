@@ -63,6 +63,7 @@ const PricingDisplay = ({
               {service.startingPeriod}
             </span>
           </div>
+          <p className="text-xs text-gray-600 italic mt-2">* All prices are exclusive of GST</p>
         </div>
       </div>
 

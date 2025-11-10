@@ -177,6 +177,7 @@ export default function VirtualOffices() {
                 <div className="text-3xl sm:text-4xl font-bold text-lime-400 mb-2">₹11,500</div>
                 <p className="text-white/90">per year</p>
                 <p className="text-sm text-white/70 mt-2">Business Address | 1 Day/Year Access</p>
+                <p className="text-xs text-white/60 italic mt-3">* All prices are exclusive of GST</p>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -271,7 +272,7 @@ export default function VirtualOffices() {
                   <p className="text-xs text-lime-600 font-medium">1 Day / Year Access</p>
                 </div>
 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-6">
                   {pkg.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                       <CheckIcon />
@@ -279,6 +280,8 @@ export default function VirtualOffices() {
                     </li>
                   ))}
                 </ul>
+
+                <p className="text-xs text-gray-600 italic text-center mb-6">* All prices are exclusive of GST</p>
 
                 <button
                   onClick={openQuote}
