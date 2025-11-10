@@ -173,7 +173,7 @@ export default function PrivateOffices() {
               <div className="text-center">
                 <p className="text-sm text-white/80 mb-2">Starting from</p>
                 <div className="text-3xl sm:text-4xl font-bold text-lime-400 mb-2">₹30,000</div>
-                <p className="text-white/90">per month +GST</p>
+                <p className="text-white/90">per month</p>
                 <div className="flex items-center justify-center mt-3">
                   {[...Array(5)].map((_, i) => (
                     <StarIcon key={i} />
@@ -271,7 +271,7 @@ export default function PrivateOffices() {
                   </div>
                   <div className="text-center">
                     <p className="text-sm text-gray-500 mb-1">Starting From</p>
-                    <p className="text-3xl font-bold text-gray-900">₹30,000<span className="text-sm text-gray-500 ml-1">/month +GST</span></p>
+                    <p className="text-3xl font-bold text-gray-900">₹30,000<span className="text-sm text-gray-500 ml-1">/month</span></p>
                   </div>
                 </div>
                 <p className="text-gray-600 text-lg">Complete office solutions with flexible configurations to match your team size and business needs</p>
@@ -331,10 +331,6 @@ export default function PrivateOffices() {
                   <div className="flex items-start space-x-3">
                     <CheckIcon />
                     <span className="text-sm text-gray-700">Premium Business Address</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckIcon />
-                    <span className="text-sm text-gray-700">GST Registration Support</span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckIcon />

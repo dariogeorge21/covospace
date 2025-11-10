@@ -93,7 +93,7 @@ export default function FlexiDesk() {
     {
       type: "Daily Pass",
       price: "₹500",
-      period: "per day +GST",
+      period: "per day",
       description: "Perfect for occasional users and testing our workspace",
       features: [
         "Access to flexi desks",
@@ -108,7 +108,7 @@ export default function FlexiDesk() {
     {
       type: "Monthly Pass",
       price: "₹5,500",
-      period: "per month +GST",
+      period: "per month",
       description: "Best value for regular flexible workspace users",
       features: [
         "5 Day / 10 Day / Unlimited Plan",

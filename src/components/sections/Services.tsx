@@ -48,7 +48,7 @@ const servicesData = [
     description: 'Company registration made simple — use our address.',
     route: '/contact',
     features: [
-      'Company and GST Registration',
+      'Company Registration',
       'Bank Account Support',
       'Mail & Courier Handling',
     ],

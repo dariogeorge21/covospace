@@ -18,12 +18,12 @@ const Pricing = () => {
   const { openQuote } = useQuotePanel();
   // Data for the pricing list to keep the code clean
   const services = [
-    { name: 'Private Offices', price: '- From ₹30,000 per month +GST' },
-    { name: 'Dedicated Desks', price: '- From ₹6,000 per month +GST' },
-    { name: 'Flexi Desk', price: '- From ₹5,500 per month +GST | ₹500 per day +GST' },
-    { name: 'Virtual Office', price: '- ₹9,500 per month +GST' },
-    { name: 'Conference Rooms', price: '- ₹700 per hour +GST' },
-    { name: 'Business Address', price: '- From ₹40,000 annually +GST' },
+    { name: 'Private Offices', price: '- From ₹30,000 per month' },
+    { name: 'Dedicated Desks', price: '- From ₹6,000 per month' },
+    { name: 'Flexi Desk', price: '- From ₹5,500 per month | ₹500 per day' },
+    { name: 'Virtual Office', price: '- ₹9,500 per month' },
+    { name: 'Conference Rooms', price: '- ₹700 per hour' },
+    { name: 'Business Address', price: '- From ₹40,000 annually' },
   ];
 
   // Data for the green office type buttons

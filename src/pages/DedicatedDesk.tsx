@@ -81,7 +81,7 @@ export default function DedicatedDesk() {
     {
       type: "Monthly Plan",
       price: "₹6,000",
-      period: "per month +GST",
+      period: "per month",
       description: "Best value for dedicated workspace users",
       features: [
         "Includes all Flexi Desk facilities",
