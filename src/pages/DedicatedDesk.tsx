@@ -94,7 +94,7 @@ export default function DedicatedDesk() {
   const benefits = [
     "Aesthetically crafted coworking environment",
     "Professional atmosphere for enhanced productivity",
-    "Access to meeting rooms and conference facilities",
+    "Access to conference rooms and conference facilities",
     "Complimentary tea, coffee, and refreshments",
     "Professional cleaning and maintenance",
     "On-site support and technical assistance",
@@ -350,7 +350,7 @@ export default function DedicatedDesk() {
                   What's included with a dedicated desk?
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Every dedicated desk includes high-speed internet, mail handling, access to meeting rooms, 
+                  Every dedicated desk includes high-speed internet, mail handling, access to conference rooms, 
                   storage space, and all basic amenities like printing, tea, and coffee.
                 </p>
               </div>

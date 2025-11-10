@@ -368,7 +368,7 @@ export default function VirtualOffices() {
                   </div>
                   <div className="flex items-center text-sm">
                     <MeetingIcon />
-                    <span className="ml-3">Meeting room access available</span>
+                    <span className="ml-3">Conference Room access available</span>
                   </div>
                 </div>
 
@@ -389,7 +389,7 @@ export default function VirtualOffices() {
               </div>
             </div>
 
-            {/* Interactive Meeting Room Showcase */}
+            {/* Interactive Conference Room Showcase */}
             <div className="relative">
               <div 
                 className="rounded-2xl overflow-hidden shadow-xl h-80 lg:h-96 bg-cover bg-center relative group cursor-pointer"
@@ -400,8 +400,8 @@ export default function VirtualOffices() {
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 transform group-hover:scale-105 transition-transform duration-300">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Professional Meeting Rooms</h3>
-                    <p className="text-sm text-gray-600">Access to premium meeting spaces when you need to meet clients in person</p>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Professional Conference Rooms</h3>
+                    <p className="text-sm text-gray-600">Access to premium conferencespaces when you need to meet clients in person</p>
                   </div>
                 </div>
               </div>
@@ -446,11 +446,11 @@ export default function VirtualOffices() {
 
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-lime-200 transition-all duration-300">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Do I get access to meeting rooms with virtual office packages?
+                  Do I get access to conference rooms with virtual office packages?
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Yes, our Professional and Premium packages include meeting room hours. You can also book additional 
-                  meeting room time at member rates when needed.
+                  Yes, our Professional and Premium packages include conference room hours. You can also book additional 
+                  conference room time at member rates when needed.
                 </p>
               </div>
 

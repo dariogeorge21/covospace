@@ -78,7 +78,7 @@ const Header = () => {
                     <Link to="/dedicated-desk" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" onClick={()=>{setIsWorkspacesOpen(false)}}>Dedicated Desk</Link>
                     <Link to="/flexi-desk" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" onClick={()=>{setIsWorkspacesOpen(false)}}>Flexi Desk</Link>
                     <Link to="/virtual-offices" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" onClick={()=>{setIsWorkspacesOpen(false)}}>Virtual Offices</Link>
-                    <Link to="/meeting-rooms" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" onClick={()=>{setIsWorkspacesOpen(false)}}>Meeting Rooms</Link>
+                    <Link to="/meeting-rooms" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" onClick={()=>{setIsWorkspacesOpen(false)}}>Conference Rooms</Link>
                   </div>
                 </div>
 
@@ -166,7 +166,7 @@ const Header = () => {
                     <Link to="/dedicated-desk" onClick={() => setIsMenuOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Dedicated Desk</Link>
                     <Link to="/flexi-desk" onClick={() => setIsMenuOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Flexi Desk</Link>
                     <Link to="/virtual-offices" onClick={() => setIsMenuOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Virtual Offices</Link>
-                    <Link to="/meeting-rooms" onClick={() => setIsMenuOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Meeting Rooms</Link>
+                    <Link to="/meeting-rooms" onClick={() => setIsMenuOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Conference Rooms</Link>
                   </div>
                 )}
 

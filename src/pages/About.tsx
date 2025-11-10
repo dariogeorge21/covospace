@@ -100,7 +100,7 @@ export default function About() {
 								</li>
 								<li className="flex items-center">
 									<span className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></span>
-									Meeting rooms with cutting-edge technology
+									conference rooms with cutting-edge technology
 								</li>
 							</ul>
 						</div>
@@ -225,7 +225,7 @@ export default function About() {
 								</div>
 								<div className="flex items-start">
 									<span className="text-lime-200 font-semibold text-sm uppercase tracking-wide w-20 flex-shrink-0">Features:</span>
-									<span className="text-white/90">30+ Private Offices, 65+ Workstations, Premium Meeting Rooms</span>
+									<span className="text-white/90">30+ Private Offices, 65+ Workstations, Premium Conference Rooms</span>
 								</div>
 							</div>
 						</div>

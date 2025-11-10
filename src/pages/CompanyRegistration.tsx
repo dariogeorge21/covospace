@@ -66,7 +66,7 @@ export default function CompanyRegistration() {
     'Bank Account Support',
     'Mail & Courier Handling',
     'Virtual Office Services',
-    'Meeting Room Access',
+    'Conference Room Access',
     'Compliance Management'
   ];
 

@@ -98,7 +98,7 @@ export default function Location() {
     {
       icon: CoffeeIcon,
       title: "Coffee Shops",
-      description: "Premium coffee shops and casual meeting spots within walking distance"
+      description: "Premium coffee shops and casual conferencespots within walking distance"
     },
     {
       icon: ShoppingIcon,

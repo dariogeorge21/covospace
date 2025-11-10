@@ -110,7 +110,7 @@ export default function MeetingRooms() {
   const bookingOptions = [
     {
       title: "Hourly Booking",
-      description: "Book meeting rooms by the hour for flexible scheduling",
+      description: "Book conference rooms by the hour for flexible scheduling",
       price: "INR 700/hour",
       benefits: ["Pay only for time used", "Easy online booking", "Last-minute availability"]
     },
@@ -136,7 +136,7 @@ export default function MeetingRooms() {
     "High-speed printing and scanning services",
     "Secure storage for personal belongings",
     "Tea, coffee, and refreshment services",
-    "Dedicated parking spaces for meeting attendees"
+    "Dedicated parking spaces for conferenceattendees"
   ];
 
   return (
@@ -160,10 +160,10 @@ export default function MeetingRooms() {
               </div>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Premium <span className="text-lime-400">Meeting Rooms</span>
+              Premium <span className="text-lime-400">Conference Rooms</span>
             </h1>
             <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-4">
-              Impress your clients and collaborate effectively in our state-of-the-art meeting rooms.
+              Impress your clients and collaborate effectively in our state-of-the-art conference rooms.
               Professional conference room with interactive display and complimentary refreshments.
             </p>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 max-w-md mx-auto mb-8">
@@ -198,7 +198,7 @@ export default function MeetingRooms() {
               Cutting-Edge Technology & Amenities
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-              Our meeting rooms are equipped with the latest technology and premium amenities to ensure 
+              Our conference rooms are equipped with the latest technology and premium amenities to ensure 
               your meetings are productive, professional, and memorable.
             </p>
           </div>
@@ -231,11 +231,11 @@ export default function MeetingRooms() {
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
-              Meeting Room Options
+              Conference Room Options
             </h2>
             <p className="text-base sm:text-lg text-white/90 max-w-2xl mx-auto">
-              Choose from our range of professionally designed meeting spaces, each equipped with 
-              premium technology and tailored for different group sizes and meeting types.
+              Choose from our range of professionally designed conferencespaces, each equipped with 
+              premium technology and tailored for different group sizes and conferencetypes.
             </p>
           </div>
 
@@ -295,7 +295,7 @@ export default function MeetingRooms() {
               Flexible Booking Options
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-              Whether you need a room for a quick meeting or an all-day conference, 
+              Whether you need a room for a quick conferenceor an all-day conference, 
               we offer flexible booking options to suit your schedule and budget.
             </p>
           </div>
@@ -326,10 +326,10 @@ export default function MeetingRooms() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-2">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Complete Meeting Experience
+                Complete Conference Experience
               </h2>
               <p className="text-base sm:text-lg text-gray-600 mb-8 leading-relaxed">
-                Every meeting room booking includes access to our full range of amenities and services, 
+                Every conference room booking includes access to our full range of amenities and services, 
                 ensuring your meetings are productive and your guests are impressed.
               </p>
               
@@ -345,8 +345,8 @@ export default function MeetingRooms() {
               <div className="bg-lime-600 rounded-2xl p-6 sm:p-8 text-white">
                 <h3 className="text-xl sm:text-2xl font-bold mb-4">Ready to Book?</h3>
                 <p className="text-lime-100 mb-6">
-                  Reserve your meeting room today and experience the difference premium facilities make. 
-                  Our team is ready to help you plan the perfect meeting or event.
+                  Reserve your conference room today and experience the difference premium facilities make. 
+                  Our team is ready to help you plan the perfect conferenceor event.
                 </p>
                 
                 <div className="space-y-3 mb-6">
@@ -373,7 +373,7 @@ export default function MeetingRooms() {
                     to="/contact"
                     className="block w-full bg-white text-lime-600 text-center font-semibold py-3 px-6 rounded-lg hover:bg-gray-50 transition-colors duration-300"
                   >
-                    Book Meeting Room
+                    Book Conference Room
                   </Link>
                   <Link 
                     to="/contact"
@@ -385,7 +385,7 @@ export default function MeetingRooms() {
               </div>
             </div>
 
-            {/* Interactive Meeting Room Showcase */}
+            {/* Interactive Conference Room Showcase */}
             <div className="relative">
               <div 
                 className="rounded-2xl overflow-hidden shadow-xl h-80 lg:h-96 bg-cover bg-center relative group cursor-pointer"
@@ -397,7 +397,7 @@ export default function MeetingRooms() {
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 transform group-hover:scale-105 transition-transform duration-300">
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Executive Boardroom</h3>
-                    <p className="text-sm text-gray-600">Premium meeting space with advanced presentation technology</p>
+                    <p className="text-sm text-gray-600">Premium conferencespace with advanced presentation technology</p>
                   </div>
                 </div>
               </div>
@@ -414,7 +414,7 @@ export default function MeetingRooms() {
               Simple Booking Process
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-              Booking your perfect meeting room is quick and easy. Here's how you can get started.
+              Booking your perfect conference room is quick and easy. Here's how you can get started.
             </p>
           </div>
 
@@ -455,7 +455,7 @@ export default function MeetingRooms() {
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Enjoy Your Meeting</h3>
               <p className="text-gray-600 text-sm">
-                Arrive and start your meeting immediately - everything will be set up and ready to go.
+                Arrive and start your conferenceimmediately - everything will be set up and ready to go.
               </p>
             </div>
           </div>

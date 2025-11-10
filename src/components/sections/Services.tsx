@@ -24,11 +24,11 @@ const servicesData = [
     ],
   },
   {
-    title: 'Meeting Rooms',
-    description: 'Reserve premium meeting rooms designed with cutting-edge technology and complete amenities.',
+    title: 'Conference Rooms',
+    description: 'Reserve premium conference rooms designed with cutting-edge technology and complete amenities.',
     route: '/meeting-rooms',
     features: [
-      '4 - 8 Seater Meeting Rooms',
+      '4 - 8 Seater Conference Rooms',
       'Audio and Video Conferencing',
       'Catering on Request',
     ],
