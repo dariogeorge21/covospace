@@ -194,7 +194,7 @@ export default function CompanyRegistration() {
         {/* Services Overview */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <div className="bg-lime-50 p-6 rounded-lg text-center">
-            <h3 className="font-semibold text-gray-900 mb-2">Company & GST Registration</h3>
+            <h3 className="font-semibold text-gray-900 mb-2">Company </h3>
             <p className="text-sm text-gray-600">Complete registration process</p>
           </div>
           <div className="bg-lime-50 p-6 rounded-lg text-center">
@@ -354,21 +354,6 @@ export default function CompanyRegistration() {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-lime-500"
                   placeholder="Enter your business address"
                 />
-              </div>
-
-              {/* GST Registration */}
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="gstRegistration"
-                  name="gstRegistration"
-                  checked={formData.gstRegistration}
-                  onChange={handleInputChange}
-                  className="h-4 w-4 text-lime-600 focus:ring-lime-500 border-gray-300 rounded"
-                />
-                <label htmlFor="gstRegistration" className="ml-2 block text-sm text-gray-900">
-                  Include GST Registration (Recommended for most businesses)
-                </label>
               </div>
 
               {/* Additional Services */}

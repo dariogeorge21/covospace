@@ -65,7 +65,6 @@ export const quoteServices: ServicePricing[] = [
       'Access Timing 9am-9pm',
       'Reserved Parking',
       'Premium Business Address',
-      'GST Registration Support',
       'Current Account Opening Support'
     ],
     bookingUrl: '/private-offices'
@@ -79,7 +78,6 @@ export const quoteServices: ServicePricing[] = [
     },
     features: [
       'Business Address',
-      'GST Registration',
       'MSME Registration',
       'Current Account Opening Support',
       'Mail and Courier',
@@ -106,12 +104,11 @@ export const quoteServices: ServicePricing[] = [
   {
     id: 'business-address',
     name: 'Business Address',
-    description: 'Company registration made simple with our address',
+    description: 'Prime business address',
     pricing: {
       annually: 'INR 40,000'
     },
     features: [
-      'Company and GST registration',
       'Bank account support',
       'Mail & courier handling',
       'Virtual office services',

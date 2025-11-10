@@ -61,7 +61,7 @@ export const quoteServices: ServicePricing[] = [
       {
         type: 'Daily Plan',
         price: '₹500',
-        period: 'per day +GST',
+        period: 'per day',
         description: 'Perfect for occasional users and testing our workspace',
         features: [
           'Access to flexi desks',
@@ -75,7 +75,7 @@ export const quoteServices: ServicePricing[] = [
       {
         type: 'Monthly Plan',
         price: '₹5,500',
-        period: 'per month +GST',
+        period: 'per month',
         description: 'Best value for regular flexible workspace users',
         features: [
           '5 Day / 10 Day / Unlimited Plan',
@@ -114,7 +114,7 @@ export const quoteServices: ServicePricing[] = [
       {
         type: 'Monthly Plan',
         price: '₹6,000',
-        period: 'per month +GST',
+        period: 'per month',
         description: 'Best value for dedicated workspace users',
         features: [
           'Includes all Flexi Desk facilities',
@@ -154,7 +154,7 @@ export const quoteServices: ServicePricing[] = [
       {
         type: 'Monthly Plan',
         price: '₹30,000',
-        period: 'per month +GST',
+        period: 'per month',
         description: 'Perfect for small teams (3 Chair + 1 Manager, Total - 4)',
         features: [
           '5 Day / 10 Day / Unlimited Plan',
@@ -193,7 +193,7 @@ export const quoteServices: ServicePricing[] = [
       {
         type: 'Monthly Plan',
         price: '₹30,000',
-        period: 'per month +GST',
+        period: 'per month',
         description: 'Ideal for teams with conference needs (3 Chair + 1 Manager + 2 Visitors, Total - 4)',
         features: [
           'Includes all CS2-02 facilities',
@@ -207,21 +207,19 @@ export const quoteServices: ServicePricing[] = [
     id: 'cs2-05',
     spaceId: 'CS2-05',
     name: 'Office Suite',
-    description: 'Premium office with business address and GST registration.',
+    description: 'Premium office with business address.',
     category: 'office',
     area: '172 Sq.ft',
     seatsDescription: '4 Chair + 1 Manager + 2 Visitors (Total - 5)',
     seatsTotal: 5,
     features: [
       'Premium Business Address',
-      'GST Registration',
       'Current Account',
       'Reception Desk & Guest Service',
       'Unlimited WiFi Access'
     ],
     facilities: [
       'Premium Business Address',
-      'GST Registration',
       'Current Account'
     ],
     startingPrice: '₹35,000',
@@ -230,11 +228,10 @@ export const quoteServices: ServicePricing[] = [
       {
         type: 'Monthly Plan',
         price: '₹35,000',
-        period: 'per month +GST',
+        period: 'per month',
         description: 'Premium office for growing businesses (4 Chair + 1 Manager + 2 Visitors, Total - 5)',
         features: [
           'Premium Business Address',
-          'GST Registration',
           'Current Account'
         ]
       }
@@ -253,7 +250,6 @@ export const quoteServices: ServicePricing[] = [
       'Setup and Register your Company',
       'Prestigious Address',
       'Premium Business Address',
-      'GST Registration',
       'Current Account'
     ],
     facilities: [
@@ -266,7 +262,7 @@ export const quoteServices: ServicePricing[] = [
       {
         type: 'Monthly Plan',
         price: '₹35,000',
-        period: 'per month +GST',
+        period: 'per month',
         description: 'Complete company setup solution (4 Chair + 1 Manager + 2 Visitors, Total - 5)',
         features: [
           'Setup and Register your Company at our Prestigious Address',
@@ -299,7 +295,7 @@ export const quoteServices: ServicePricing[] = [
       {
         type: 'Conference Room',
         price: '₹700',
-        period: 'per hour +GST',
+        period: 'per hour',
         description: 'Ideal for client meetings and team presentations (8 Seater)',
         features: [
           'Complimentary Beverages and Cookies',
@@ -320,7 +316,6 @@ export const quoteServices: ServicePricing[] = [
     seatsDescription: '1 Day / Year',
     features: [
       'Business Address',
-      'GST Registration',
       'MSME Registration',
       'Current Account Opening Support',
       'Mail and Courier',
@@ -330,7 +325,6 @@ export const quoteServices: ServicePricing[] = [
     ],
     facilities: [
       'Business Address',
-      'GST Registration',
       'MSME Registration',
       'Current Account Opening Support',
       'Mail and Courier',
@@ -344,11 +338,10 @@ export const quoteServices: ServicePricing[] = [
       {
         type: 'Virtual Office',
         price: '₹9,500',
-        period: 'per month +GST',
+        period: 'per month',
         description: 'Complete virtual office solution with 1 Day/Year access',
         features: [
           'Business Address',
-          'GST Registration',
           'MSME Registration',
           'Current Account Opening Support',
           'Mail and Courier',

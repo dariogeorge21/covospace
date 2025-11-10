@@ -96,7 +96,7 @@ export default function MeetingRooms() {
       capacity: "8 Seater",
       area: "160 Sq.ft",
       price: "₹700",
-      period: "per hour +GST",
+      period: "per hour",
       description: "Ideal for client meetings and team presentations",
       features: [
         "Complimentary Beverages and Cookies",
@@ -169,7 +169,7 @@ export default function MeetingRooms() {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 max-w-md mx-auto mb-8">
               <div className="text-white/90 text-sm">
                 <p><strong>Space ID:</strong> CS2-C1 | <strong>Area:</strong> 160 Sq.ft | <strong>Seats:</strong> 8</p>
-                <p className="mt-2"><strong>Price:</strong> ₹700/Hour +GST</p>
+                <p className="mt-2"><strong>Price:</strong> ₹700/Hour</p>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -88,7 +88,7 @@ export default function VirtualOffices() {
     {
       icon: DocumentIcon,
       title: "Company Registration Support",
-      description: "Use our address for company registration, GST registration, and other official government documentation"
+      description: "Use our address for company registration, and other official government documentation"
     }
   ];
 
@@ -97,11 +97,10 @@ export default function VirtualOffices() {
       spaceId: "CS2-01",
       type: "Virtual Office",
       price: "₹9,500",
-      period: "per month +GST",
+      period: "per month",
       description: "Complete virtual office solution with 1 Day/Year access",
       features: [
         "Business Address",
-        "GST Registration",
         "MSME Registration",
         "Current Account Opening Support",
         "Mail and Courier",
@@ -176,8 +175,8 @@ export default function VirtualOffices() {
               <div className="text-center">
                 <p className="text-sm text-white/80 mb-2">Complete Package</p>
                 <div className="text-3xl sm:text-4xl font-bold text-lime-400 mb-2">₹11,500</div>
-                <p className="text-white/90">per year +GST</p>
-                <p className="text-sm text-white/70 mt-2">Business Address | GST & MSME Registration | 1 Day/Year Access</p>
+                <p className="text-white/90">per year</p>
+                <p className="text-sm text-white/70 mt-2">Business Address | 1 Day/Year Access</p>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -429,7 +428,7 @@ export default function VirtualOffices() {
                   Can I use the virtual office address for company registration?
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Yes, absolutely! Our virtual office address can be used for company registration, GST registration, 
+                  Yes, absolutely! Our virtual office address can be used for company registration, 
                   and all other official business documentation.
                 </p>
               </div>
