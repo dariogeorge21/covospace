@@ -170,6 +170,7 @@ export default function MeetingRooms() {
               <div className="text-white/90 text-sm">
                 <p><strong>Space ID:</strong> CS2-C1 | <strong>Area:</strong> 160 Sq.ft | <strong>Seats:</strong> 8</p>
                 <p className="mt-2"><strong>Price:</strong> ₹700/Hour</p>
+                <p className="text-xs text-white/60 italic mt-2">* All prices are exclusive of GST</p>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -266,7 +267,7 @@ export default function MeetingRooms() {
                   <p className="text-sm text-gray-600">{room.description}</p>
                 </div>
 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-6">
                   {room.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                       <CheckIcon />
@@ -274,6 +275,8 @@ export default function MeetingRooms() {
                     </li>
                   ))}
                 </ul>
+
+                <p className="text-xs text-gray-600 italic text-center mb-6">* All prices are exclusive of GST</p>
 
                 <Link
                   to="/contact"
@@ -306,7 +309,7 @@ export default function MeetingRooms() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-lime-700 transition-colors duration-300">{option.title}</h3>
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed">{option.description}</p>
                 <div className="text-2xl font-bold text-lime-600 mb-4 group-hover:text-lime-700 transition-colors duration-300">{option.price}</div>
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-4">
                   {option.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                       <CheckIcon />
@@ -314,6 +317,7 @@ export default function MeetingRooms() {
                     </li>
                   ))}
                 </ul>
+                <p className="text-xs text-gray-600 italic text-center">* Price exclusive of GST</p>
               </div>
             ))}
           </div>
