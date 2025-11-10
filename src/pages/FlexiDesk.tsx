@@ -282,7 +282,7 @@ export default function FlexiDesk() {
                     <p className="text-sm text-gray-600">{plan.description}</p>
                   </div>
 
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-3 mb-6">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckIcon />
@@ -291,11 +291,13 @@ export default function FlexiDesk() {
                     ))}
                   </ul>
 
-                  <Link 
+                  <p className="text-xs text-gray-600 italic text-center mb-6">* All prices are exclusive of GST</p>
+
+                  <Link
                     to="/contact"
                     className={`block w-full text-center font-semibold py-3 px-6 rounded-lg transition-colors duration-300 ${
-                      plan.highlight 
-                        ? 'bg-lime-600 text-white hover:bg-lime-700' 
+                      plan.highlight
+                        ? 'bg-lime-600 text-white hover:bg-lime-700'
                         : 'border-2 border-lime-600 text-lime-600 hover:bg-lime-50'
                     }`}
                   >
