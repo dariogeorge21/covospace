@@ -221,7 +221,7 @@ export default function DedicatedDesk() {
                   <p className="text-sm text-gray-600">{plan.description}</p>
                 </div>
 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                       <CheckIcon />
@@ -229,6 +229,8 @@ export default function DedicatedDesk() {
                     </li>
                   ))}
                 </ul>
+
+                <p className="text-xs text-gray-600 italic text-center mb-6">* All prices are exclusive of GST</p>
 
                 <Link
                   to="/contact"
