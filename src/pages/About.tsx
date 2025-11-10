@@ -132,52 +132,62 @@ export default function About() {
 					</div>
 
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-						{/* Private Offices */}
+						{/* Value for Money */}
 						<div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
 							<div className="mb-4">
 								<OfficeIcon />
 							</div>
-							<h3 className="text-xl font-semibold text-gray-900 mb-3">Private Offices</h3>
+							<h3 className="text-xl font-semibold text-lime-600 mb-3">💰 Value for Money</h3>
 							<p className="text-gray-600 text-sm sm:text-base mb-4">
-								Fully managed private office experience with flexible plans starting from INR 9,500 per person per month.
+								Covspace's all-inclusive pricing offers fully furnished offices with premium amenities and services, ensuring a valuable and hassle-free workspace experience.
 							</p>
-							<ul className="text-sm text-gray-500 space-y-1">
-								<li>• Flexible Plans</li>
-								<li>• 24x7 Security & Access</li>
-								<li>• All-Inclusive Services</li>
-							</ul>
 						</div>
 
-						{/* Coworking Spaces */}
+						{/* Low CapEx */}
 						<div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
 							<div className="mb-4">
 								<CommunityIcon />
 							</div>
-							<h3 className="text-xl font-semibold text-gray-900 mb-3">Coworking Spaces</h3>
+							<h3 className="text-xl font-semibold text-lime-600 mb-3">💪 Low CapEx</h3>
 							<p className="text-gray-600 text-sm sm:text-base mb-4">
-								Dedicated desks and flexi desk options in aesthetically crafted environments, perfect for networking.
+								Accelerate growth and optimize cash flow with Covspace's fully furnished offices, designed to eliminate large upfront expenses and ensure smooth, efficient operations.
 							</p>
-							<ul className="text-sm text-gray-500 space-y-1">
-								<li>• Daily/Weekly/Monthly Plans</li>
-								<li>• Free Secure Internet</li>
-								<li>• Mail & Courier Handling</li>
-							</ul>
 						</div>
 
-						{/* Meeting Rooms */}
+						{/* Transparent Pricing */}
 						<div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
 							<div className="mb-4">
 								<FlexibilityIcon />
 							</div>
-							<h3 className="text-xl font-semibold text-gray-900 mb-3">Meeting Rooms</h3>
+							<h3 className="text-xl font-semibold text-lime-600 mb-3">💎 Transparent Pricing, No Surprises</h3>
 							<p className="text-gray-600 text-sm sm:text-base mb-4">
-								Premium meeting rooms with cutting-edge technology, perfect for client meetings and presentations.
+								At Covspace, what you see is what you get - transparent upfront costs and a smooth, hassle-free workspace experience.
 							</p>
-							<ul className="text-sm text-gray-500 space-y-1">
-								<li>• 4-8 Seater Options</li>
-								<li>• Audio/Video Conferencing</li>
-								<li>• Catering on Request</li>
-							</ul>
+						</div>
+						
+						{/* Bottom centered cards */}
+						<div className="col-span-1 md:col-span-2 lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 justify-items-center max-w-3xl mx-auto">
+							{/* Holistic Workplace */}
+							<div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 w-full">
+								<div className="mb-4">
+									<LocationIcon />
+								</div>
+								<h3 className="text-xl font-semibold text-lime-600 mb-3">🏢 Holistic Workplace</h3>
+								<p className="text-gray-600 text-sm sm:text-base mb-4">
+									Vibrant workspaces designed to boost productivity and well-being through a holistic approach, fostering a healthy and engaged professional community with regular events and activities.
+								</p>
+							</div>
+
+							{/* Flexible & Dynamic Workspaces */}
+							<div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 w-full">
+								<div className="mb-4">
+									<FlexibilityIcon />
+								</div>
+								<h3 className="text-xl font-semibold text-lime-600 mb-3">🚀 Flexible & Dynamic Workspaces</h3>
+								<p className="text-gray-600 text-sm sm:text-base mb-4">
+									Flexible workspaces at Covspace adapt to your growth, making it easy for solo entrepreneurs and startups to scale effortlessly.
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
