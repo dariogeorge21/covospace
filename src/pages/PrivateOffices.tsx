@@ -180,6 +180,7 @@ export default function PrivateOffices() {
                   ))}
                   <span className="ml-2 text-sm text-white/80">All-inclusive pricing</span>
                 </div>
+                <p className="text-xs text-white/60 italic mt-3">* All prices are exclusive of GST</p>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -298,6 +299,7 @@ export default function PrivateOffices() {
                     <p className="text-xs text-gray-500">171-172 sq ft • Ideal for growing teams</p>
                   </div>
                 </div>
+                <p className="text-xs text-gray-600 italic text-center mt-3">* All prices are exclusive of GST</p>
               </div>
 
               {/* All Inclusive Features */}
