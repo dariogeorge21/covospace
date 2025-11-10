@@ -22,7 +22,7 @@ const Pricing = () => {
     { name: 'Dedicated Desks', price: '- From ₹6,000 per month +GST' },
     { name: 'Flexi Desk', price: '- From ₹5,500 per month +GST | ₹500 per day +GST' },
     { name: 'Virtual Office', price: '- ₹9,500 per month +GST' },
-    { name: 'Meeting Rooms', price: '- ₹700 per hour +GST' },
+    { name: 'Conference Rooms', price: '- ₹700 per hour +GST' },
     { name: 'Business Address', price: '- From ₹40,000 annually +GST' },
   ];
 

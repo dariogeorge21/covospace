@@ -98,8 +98,8 @@ const Footer = () => {
         <div className="w-1/6 bg-black"></div>
 
         {/* Middle Column: Green background with Logo */}
-        <div className="w-1/6 bg-lime-600 flex items-center justify-center p-4 lg:p-6">
-          <div className="text-center scale-90 lg:scale-100">
+        <div className="w-1/6 flex items-center justify-center p-4 lg:p-6 bg-white rounded-lg border-2 border-black">
+          <div className="text-center scale-90 lg:scale-150">
             <CovspaceLogo />
           </div>
         </div>

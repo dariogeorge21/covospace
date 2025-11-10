@@ -73,7 +73,7 @@ export default function Contact() {
     'Dedicated Desk',
     'Flexi Desk',
     'Virtual Office',
-    'Meeting Rooms',
+    'Conference Rooms',
     'Business Address',
     'General Inquiry'
   ];
@@ -163,7 +163,7 @@ export default function Contact() {
       <section 
         className="relative py-12 sm:py-16 lg:py-20"
         style={{
-          backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1759947548/DSCN0759_eaza4f.jpg)',
+          backgroundImage: 'url(https://res.cloudinary.com/dobqxxtml/image/upload/v1762782579/FB_cover_new_re_web_re9xs2.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -450,7 +450,7 @@ export default function Contact() {
                     </div>
                     <div className="flex items-center">
                       <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
-                      <span>Meeting Rooms Available</span>
+                      <span>Conference Rooms Available</span>
                     </div>
                   </div>
                 </div>
@@ -479,7 +479,7 @@ export default function Contact() {
                     <div>• Dedicated Desks</div>
                     <div>• Flexi Desk</div>
                     <div>• Virtual Office</div>
-                    <div>• Meeting Rooms</div>
+                    <div>• Conference Rooms</div>
                     <div>• Business Address</div>
                   </div>
                 </div>

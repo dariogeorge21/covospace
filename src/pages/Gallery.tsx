@@ -46,10 +46,10 @@ const galleryImages: GalleryImage[] = [
   { id: 5, src: '/gallery/l2.jpg', alt: 'Open Workspace', category: 'Coworking Spaces' },
   { id: 6, src: 'https://res.cloudinary.com/dobqxxtml/image/upload/v1759945668/group-business-executives-working-together_m0lxs8.jpg', alt: 'Collaborative Space', category: 'Coworking Spaces' },
 
-  // Meeting Rooms
-  { id: 7, src: 'https://res.cloudinary.com/dobqxxtml/image/upload/v1759948586/IMG_2935_xsa1h4.jpg', alt: 'Conference Room', category: 'Meeting Rooms' },
-  { id: 8, src: '/gallery/r1.jpg', alt: 'Meeting Space', category: 'Meeting Rooms' },
-  { id: 9, src: '/gallery/r2.jpg', alt: 'Boardroom', category: 'Meeting Rooms' },
+  // Conference Rooms
+  { id: 7, src: 'https://res.cloudinary.com/dobqxxtml/image/upload/v1759948586/IMG_2935_xsa1h4.jpg', alt: 'Conference Room', category: 'Conference Rooms' },
+  { id: 8, src: '/gallery/r1.jpg', alt: 'ConferenceSpace', category: 'Conference Rooms' },
+  { id: 9, src: '/gallery/r2.jpg', alt: 'Boardroom', category: 'Conference Rooms' },
 
   // Common Areas & Amenities
   { id: 10, src: '/gallery/l3.jpg', alt: 'Lounge Area', category: 'Common Areas' },
@@ -57,7 +57,7 @@ const galleryImages: GalleryImage[] = [
   { id: 12, src: 'https://res.cloudinary.com/dobqxxtml/image/upload/v1759947548/DSCN0759_eaza4f.jpg', alt: 'Reception Area', category: 'Common Areas' },
 ];
 
-const categories = ['All', 'Private Offices', 'Coworking Spaces', 'Meeting Rooms', 'Common Areas'];
+const categories = ['All', 'Private Offices', 'Coworking Spaces', 'Conference Rooms', 'Common Areas'];
 
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState('All');

@@ -56,35 +56,35 @@ export default function OurClients() {
       title: "Startups & Entrepreneurs",
       count: "150+",
       description: "Early-stage companies and innovative entrepreneurs building the next big thing",
-      services: ["Private offices", "Flexi desks", "Meeting rooms", "Virtual office", "Networking events"]
+      services: ["Private offices", "Flexi desks", "conference rooms", "Virtual office", "Networking events"]
     },
     {
       icon: EnterpriseIcon,
       title: "Enterprise Companies",
       count: "50+",
       description: "Established corporations using our spaces for satellite offices and project teams",
-      services: ["Private office suites", "Dedicated meeting rooms", "Corporate events", "Business address", "Mail handling"]
+      services: ["Private office suites", "Dedicated conference rooms", "Corporate events", "Business address", "Mail handling"]
     },
     {
       icon: FreelancerIcon,
       title: "Freelancers & Consultants",
       count: "200+",
       description: "Independent professionals seeking a productive workspace and community",
-      services: ["Flexi desk access", "Day passes", "Meeting room bookings", "Professional address", "Networking opportunities"]
+      services: ["Flexi desk access", "Day passes", "Conference Room bookings", "Professional address", "Networking opportunities"]
     },
     {
       icon: TechIcon,
       title: "Tech & Creative Agencies",
       count: "75+",
       description: "Digital agencies, software companies, and creative studios",
-      services: ["Team spaces", "Collaboration areas", "High-speed internet", "Presentation rooms", "Client meeting spaces"]
+      services: ["Team spaces", "Collaboration areas", "High-speed internet", "Presentation rooms", "Client conferencespaces"]
     },
     {
       icon: ConsultingIcon,
       title: "Professional Services",
       count: "100+",
       description: "Law firms, accounting firms, consulting companies, and other professional services",
-      services: ["Executive offices", "Client meeting rooms", "Confidential spaces", "Business address", "Administrative support"]
+      services: ["Executive offices", "Client conference rooms", "Confidential spaces", "Business address", "Administrative support"]
     }
   ];
 
@@ -104,7 +104,7 @@ export default function OurClients() {
       image: "https://randomuser.me/api/portraits/women/44.jpg"
     },
     {
-      quote: "As a growing startup, we needed flexibility and professional facilities. Covspace provided exactly that, with meeting rooms that impress our clients and a workspace that inspires our team.",
+      quote: "As a growing startup, we needed flexibility and professional facilities. Covspace provided exactly that, with conference rooms that impress our clients and a workspace that inspires our team.",
       client: "Arjun Menon",
       company: "GreenTech Innovations",
       industry: "CleanTech Startup",
@@ -137,7 +137,7 @@ export default function OurClients() {
     "Flexible lease terms from daily to monthly contracts",
     "Prime business address in the center of Kochi",
     "Access to a diverse professional network",
-    "State-of-the-art meeting and conference facilities",
+    "State-of-the-art conferenceand conference facilities",
     "24x7 security and professional maintenance",
     "High-speed internet and modern technology infrastructure",
     "Administrative support and business services",

@@ -51,7 +51,7 @@ const Hero= () => {
             className="mt-4 sm:mt-6 text-gray-600 text-xs xs:text-sm sm:text-sm md:text-base leading-relaxed text-center sm:text-left" 
             style={{ fontFamily: 'Istok Web', fontStyle: 'italic' }}
           >
-            Covspace is a premier coworking and shared workspace provider based in Kochi, Kerala. We offer fully managed private offices, collaborative coworking spaces, meeting rooms, and virtual office services.
+            Covspace is a premier coworking and shared workspace provider based in Kochi, Kerala. We offer fully managed private offices, collaborative coworking spaces, conference rooms, and virtual office services.
           </p>
 
           {/* Quick Quote Button - mobile-optimized */}

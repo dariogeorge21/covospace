@@ -89,8 +89,8 @@ export const quoteServices: ServicePricing[] = [
   },
   {
     id: 'meeting-rooms',
-    name: 'Meeting Rooms',
-    description: 'Premium meeting rooms with cutting-edge technology',
+    name: 'Conference Rooms',
+    description: 'Premium conference rooms with cutting-edge technology',
     pricing: {
       hourly: 'INR 700'
     },

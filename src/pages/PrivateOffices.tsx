@@ -109,7 +109,7 @@ export default function PrivateOffices() {
     "Daily housekeeping and maintenance",
     "24x7 security and CCTV monitoring",
     "Access to common areas and amenities",
-    "Meeting room credits included",
+    "Conference Room credits included",
     "Guest reception and visitor management",
     "Printing and scanning services",
     "Tea, coffee, and refreshment services"

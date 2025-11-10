@@ -433,7 +433,7 @@ export default function FlexiDesk() {
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-lime-700 transition-colors duration-300">Enjoy Premium Amenities</h3>
               <p className="text-gray-600 text-sm">
-                Access high-speed internet, meeting rooms, printing services, and our vibrant community network.
+                Access high-speed internet, conference rooms, printing services, and our vibrant community network.
               </p>
             </div>
           </div>
@@ -470,7 +470,7 @@ export default function FlexiDesk() {
                 </h3>
                 <p className="text-gray-600 text-sm">
                   All passes include high-speed internet, access to common areas, tea/coffee, basic printing, 
-                  and community networking events. Higher tier passes include additional perks like meeting room credits.
+                  and community networking events. Higher tier passes include additional perks like conference room credits.
                 </p>
               </div>
 

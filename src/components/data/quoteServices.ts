@@ -194,7 +194,7 @@ export const quoteServices: ServicePricing[] = [
         type: 'Monthly Plan',
         price: '₹30,000',
         period: 'per month +GST',
-        description: 'Ideal for teams with meeting needs (3 Chair + 1 Manager + 2 Visitors, Total - 4)',
+        description: 'Ideal for teams with conference needs (3 Chair + 1 Manager + 2 Visitors, Total - 4)',
         features: [
           'Includes all CS2-02 facilities',
           'Conference Room Access 12 Hours/Month (Additional hours chargeable)'
@@ -279,7 +279,7 @@ export const quoteServices: ServicePricing[] = [
     id: 'cs2-c1',
     spaceId: 'CS2-C1',
     name: 'Conference Room',
-    description: 'Premium meeting rooms with cutting-edge technology and complete amenities.',
+    description: 'Premium conference rooms with cutting-edge technology and complete amenities.',
     category: 'meeting',
     area: '160 Sq.ft',
     seats: 8,
