@@ -82,7 +82,7 @@ const Pricing = () => {
                   className="grid grid-cols-2 items-start text-base md:text-lg leading-snug"
                 >
                   <span className="font-medium text-black">&#x2022; {service.name}</span>
-                  <span className="font-light text-black/90 text-right">{service.price}</span>
+                  <span className="font-light text-black/90 text-left">{service.price}</span>
                 </li>
               ))}
             </ul>
