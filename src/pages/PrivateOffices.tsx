@@ -308,10 +308,6 @@ export default function PrivateOffices() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <div className="flex items-start space-x-3">
                     <CheckIcon />
-                    <span className="text-sm text-gray-700">Flexible Plans (5/10/Unlimited Days)</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckIcon />
                     <span className="text-sm text-gray-700">Reception & Guest Services</span>
                   </div>
                   <div className="flex items-start space-x-3">
