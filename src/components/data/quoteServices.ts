@@ -134,14 +134,12 @@ export const quoteServices: ServicePricing[] = [
     seatsDescription: '3 Chair + 1 Manager (Total - 4)',
     seatsTotal: 4,
     features: [
-      '5 Day / 10 Day / Unlimited Plan',
       'Reception Desk & Guest Service',
       'Unlimited WiFi Access',
       'Mail & Courier Management',
       'Print / Photocopy Facility (50 Prints)'
     ],
     facilities: [
-      '5 Day / 10 Day / Unlimited Plan',
       'Reception Desk & Guest Service',
       'Unlimited WiFi Access',
       'Mail & Courier Management',
@@ -157,7 +155,6 @@ export const quoteServices: ServicePricing[] = [
         period: 'per month',
         description: 'Perfect for small teams (3 Chair + 1 Manager, Total - 4)',
         features: [
-          '5 Day / 10 Day / Unlimited Plan',
           'Reception Desk & Guest Service',
           'Unlimited WiFi Access',
           'Mail & Courier Management',
