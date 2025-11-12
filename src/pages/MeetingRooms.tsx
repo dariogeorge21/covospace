@@ -363,10 +363,6 @@ export default function MeetingRooms() {
                     <span className="ml-3">Advanced A/V technology included</span>
                   </div>
                   <div className="flex items-center text-sm">
-                    <CateringIcon />
-                    <span className="ml-3">Catering services available</span>
-                  </div>
-                  <div className="flex items-center text-sm">
                     <ShieldIcon />
                     <span className="ml-3">Private and secure environment</span>
                   </div>
