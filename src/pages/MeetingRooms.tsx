@@ -94,7 +94,7 @@ export default function MeetingRooms() {
       spaceId: "CS2-C1",
       type: "Conference Room",
       capacity: "8 Seater",
-      area: "160 Sq.ft",
+      area: "",
       price: "₹700",
       period: "per hour",
       description: "Ideal for client meetings and team presentations",
@@ -361,10 +361,6 @@ export default function MeetingRooms() {
                   <div className="flex items-center text-sm">
                     <VideoIcon />
                     <span className="ml-3">Advanced A/V technology included</span>
-                  </div>
-                  <div className="flex items-center text-sm">
-                    <CateringIcon />
-                    <span className="ml-3">Catering services available</span>
                   </div>
                   <div className="flex items-center text-sm">
                     <ShieldIcon />

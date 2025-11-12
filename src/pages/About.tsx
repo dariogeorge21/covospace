@@ -80,27 +80,79 @@ export default function About() {
 							</p>
 						</div>
 						<div className="bg-lime-600 rounded-2xl p-6 sm:p-8 text-white">
-							<h3 className="text-xl sm:text-2xl font-bold mb-4">Why Choose Covspace?</h3>
-							<ul className="space-y-3 text-sm sm:text-base">
+							<h3 className="text-xl sm:text-2xl font-bold mb-4">Facilities Offered!</h3>
+							<ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm sm:text-base">
 								<li className="flex items-center">
 									<span className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></span>
-									Prime location in the center of Kochi
+									Unlimited Daily pass subject to availability
 								</li>
 								<li className="flex items-center">
 									<span className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></span>
-									Fully managed private offices and coworking spaces
+									Reception Desk & Guest Services
 								</li>
 								<li className="flex items-center">
 									<span className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></span>
-									24x7 security and access control
+									Unlimited Wi-Fi Access
 								</li>
 								<li className="flex items-center">
 									<span className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></span>
-									All-inclusive services with high-speed internet
+									Mail & Courier Management
 								</li>
 								<li className="flex items-center">
 									<span className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></span>
-									conference rooms with cutting-edge technology
+									Print/Photocopy Facility (50 prints/mo)
+								</li>
+								<li className="flex items-center">
+									<span className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></span>
+									Scanning Facilities (Unlimited)
+								</li>
+								<li className="flex items-center">
+									<span className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></span>
+									Conference Room Access
+								</li>
+								<li className="flex items-center">
+									<span className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></span>
+									Pantry & Toilet
+								</li>
+								<li className="flex items-center">
+									<span className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></span>
+									Temp Sign board
+								</li>
+								<li className="flex items-center">
+									<span className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></span>
+									Housekeeping & Security
+								</li>
+								<li className="flex items-center">
+									<span className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></span>
+									Interactive Display
+								</li>
+								<li className="flex items-center">
+									<span className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></span>
+									Car & Bike Parking Facility
+								</li>
+								<li className="flex items-center">
+									<span className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></span>
+									Uninterrupted Power Supply
+								</li>
+								<li className="flex items-center">
+									<span className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></span>
+									Locker Facility
+								</li>
+								<li className="flex items-center">
+									<span className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></span>
+									Hot Beverages (On Demand)
+								</li>
+								<li className="flex items-center">
+									<span className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></span>
+									Individual Biometric Access
+								</li>
+								<li className="flex items-center">
+									<span className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></span>
+									Air Conditioned
+								</li>
+								<li className="flex items-center">
+									<span className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></span>
+									24x7 CCTV Surveillance
 								</li>
 							</ul>
 						</div>

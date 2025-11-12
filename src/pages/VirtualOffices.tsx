@@ -174,7 +174,7 @@ export default function VirtualOffices() {
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto mb-8">
               <div className="text-center">
                 <p className="text-sm text-white/80 mb-2">Complete Package</p>
-                <div className="text-3xl sm:text-4xl font-bold text-lime-400 mb-2">₹11,500</div>
+                <div className="text-3xl sm:text-4xl font-bold text-lime-400 mb-2">₹9,500</div>
                 <p className="text-white/90">per year</p>
                 <p className="text-sm text-white/70 mt-2">Business Address | 1 Day/Year Access</p>
                 <p className="text-xs text-white/60 italic mt-3">* All prices are exclusive of GST</p>

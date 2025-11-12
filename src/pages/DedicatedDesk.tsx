@@ -129,11 +129,7 @@ export default function DedicatedDesk() {
               Work your way with a dedicated desk in an aesthetically crafted coworking environment.
               Enjoy the perfect blend of personal workspace and collaborative community in the heart of Kochi.
             </p>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 max-w-md mx-auto mb-8">
-              <div className="text-white/90 text-sm">
-                <p><strong>Space ID:</strong> CS2-04 | <strong>Area:</strong> 203 Sq.ft | <strong>Seats:</strong> 8</p>
-              </div>
-            </div>
+            <div><br /><br /></div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
