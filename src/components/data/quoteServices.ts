@@ -22,7 +22,6 @@ export interface ServicePricing {
   startingPrice: string;
   startingPeriod: string;
   spaceId?: string;
-  area?: string | null;  // Can be null for Virtual Office
   seats?: string | number;
   seatsDescription?: string;  // Detailed seat breakdown like "3 Chair + 1 Manager + 2 Visitors"
   seatsTotal?: number;  // Numeric total
@@ -37,7 +36,6 @@ export const quoteServices: ServicePricing[] = [
     name: 'Flexi Desk / Hot Desk',
     description: 'Flexible workspace solution with no fixed commitments. Perfect for freelancers and remote workers.',
     category: 'workspace',
-    area: '207 Sq.ft',
     seats: 9,
     features: [
       'Reception Desk & Guest Service',
@@ -95,7 +93,6 @@ export const quoteServices: ServicePricing[] = [
     name: 'Dedicated Work Space',
     description: 'Your personal workspace in our aesthetically crafted coworking environment.',
     category: 'workspace',
-    area: '203 Sq.ft',
     seats: 8,
     features: [
       'All Flexi Desk facilities',
@@ -125,63 +122,28 @@ export const quoteServices: ServicePricing[] = [
     ]
   },
   {
-    id: 'cs2-02',
-    spaceId: 'CS2-02',
+    id: 'cs2-02-03',
+    spaceId: 'CS2-02 & CS2-03',
     name: 'Office Suite',
-    description: 'Fully managed private office experience for small teams.',
+    description: 'Fully managed private office with flexible seating and conference room access.',
     category: 'office',
-    area: '143 Sq.ft',
-    seatsDescription: '3 Chair + 1 Manager (Total - 4)',
+    seatsDescription: '3 Chair + 1 Manager',
     seatsTotal: 4,
     features: [
       'Reception Desk & Guest Service',
       'Unlimited WiFi Access',
       'Mail & Courier Management',
-      'Print / Photocopy Facility (50 Prints)'
+      'Print / Photocopy Facility (50 Prints)',
+      'Scan Facilities',
+      'Conference Room Access 12 Hours/Month',
+      'Additional hours chargeable'
     ],
     facilities: [
       'Reception Desk & Guest Service',
       'Unlimited WiFi Access',
       'Mail & Courier Management',
       'Print / Photocopy Facility (50 Prints)',
-      'Scan Facilities'
-    ],
-    startingPrice: '₹30,000',
-    startingPeriod: 'per month',
-    pricingOptions: [
-      {
-        type: 'Monthly Plan',
-        price: '₹30,000',
-        period: 'per month',
-        description: 'Perfect for small teams (3 Chair + 1 Manager, Total - 4)',
-        features: [
-          'Reception Desk & Guest Service',
-          'Unlimited WiFi Access',
-          'Mail & Courier Management',
-          'Print / Photocopy Facility (50 Prints)',
-          'Scan Facilities'
-        ]
-      }
-    ]
-  },
-  {
-    id: 'cs2-03',
-    spaceId: 'CS2-03',
-    name: 'Office Suite',
-    description: 'Fully managed private office with conference room access.',
-    category: 'office',
-    area: '145 Sq.ft',
-    seatsDescription: '3 Chair + 1 Manager + 2 Visitors (Total - 4)',
-    seatsTotal: 4,
-    features: [
-      'Includes all CS2-02 facilities',
-      'Conference Room Access 12 Hours/Month',
-      'Additional hours chargeable',
-      'Reception Desk & Guest Service',
-      'Unlimited WiFi Access'
-    ],
-    facilities: [
-      'Includes all CS2-02 facilities',
+      'Scan Facilities',
       'Conference Room Access 12 Hours/Month (Additional hours chargeable)'
     ],
     startingPrice: '₹30,000',
@@ -191,9 +153,13 @@ export const quoteServices: ServicePricing[] = [
         type: 'Monthly Plan',
         price: '₹30,000',
         period: 'per month',
-        description: 'Ideal for teams with conference needs (3 Chair + 1 Manager + 2 Visitors, Total - 4)',
+        description: 'Combined office suite for growing teams (6 Chair + 2 Manager + 2 Visitors, Total - 8)',
         features: [
-          'Includes all CS2-02 facilities',
+          'Reception Desk & Guest Service',
+          'Unlimited WiFi Access',
+          'Mail & Courier Management',
+          'Print / Photocopy Facility (50 Prints)',
+          'Scan Facilities',
           'Conference Room Access 12 Hours/Month (Additional hours chargeable)'
         ],
         highlight: true
@@ -201,57 +167,27 @@ export const quoteServices: ServicePricing[] = [
     ]
   },
   {
-    id: 'cs2-05',
-    spaceId: 'CS2-05',
+    id: 'cs2-05-06',
+    spaceId: 'CS2-05 & CS2-06',
     name: 'Office Suite',
-    description: 'Premium office with business address.',
+    description: 'Premium office with business address and complete company setup services.',
     category: 'office',
-    area: '172 Sq.ft',
-    seatsDescription: '4 Chair + 1 Manager + 2 Visitors (Total - 5)',
-    seatsTotal: 5,
+    seatsDescription: '4 Chair + 1 Manager + 2 Visitors',
+    seatsTotal: 10,
     features: [
+      'Setup and Register your Company',
+      'Prestigious Address',
       'Premium Business Address',
       'Current Account',
       'Reception Desk & Guest Service',
       'Unlimited WiFi Access'
     ],
     facilities: [
-      'Premium Business Address',
-      'Current Account'
-    ],
-    startingPrice: '₹35,000',
-    startingPeriod: 'per month',
-    pricingOptions: [
-      {
-        type: 'Monthly Plan',
-        price: '₹35,000',
-        period: 'per month',
-        description: 'Premium office for growing businesses (4 Chair + 1 Manager + 2 Visitors, Total - 5)',
-        features: [
-          'Premium Business Address',
-          'Current Account'
-        ]
-      }
-    ]
-  },
-  {
-    id: 'cs2-06',
-    spaceId: 'CS2-06',
-    name: 'Office Suite',
-    description: 'Setup and register your company at our prestigious address.',
-    category: 'office',
-    area: '171 Sq.ft',
-    seatsDescription: '4 Chair + 1 Manager + 2 Visitors (Total - 5)',
-    seatsTotal: 5,
-    features: [
-      'Setup and Register your Company',
-      'Prestigious Address',
-      'Premium Business Address',
-      'Current Account'
-    ],
-    facilities: [
       'Setup and Register your Company at our Prestigious Address',
-      'Includes facilities listed for CS2-05'
+      'Premium Business Address',
+      'Current Account',
+      'Reception Desk & Guest Service',
+      'Unlimited WiFi Access'
     ],
     startingPrice: '₹35,000',
     startingPeriod: 'per month',
@@ -260,10 +196,13 @@ export const quoteServices: ServicePricing[] = [
         type: 'Monthly Plan',
         price: '₹35,000',
         period: 'per month',
-        description: 'Complete company setup solution (4 Chair + 1 Manager + 2 Visitors, Total - 5)',
+        description: 'Complete premium office and company setup solution (8 Chair + 2 Manager + 4 Visitors, Total - 10)',
         features: [
           'Setup and Register your Company at our Prestigious Address',
-          'Includes facilities listed for CS2-05'
+          'Premium Business Address',
+          'Current Account',
+          'Reception Desk & Guest Service',
+          'Unlimited WiFi Access'
         ]
       }
     ]
@@ -274,7 +213,6 @@ export const quoteServices: ServicePricing[] = [
     name: 'Conference Room',
     description: 'Premium conference rooms with cutting-edge technology and complete amenities.',
     category: 'meeting',
-    area: '160 Sq.ft',
     seats: 8,
     features: [
       'Complimentary Beverages and Cookies',
@@ -309,7 +247,6 @@ export const quoteServices: ServicePricing[] = [
     name: 'Virtual Office',
     description: 'Establish your presence at a prime business address without the upfront cost.',
     category: 'virtual',
-    area: null,
     seatsDescription: '1 Day / Year',
     features: [
       'Business Address',

@@ -31,7 +31,7 @@ function Home() {
       <Pricing />
       <ClientMarquee />
       <Blog />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Footer />
     </div>
   );

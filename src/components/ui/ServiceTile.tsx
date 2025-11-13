@@ -73,28 +73,6 @@ const ServiceTile = ({ service, isSelected, onSelect, onHover }: ServiceTileProp
         )}
       </div>
 
-      {/* Workspace Details (Area & Seats) */}
-      {(service.area || service.seats) && (
-        <div className="flex items-center gap-3 mb-2 text-xs">
-          {service.area && (
-            <div className="flex items-center text-gray-600">
-              <svg className="w-3.5 h-3.5 text-lime-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-              </svg>
-              <span className="font-medium">{service.area}</span>
-            </div>
-          )}
-          {service.seats && (
-            <div className="flex items-center text-gray-600">
-              <svg className="w-3.5 h-3.5 text-lime-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-              <span className="font-medium">{service.seats}</span>
-            </div>
-          )}
-        </div>
-      )}
-
       {/* Service description */}
       <p className="text-sm text-gray-600 mb-3 line-clamp-2">
         {service.description}

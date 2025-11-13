@@ -12,6 +12,11 @@ const QuotePanel = ({ isOpen, onClose }: QuotePanelProps) => {
   const [hoveredService, setHoveredService] = useState<ServicePricing | null>(null);
   const [selectedPricingOption, setSelectedPricingOption] = useState<PricingOption | undefined>();
   const [seatCount, setSeatCount] = useState<number>(1);
+
+  // Helper to check if current service is an Office Suite
+  const isOfficeSuite = (service: ServicePricing | null): boolean => {
+    return service?.category === 'office';
+  };
   const [announcement, setAnnouncement] = useState<string>('');
   const panelRef = useRef<HTMLDivElement>(null);
   const pricingRef = useRef<HTMLDivElement>(null);
@@ -154,7 +159,8 @@ const QuotePanel = ({ isOpen, onClose }: QuotePanelProps) => {
       if (selectedPricingOption) {
         const basePrice = parseFloat(selectedPricingOption.price.replace(/[^0-9.]/g, ''));
         const totalPrice = basePrice * newCount;
-        setAnnouncement(`${newCount} seat${newCount > 1 ? 's' : ''} selected. Total: ₹${totalPrice.toLocaleString()} ${selectedPricingOption.period}.`);
+        const unitLabel = isOfficeSuite(displayService) ? 'cabin' : 'seat';
+        setAnnouncement(`${newCount} ${unitLabel}${newCount > 1 ? 's' : ''} selected. Total: ₹${totalPrice.toLocaleString()} ${selectedPricingOption.period}.`);
       }
     }
   };
@@ -162,44 +168,53 @@ const QuotePanel = ({ isOpen, onClose }: QuotePanelProps) => {
   // Determine which service to display in pricing panel
   const displayService = hoveredService || selectedService;
 
-  // Extract maximum seat count from the workspace
+  // Extract maximum seat/cabin count from the workspace
   const getMaxSeats = (): number => {
+    // For Office Suites, maximum is 2 cabins
+    if (isOfficeSuite(displayService)) {
+      return 2;
+    }
+
     if (!displayService?.seats) return 50; // Default fallback
-    
+
     // Extract numbers from strings like "9 seats" or "4 Total (3 Chair + 1 Manager)"
     const match = String(displayService.seats).match(/(\d+)\s*(?:Total|seats?)/i);
     if (match) {
       return parseInt(match[1], 10);
     }
-    
+
     // Fallback: try to extract first number
     const firstNumber = String(displayService.seats).match(/\d+/);
     return firstNumber ? parseInt(firstNumber[0], 10) : 50;
   };
 
-  // Calculate total price based on seat count
+  // Calculate total price based on seat/cabin count
   const calculateTotalPrice = (basePrice: string): string => {
     const price = parseFloat(basePrice.replace(/[^0-9.]/g, ''));
     const total = price * seatCount;
     return `₹${total.toLocaleString()}`;
   };
 
-  // Seat Counter Component
+  // Seat/Cabin Counter Component
   const SeatCounter = () => {
     const maxSeats = getMaxSeats();
-    
+    const isOffice = isOfficeSuite(displayService);
+    const unitLabel = isOffice ? 'Cabins' : 'Seats';
+    const decreaseLabel = isOffice ? 'Decrease cabin count' : 'Decrease seat count';
+    const increaseLabel = isOffice ? 'Increase cabin count' : 'Increase seat count';
+
     return (
       <div className="flex items-center justify-between p-3 bg-white rounded-lg border border-gray-200 mb-4">
         <div>
-          <span className="text-sm font-medium text-gray-900">Seats</span>
-          <p className="text-xs text-gray-500 mt-0.5">Max: {maxSeats}</p>
+          <span className="text-sm font-medium text-gray-900">{unitLabel}</span>
+          {!isOffice && <p className="text-xs text-gray-500 mt-0.5">Max: {maxSeats}</p>}
         </div>
         <div className="flex items-center space-x-3">
           <button
             onClick={() => handleSeatCountChange(seatCount - 1)}
             disabled={seatCount <= 1}
             className="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center transition-all duration-200"
-            aria-label="Decrease seat count"
+            aria-label={decreaseLabel}
           >
             <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
@@ -210,7 +225,7 @@ const QuotePanel = ({ isOpen, onClose }: QuotePanelProps) => {
             onClick={() => handleSeatCountChange(seatCount + 1)}
             disabled={seatCount >= maxSeats}
             className="w-8 h-8 rounded-full bg-lime-500 hover:bg-lime-600 disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center transition-all duration-200"
-            aria-label="Increase seat count"
+            aria-label={increaseLabel}
           >
             <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
@@ -247,7 +262,7 @@ const QuotePanel = ({ isOpen, onClose }: QuotePanelProps) => {
           fixed top-0 left-0 right-0 bg-white shadow-2xl z-50
           transform transition-transform duration-300 ease-out
           ${isOpen ? 'translate-y-0' : '-translate-y-full'}
-          lg:top-[90px] sm:top-[120px] top-[100px]
+          lg:top-[152px] sm:top-[120px] top-[100px]
         `}
         style={{
           maxHeight: 'calc(100vh - 100px)',
@@ -289,7 +304,7 @@ const QuotePanel = ({ isOpen, onClose }: QuotePanelProps) => {
             <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">
               Select Workspace
             </h3>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {quoteServices.map((service) => (
                 <ServiceTile
                   key={service.id}
@@ -318,19 +333,9 @@ const QuotePanel = ({ isOpen, onClose }: QuotePanelProps) => {
                   </div>
 
                   {/* Workspace Details - Compact */}
-                  {(displayService.area || displayService.seatsDescription) && (
+                  {(displayService.seatsDescription) && (
                     <div className="mb-4 grid grid-cols-2 gap-3">
-                      {displayService.area && (
-                        <div className="p-3 bg-white rounded-lg border border-gray-200">
-                          <div className="flex items-center space-x-2 mb-1">
-                            <svg className="w-4 h-4 text-lime-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-                            </svg>
-                            <p className="text-xs text-gray-500 font-medium">Area</p>
-                          </div>
-                          <p className="text-sm font-semibold text-gray-900">{displayService.area}</p>
-                        </div>
-                      )}
+                      
                       {displayService.seatsDescription && (
                         <div className="p-3 bg-white rounded-lg border border-gray-200">
                           <div className="flex items-center space-x-2 mb-1">
@@ -345,7 +350,7 @@ const QuotePanel = ({ isOpen, onClose }: QuotePanelProps) => {
                     </div>
                   )}
 
-                  {/* Seat Counter */}
+                  {/* Seat/Cabin Counter */}
                   <SeatCounter />
 
                   {/* Pricing Options - Simplified */}
@@ -394,7 +399,7 @@ const QuotePanel = ({ isOpen, onClose }: QuotePanelProps) => {
                           </span>
                         </div>
                         <div className="text-xs text-gray-600 mt-1 flex justify-between">
-                          <span>{seatCount} seat{seatCount > 1 ? 's' : ''} • {selectedPricingOption.type}</span>
+                          <span>{seatCount} {isOfficeSuite(displayService) ? 'cabin' : 'seat'}{seatCount > 1 ? 's' : ''} • {selectedPricingOption.type}</span>
                           <span className="font-medium">{selectedPricingOption.period}</span>
                         </div>
                       </div>
