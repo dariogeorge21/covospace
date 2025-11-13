@@ -5,7 +5,6 @@ import GallerySection from './components/sections/Gallery';
 import Pricing from './components/sections/Pricing';
 import ClientMarquee from './components/sections/ClientMarquee';
 import Blog from './components/sections/Blog';
-import Testimonials from './components/sections/Testimonials';
 import Footer from './components/sections/Footer';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import PrivateOffices from './pages/PrivateOffices';
@@ -21,6 +20,7 @@ import CompanyRegistration from './pages/CompanyRegistration';
 import Gallery from './pages/Gallery';
 import { QuotePanelProvider } from './components/ui/QuotePanelProvider';
 import FloatingSocialMenu from './components/ui/FloatingSocialMenu';
+import Terms from './components/sections/Terms';
 
 function Home() {
   return (
@@ -31,7 +31,6 @@ function Home() {
       <Pricing />
       <ClientMarquee />
       <Blog />
-      {/* <Testimonials /> */}
       <Footer />
     </div>
   );
@@ -55,6 +54,7 @@ function App() {
           <Route path="/our-clients" element={<OurClients />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/company-registration" element={<CompanyRegistration />} />
+          <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <FloatingSocialMenu />
