@@ -18,6 +18,8 @@ import OurClients from './pages/OurClients';
 import Contact from './pages/Contact';
 import CompanyRegistration from './pages/CompanyRegistration';
 import Gallery from './pages/Gallery';
+import Careers from './pages/Careers';
+import BlogsPage from './pages/Blogs';
 import { QuotePanelProvider } from './components/ui/QuotePanelProvider';
 import FloatingSocialMenu from './components/ui/FloatingSocialMenu';
 import Terms from './components/sections/Terms';
@@ -54,6 +56,8 @@ function App() {
           <Route path="/our-clients" element={<OurClients />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/company-registration" element={<CompanyRegistration />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/blogs" element={<BlogsPage />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
