@@ -63,7 +63,7 @@ const footerLinks = [
   { name: "About", href: "/about" },
   { name: "Blogs", href: "#" },
   { name: "Contact Us", href: "/contact" },
-  { name: "Careers", href: "#" },
+  { name: "Careers", href: "/careers" },
   { name: "Terms & Conditions", href: "/terms" },
 ];
 
