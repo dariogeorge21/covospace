@@ -9,7 +9,7 @@ const blogPosts = [
     date: 'Jan 10, 2025',
     image:
       'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&h=500&fit=crop',
-    author: 'Covospace Team',
+    author: 'Covspace Team',
     category: 'Workspace Design',
   },
   {
@@ -20,7 +20,7 @@ const blogPosts = [
     date: 'Dec 28, 2024',
     image:
       'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=500&fit=crop',
-    author: 'Covospace Team',
+    author: 'Covspace Team',
     category: 'Startups',
   },
   {
@@ -31,7 +31,7 @@ const blogPosts = [
     date: 'Dec 12, 2024',
     image:
       'https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&h=500&fit=crop',
-    author: 'Covospace Team',
+    author: 'Covspace Team',
     category: 'Community',
   },
   {
@@ -42,7 +42,7 @@ const blogPosts = [
     date: 'Nov 30, 2024',
     image:
       'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=500&fit=crop',
-    author: 'Covospace Team',
+    author: 'Covspace Team',
     category: 'Productivity',
   },
   {
@@ -53,18 +53,18 @@ const blogPosts = [
     date: 'Nov 18, 2024',
     image:
       'https://res.cloudinary.com/dobqxxtml/image/upload/v1759947739/DSCN0683_dlbtql.jpg?w=800&h=500&fit=crop',
-    author: 'Covospace Team',
+    author: 'Covspace Team',
     category: 'Guides',
   },
   {
     id: 6,
-    title: 'Hosting Client Meetings at Covospace',
+    title: 'Hosting Client Meetings at Covspace',
     excerpt:
       'Create a strong first impression with well-equipped, welcoming meeting spaces in the heart of Kochi.',
     date: 'Nov 05, 2024',
     image:
       'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=500&fit=crop',
-    author: 'Covospace Team',
+    author: 'Covspace Team',
     category: 'Meetings',
   },
 ];
@@ -88,7 +88,7 @@ export default function Blogs() {
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 sm:p-12 max-w-3xl mx-auto">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-                Covospace <span className="text-lime-400">Blog</span>
+                Covspace <span className="text-lime-400">Blog</span>
               </h1>
               <p className="text-lg text-white/90 leading-relaxed">
                 Insights, stories, and updates from our coworking community in Kochi.
@@ -104,7 +104,7 @@ export default function Blogs() {
           <div className="flex items-center justify-between mb-6 sm:mb-8">
             <div>
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
-                Latest from Covospace
+                Latest from Covspace
               </h2>
               <p className="text-sm sm:text-base text-gray-600 max-w-xl">
                 Explore how teams, founders, and professionals are using coworking to do their best work.

@@ -135,7 +135,7 @@ export default function Careers() {
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 sm:p-12 max-w-3xl mx-auto">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-                Careers at <span className="text-lime-400">Covospace</span>
+                Careers at <span className="text-lime-400">Covspace</span>
               </h1>
               <p className="text-lg text-white/90 leading-relaxed">
                 Join a passionate team that is reimagining how professionals and teams work in Kochi.
@@ -150,14 +150,14 @@ export default function Careers() {
       <section className="bg-gray-50 py-12 sm:py-16 lg:py-20">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Life at Covospace</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Life at Covspace</h2>
             <p className="text-base text-gray-600 mb-4">
-              Covospace is a community-first coworking space where startups, freelancers, and established
+              Covspace is a community-first coworking space where startups, freelancers, and established
               businesses come together. Our team is obsessed with creating a warm, professional environment
               that helps our members do their best work every day.
             </p>
             <p className="text-base text-gray-600 mb-4">
-              As part of the Covospace team, you will work in a fast-paced, collaborative environment where
+              As part of the Covspace team, you will work in a fast-paced, collaborative environment where
               ideas are encouraged, and initiative is celebrated. We value ownership, humility, and a strong
               focus on customer experience.
             </p>
@@ -336,7 +336,7 @@ export default function Careers() {
                   className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-lime-500 ${
                     errors.coverLetter ? 'border-red-300' : 'border-gray-300'
                   }`}
-                  placeholder="Tell us about yourself, your experience, and why Covospace is a good fit for you."
+                  placeholder="Tell us about yourself, your experience, and why Covspace is a good fit for you."
                 />
                 {errors.coverLetter && (
                   <p className="mt-1 text-sm text-red-600">{errors.coverLetter}</p>
