@@ -65,6 +65,7 @@ const footerLinks = [
   { name: "Contact Us", href: "/contact" },
   { name: "Careers", href: "/careers" },
   { name: "Terms & Conditions", href: "/terms" },
+  { name: "Privacy", href: "/policy"}
 ];
 
 const socialLinks = [
