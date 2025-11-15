@@ -271,16 +271,11 @@ export default function Privacy() {
                 <p className="font-medium text-gray-900">Contact Information</p>
                 <div className="mt-2 space-y-1 text-gray-700">
                   <p>Email: privacy@covspace.com</p>
-                  <p>Phone: [Contact Number]</p>
-                  <p>Address: [Company Address]</p>
-                </div>
-                <div className="mt-3">
-                  <Link
-                    to="/contact"
-                    className="text-lime-600 font-medium hover:underline"
-                  >
-                    Contact us through our website
-                  </Link>
+                  <p>Phone: +91 918893 9892, +91 735659 3629</p>
+                  <p>Address: GK Tower, Chakkarapparambu Road<br />
+                Near to NH 66 Bypass, Near Holiday Inn Hotel<br />
+                Ernakulam- 682028
+                </p>
                 </div>
               </div>
             </SectionCard>
